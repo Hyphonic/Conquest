@@ -21,9 +21,6 @@ jobs:
           packsquash_version: latest
           options: |
             pack_directory = '.'
-            ogg_obfuscation = true
-            force_include = true
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
