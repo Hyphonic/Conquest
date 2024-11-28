@@ -1,5 +1,8 @@
 name: Optimize resource pack
-on: [push]
+on:
+  push:
+    tags:
+      - '**'
 # This permissions section explicitly gives the workflow permission to create releases.
 # Most of the time it's not needed to set it, as the default GITHUB_TOKEN permissions
 # are permissive enough, but that's not always the case
@@ -19,15 +22,20 @@ jobs:
         with:
           packsquash_version: latest
           options: |
-            # Optimize the pack in the root repository directory.
-            # This is the default value for pack_directory when no PackSquash options are defined
             pack_directory = '.'
-
-            # Set a custom output file path to work with the generated ZIP file
-            # without needing to download its artifact in a separate step
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
+            ogg_obfuscation = true
+            force_include = true
+            recompress_compressed_files = true
+            zip_compression_iterations = 30
+            zip_spec_conformance_level = 'balanced'
+            skip_pack_icon = true
+            zip_spec_conformance_level = 'disregard'
+            
+            ['**/*?.png']
+            image_data_compression_iterations = 15
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
           tag_name: action-v${{ github.run_number }}
-          files: /tmp/ Conquest-${{ github.run_id }}.zip
+          files: /tmp/Conquest-${{ github.run_id }}.zip
