@@ -1,6 +1,8 @@
 name: Optimize resource pack
 on:
   workflow_dispatch:
+
+  push:
 # This permissions section explicitly gives the workflow permission to create releases.
 # Most of the time it's not needed to set it, as the default GITHUB_TOKEN permissions
 # are permissive enough, but that's not always the case
@@ -21,24 +23,16 @@ jobs:
           packsquash_version: latest
           options: |
             pack_directory = '.'
-            recompress_compressed_files = true
-            zip_compression_iterations = 255
-            zip_spec_conformance_level = 'disregard'
-            size_increasing_zip_obfuscation = true
-            percentage_of_zip_structures_tuned_for_obfuscation_discretion = 100
-            never_store_squash_times = true
-            spooling_buffers_size = 7629
-            allow_mods = ['OptiFine']
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
-            transcode_ogg = true
-            ogg_obfuscation = true
-            minify_json = true
-            delete_bloat_keys = false
-            image_data_compression_iterations = 255
-            color_quantization_target = 'none'
-            maximum_width_and_height = 2048
-            minify_legacy_language = true
-            minify_properties = true
+            allow_mods = ['OptiFine']
+            zip_spec_conformance_level = 'disregard'
+
+            recompress_compressed_files = true
+            zip_compression_iterations = 30
+            zip_spec_conformance_level = 'balanced'
+
+            ['**/*?.png']
+            image_data_compression_iterations = 15
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
