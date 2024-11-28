@@ -29,30 +29,29 @@ jobs:
             never_store_squash_times = true
             spooling_buffers_size = 7629
             allow_mods = ['OptiFine']
-            
-            ['**/*?.ogg']
+            output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
+          
+            [options.audio_files]
             transcode_ogg = true
             ogg_obfuscation = true
-            target_pitch = 1.5
-            
-            ['**/*?.json']
+          
+            [options.json_files]
             minify_json = true
             delete_bloat_keys = false
-            
-            ['**/*?.png']
+          
+            [options.image_files]
             image_data_compression_iterations = 255
             color_quantization_target = 'none'
             maximum_width_and_height = 2048
-            
-            ['**/*?.{fsh,vsh}']
-            minify_shader = true
-            
-            ['**/*?.lang']
+          
+            [options.shader_files]
+            shader_source_transformation_strategy = 'minify'
+          
+            [options.legacy_language_files]
             minify_legacy_language = true
-            
-            ['**/*?.properties']
+          
+            [options.properties_files]
             minify_properties = true
-            output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
