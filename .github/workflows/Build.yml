@@ -21,7 +21,37 @@ jobs:
           packsquash_version: latest
           options: |
             pack_directory = '.'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
+            recompress_compressed_files = true
+            zip_compression_iterations = 255
+            zip_spec_conformance_level = 'disregard'
+            size_increasing_zip_obfuscation = true
+            percentage_of_zip_structures_tuned_for_obfuscation_discretion = 100
+            never_store_squash_times = true
+            spooling_buffers_size = 7629
+            allow_mods = ['OptiFine']
+            
+            ['**/*?.ogg']
+            transcode_ogg = true
+            ogg_obfuscation = true
+            target_pitch = 1.5
+            
+            ['**/*?.json']
+            minify_json = true
+            delete_bloat_keys = false
+            
+            ['**/*?.png']
+            image_data_compression_iterations = 255
+            color_quantization_target = 'none'
+            maximum_width_and_height = 2048
+            
+            ['**/*?.{fsh,vsh}']
+            minify_shader = true
+            
+            ['**/*?.lang']
+            minify_legacy_language = true
+            
+            ['**/*?.properties']
+            minify_properties = true
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
