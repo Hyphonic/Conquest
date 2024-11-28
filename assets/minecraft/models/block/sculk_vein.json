@@ -1,0 +1,55 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion": false,
+	"textures": {
+		"1": "block/sculk_vein_extend",
+		"particle": "block/sculk_vein",
+		"sculk_vein": "block/sculk_vein"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0.06875],
+			"to": [16, 16, 0.06875],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#sculk_vein"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#sculk_vein"}
+			}
+		},
+		{
+			"from": [0, 15.69552, 1.72448],
+			"to": [16, 23.69552, 1.72448],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [8, 19.69552, 1.72448]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 8], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [0, 0, 16, 8], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"from": [0, -7.69552, 1.72448],
+			"to": [16, 0.30448, 1.72448],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [8, -3.69552, 1.72448]},
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#1", "cullface": "down"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#1", "cullface": "down"}
+			}
+		},
+		{
+			"from": [15.69552, 0, 1.72448],
+			"to": [23.69552, 16, 1.72448],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [19.69552, 8, 1.72448]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 16], "texture": "#1", "cullface": "east"},
+				"south": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "east"}
+			}
+		},
+		{
+			"from": [-7.69552, 0, 1.72448],
+			"to": [0.30448, 16, 1.72448],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [-3.69552, 8, 1.72448]},
+			"faces": {
+				"north": {"uv": [8, 0, 16, 16], "texture": "#1", "cullface": "west"},
+				"south": {"uv": [0, 0, 8, 16], "texture": "#1", "cullface": "west"}
+			}
+		}
+	]
+}

@@ -1,0 +1,16 @@
+{
+    "variants": {
+        "waterlogged=false": [
+            { "model": "block/flowering_azalea_leaves" },
+			{ "model": "block/flowering_azalea_leaves_1", "y": 90 },
+			{ "model": "block/flowering_azalea_leaves_2", "y": 180 },
+			{ "model": "block/flowering_azalea_leaves_3", "y": 270 }],
+
+        "waterlogged=true": [
+            {"model": "minecraft:block/flowering_azalea_leaves_water"},
+            {"model": "minecraft:block/flowering_azalea_leaves_water","y" :90},
+            {"model": "minecraft:block/flowering_azalea_leaves_water","y" :180},
+            {"model": "minecraft:block/flowering_azalea_leaves_water","y" :270}]
+        
+    }
+}

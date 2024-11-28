@@ -1,0 +1,27 @@
+{
+    "variants": {
+        "waterlogged=false": [
+            { "model": "block/acacia_leaves" },
+            { "model": "block/acacia_leaves_1" },
+            { "model": "block/acacia_leaves_2" },
+            { "model": "block/acacia_leaves_3" },
+            { "model": "block/acacia_leaves", "y": 90 },
+            { "model": "block/acacia_leaves_1", "y": 90 },
+            { "model": "block/acacia_leaves_2", "y": 90 },
+            { "model": "block/acacia_leaves_3", "y": 90 },
+            { "model": "block/acacia_leaves", "y": 180 },
+            { "model": "block/acacia_leaves_1", "y": 180 },
+            { "model": "block/acacia_leaves_2", "y": 180 },
+            { "model": "block/acacia_leaves_3", "y": 180 },
+            { "model": "block/acacia_leaves", "y": 270 },
+            { "model": "block/acacia_leaves_1", "y": 270 },
+            { "model": "block/acacia_leaves_2", "y": 270 },
+            { "model": "block/acacia_leaves_3", "y": 270 }],
+
+        "waterlogged=true": [{"model": "minecraft:block/acacia_leaves_water"},
+            {"model": "minecraft:block/acacia_leaves_water","y" :90},
+            {"model": "minecraft:block/acacia_leaves_water","y" :180},
+            {"model": "minecraft:block/acacia_leaves_water","y" :270}]
+        
+    }
+}
