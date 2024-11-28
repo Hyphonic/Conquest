@@ -17,7 +17,7 @@ jobs:
       contents: write
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Zip Folder
         uses: thedoctor0/zip-release@0.7.5
@@ -28,5 +28,6 @@ jobs:
       - name: Upload Release
         uses: ncipollo/release-action@v1.12.0
         with:
+          ref: ${{ github.ref }}
           artifacts: ${{ env.File }}
           token: ${{ secrets.GITHUB_TOKEN }}
