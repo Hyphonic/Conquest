@@ -30,10 +30,10 @@ jobs:
             threads = 16
 
             recompress_compressed_files = true
-            zip_compression_iterations = 30
+            zip_compression_iterations = 15
 
             ['**/*?.png']
-            image_data_compression_iterations = 15
+            image_data_compression_iterations = 5
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
