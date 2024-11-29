@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/lr_owlbear"},"elements":[{"from":[-5.641796,8.23925,-3.4989882],"to":[7.358204,8.23925,19.50101],"faces":{"up":{"uv":[3.9375,7.75,3.53125,7.03125],"tintindex":0,"rotation":0,"texture":"#0"},"down":{"uv":[6.875,7.0625,6.46875,7.78125],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}

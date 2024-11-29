@@ -1,0 +1,130 @@
+{
+    "providers": [
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -3,
+            "chars": [ "a" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -4,
+            "chars": [ "b" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -6,
+            "chars": [ "c" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -10,
+            "chars": [ "d" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -18,
+            "chars": [ "e" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -34,
+            "chars": [ "f" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -66,
+            "chars": [ "g" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -130,
+            "chars": [ "h" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": -258,
+            "chars": [ "i" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 0,
+            "chars": [ "j" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 1,
+            "chars": [ "k" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 3,
+            "chars": [ "l" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 7,
+            "chars": [ "m" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 15,
+            "chars": [ "n" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 31,
+            "chars": [ "o" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 63,
+            "chars": [ "p" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 127,
+            "chars": [ "q" ]
+        },
+        {
+            "type": "bitmap",
+            "file": "konacept:font/spaces.png",
+            "ascent": -9999,
+            "height": 255,
+            "chars": [ "r" ]
+        }
+    ]
+}

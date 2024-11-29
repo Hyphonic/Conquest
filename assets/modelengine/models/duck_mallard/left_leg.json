@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/duck_mallard"},"elements":[{"from":[7.0,6.5,8.0],"to":[9.0,8.5,8.0],"faces":{"south":{"uv":[3.75,9.5,4.25,10.0],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[4.0,1.75,4.5,2.25],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
