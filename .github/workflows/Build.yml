@@ -28,14 +28,14 @@ jobs:
             spooling_buffers_size = 512
             threads = 32
 
-            zip_compression_iterations = 15
+            zip_compression_iterations = 20
             skip_pack_icon = true
 
             ['**/*?.ogg']
             ogg_obfuscation = true
 
             ['**/*?.png']
-            image_data_compression_iterations = 5
+            image_data_compression_iterations = 40
       - name: Tag and create release
         uses: softprops/action-gh-release@v2
         with:
