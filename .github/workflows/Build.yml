@@ -20,17 +20,21 @@ jobs:
       - name: Run PackSquash
         uses: ComunidadAylas/PackSquash-action@v4
         with:
-          packsquash_version: latest
+          packsquash_version: latest-unstable
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
-            allow_mods = ['OptiFine']
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3'] # Optifine and Custom Models
             #zip_spec_conformance_level = 'disregard'
+            zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 32
 
-            recompress_compressed_files = true
             zip_compression_iterations = 15
+            skip_pack_icon = true
+
+            ['**/*?.ogg']
+            ogg_obfuscation = true
 
             ['**/*?.png']
             image_data_compression_iterations = 5
