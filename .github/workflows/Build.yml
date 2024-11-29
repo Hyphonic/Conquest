@@ -23,7 +23,7 @@ jobs:
           packsquash_version: latest-unstable
           options: |
             pack_directory = '.'
-            output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
+            output_file_path = '/tmp/Conquest.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3'] # Optifine and Custom Models
             #zip_spec_conformance_level = 'disregard'
             zip_spec_conformance_level = 'high'
@@ -42,4 +42,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           tag_name: action-v${{ github.run_number }}
-          files: /tmp/Conquest-${{ github.run_id }}.zip
+          files: /tmp/Conquest.zip
