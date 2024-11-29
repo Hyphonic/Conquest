@@ -26,6 +26,8 @@ jobs:
             output_file_path = '/tmp/Conquest-${{ github.run_id }}.zip'
             allow_mods = ['OptiFine']
             zip_spec_conformance_level = 'disregard'
+            spooling_buffers_size = 512
+            threads = 16
 
             recompress_compressed_files = true
             zip_compression_iterations = 30
