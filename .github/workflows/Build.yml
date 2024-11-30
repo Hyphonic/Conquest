@@ -1,6 +1,7 @@
 name: Optimize resource pack
 on:
   workflow_dispatch:
+  push:
 # This permissions section explicitly gives the workflow permission to create releases.
 # Most of the time it's not needed to set it, as the default GITHUB_TOKEN permissions
 # are permissive enough, but that's not always the case
@@ -22,14 +23,14 @@ jobs:
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3'] # Optifine and Custom Models
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']    # Optifine and Custom Models
             #zip_spec_conformance_level = 'disregard'
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 32
+            zip_spec_conformance_level = 'high'                         # Changed to 'high' because 'disregard' broke it
+            spooling_buffers_size = 512                                 # Mb
+            threads = 16                                                # I don't know the CPU Cores 😓
 
-            zip_compression_iterations = 20
-            skip_pack_icon = true
+            zip_compression_iterations = 20                             # Max clamped value
+            skip_pack_icon = true                                       # ...
 
             ['**/*?.ogg']
             ogg_obfuscation = true
