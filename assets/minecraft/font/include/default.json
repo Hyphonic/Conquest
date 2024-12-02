@@ -1,5 +1,6 @@
 {
     "providers": [
+        
         {
             "type": "bitmap",
             "file": "minecraft:font/nonlatin_european.png",
