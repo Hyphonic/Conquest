@@ -1,6 +1,21 @@
 {
     "providers": [
         {
+            "type": "reference",
+            "id": "minecraft:include/space"
+        },
+        {
+            "type": "reference",
+            "id": "minecraft:include/default",
+            "filter": {
+                "uniform": false
+            }
+        },
+        {
+            "type": "reference",
+            "id": "minecraft:include/unifont"
+        },
+        {
             "type": "bitmap",
             "file": "minecraft:font/icons.png",
             "ascent": 7,
