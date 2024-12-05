@@ -1,13 +1,1 @@
-{   "options.graphics.fancy": "§6Fancy",  "options.graphics.fast": "§cFast","options.video": "§6Video Settings...","menu.options": "§6Options...",  "options.graphics": "§6Graphics",  "options.mipmapLevels": "§6Mipmap Levels","of.options.AA_LEVEL" : "Antialiasing",  "options.title": "Options \ue241",  "options.videoTitle": "Video Settings \ue242",
-
-	  "options.graphics.fast.tooltip": "Fast graphics reduces the amount of visible rain and snow.\nTransparency effects are disabled for various blocks such as leaves which will look very bad when set to fast!!!.",
-  "pack.dropInfo": "Drag and drop files into this window to add packs §6and use Optifine for ctm when using Conquest!",
-
-
-
-
-"menu.disconnect":"\uF118\uF119\ue238\uF119\ue239\uF119\ue240","menu.game":"\uF117\uF119\uF120","menu.returnToMenu": "\uF118\uF119\ue238\uF119\ue239\uF119\ue240",
-  "container.brewing": "                          §f\ue246§8              Brewing Stand             §f\ue243\uF119\ue244\uF119\ue252\ue249\uF119\ue250\uF119",
-  "container.repair": "§f                             \ue281\ue281\ue279\uF119\ue280\ue281\ue277\uF119\ue278\ue281\ue275\uF119\ue276\ue281\ue253\uF119\ue274          §8Repair & Name"
-
-}
+{"menu.returnToGame":"Return to §dVoidTales", "options.graphics.fancy":"§6Fancy","options.graphics.fast":"§cFast","options.video":"§6Video Settings...","menu.options":"§6Options...","options.graphics":"§6Graphics","options.mipmapLevels":"§6Mipmap Levels","of.options.AA_LEVEL":"Antialiasing","options.title":"Options ","options.videoTitle":"Video Settings ","options.graphics.fast.tooltip":"Fast graphics reduces the amount of visible rain and snow.\nTransparency effects are disabled for various blocks such as leaves which will look very bad when set to fast!!!.","pack.dropInfo":"Drag and drop files into this window to add packs §6and use Optifine for ctm when using Conquest!","menu.disconnect":"","menu.game":"","menu.returnToMenu":"","container.brewing":"                          §f§8              Brewing Stand             §f","container.repair":"§f                                       §8Repair & Name"}
