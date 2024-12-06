@@ -19,7 +19,7 @@
             "type": "bitmap",
             "file": "font/emojis/emojis.png",
             "ascent": 8,
-            "height": 10,
+            "height": 9,
             "chars": [
                 "",
                 "",
@@ -48,7 +48,7 @@
             "type": "bitmap",
             "file": "font/emojis/emojis2.png",
             "ascent": 8,
-            "height": 10,
+            "height": 9,
             "chars": [
                 "",
                 "",
