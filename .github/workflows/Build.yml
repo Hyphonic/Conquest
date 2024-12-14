@@ -31,7 +31,6 @@ jobs:
             threads = 16                                                # I don't know the CPU Cores 😓
 
             zip_compression_iterations = 20                             # Max clamped value
-            skip_pack_icon = true                                       # ...
 
             ['**/*?.ogg']
             ogg_obfuscation = true
