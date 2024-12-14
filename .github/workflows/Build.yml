@@ -41,3 +41,37 @@ jobs:
         with:
           tag_name: action-v${{ github.run_number }}
           files: /tmp/Conquest.zip
+  send-webhook:
+    needs: [packsquash]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Get Release Size
+        id: get_size
+        run: |
+          curl -L -o release.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest.zip
+          size=$(du -m release.zip | cut -f1)
+          echo "size=$size MB" >> $GITHUB_ENV
+      - name: Extract branch name
+        shell: bash
+        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
+      - uses: actions/checkout@v2
+      - name: Discord Webhook Action
+        uses: tsickert/discord-webhook@v6.0.0
+        with:
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          embed-title: New Release 🔔
+          embed-url: https://github.com/${{ github.repository }}
+          embed-color: 3535423
+          embed-description: |
+            ### Commit ⚡
+            Message » `${{ github.event.head_commit.message }}`
+            Commit SHA » `${{ github.sha }}`
+            Commit Author » `${{ github.event.head_commit.author.name }}`
+            ### Workflow ☢️
+            Runner OS » `${{ runner.os }}`
+            Branch » `${{ env.branch }}`
+            ### Release 📦
+            Download » [Click here to download ⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest.zip)
+            Size » `${{ env.size }}`
+            Version » `1.21.1`
