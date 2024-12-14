@@ -190,6 +190,26 @@
   "sounds": [
     "extra/chop"
   ]
- }
+ },
 
+  "hv_rats.sword": {
+      "sounds": [
+        "hv_rats/sword"
+      ]
+    },
+    "hv_rats.cloth": {
+      "sounds": [
+        "hv_rats/cloth"
+      ]
+    },
+    "hv_rats.active": {
+      "sounds": [
+        "hv_rats/active"
+      ]
+    },
+    "hv_rats.woosh": {
+      "sounds": [
+        "hv_rats/woosh"
+      ]
+    }
 }
