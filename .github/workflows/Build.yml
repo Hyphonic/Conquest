@@ -38,6 +38,7 @@ jobs:
         with:
           tag_name: action-v${{ github.run_number }}
           files: /tmp/Conquest32.zip
+          draft: true
 
   packsquash_16x:
     name: Optimize 16x resource pack
@@ -71,12 +72,15 @@ jobs:
         with:
           tag_name: action-v${{ github.run_number }}
           files: /tmp/Conquest16.zip
+          draft: true
 
-  send-webhook:
+  finalize-release:
     needs: [packsquash_32x, packsquash_16x]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Publish Release
+        run: |
+          gh release upload action-v${{ github.run_number }} /tmp/Conquest32.zip /tmp/Conquest16.zip --clobber --draft=false
       - name: Get Release Sizes
         id: get_sizes
         run: |
