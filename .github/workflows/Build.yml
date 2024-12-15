@@ -83,8 +83,13 @@ jobs:
           echo "size32=$size32 MB" >> $GITHUB_ENV
           echo "size16=$size16 MB" >> $GITHUB_ENV
       - name: Publish Release
-        run: |
-          gh release upload action-v${{ github.run_number }} /tmp/Conquest32.zip /tmp/Conquest16.zip --clobber
+        uses: softprops/action-gh-release@v2
+        with:
+          files: /tmp/Conquest32.zip,/tmp/Conquest16.zip
+          draft: false
+          prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   send-webhook:
     needs: finalize-release
