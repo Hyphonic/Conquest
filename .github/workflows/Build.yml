@@ -1,10 +1,36 @@
 name: Optimize resource pack
+
 on:
   workflow_dispatch:
-  push:
-    branches: main
+    inputs:
+      generatevariant:
+        type: boolean
+        description: Generate a 16x variant? 🔄️
+        required: true
+        default: true
+      createrelease:
+        type: boolean
+        description: Create a release? ⏫
+        required: true
+        default: true
+      commitauthor:
+        type: text
+        description: What is your name? 🔡
+        required: true
+        default: ${{ github.event.head_commit.author.name }}
+      version:
+        type: choice
+        description: What version? 🔢
+        options:
+        - 1.20.4
+        - 1.21.1
+        - 1.21.3
+        - 1.21.4
+        required: true
+
 permissions:
   contents: write
+
 jobs:
   packsquash_32x:
     name: Optimize 32x resource pack
@@ -18,7 +44,7 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
-          artifact_name:  'Conquest32'
+          artifact_name: 'Conquest32'
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest32.zip'
@@ -35,6 +61,7 @@ jobs:
   packsquash_16x:
     name: Optimize 16x resource pack
     runs-on: ubuntu-latest
+    if: ${{ github.event.inputs.generatevariant == 'true' }}
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
@@ -47,7 +74,7 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
-          artifact_name:  'Conquest16'
+          artifact_name: 'Conquest16'
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest16.zip'
@@ -63,6 +90,7 @@ jobs:
 
   finalize-release:
     needs: [packsquash_32x, packsquash_16x]
+    if: ${{ github.event.inputs.createrelease == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Download 32x artifact
@@ -82,14 +110,17 @@ jobs:
           size16=$(du -m /tmp/Conquest16.zip | cut -f1)
           echo "size32=$size32 MB" >> $GITHUB_ENV
           echo "size16=$size16 MB" >> $GITHUB_ENV
-      - name: Publish Release
-        uses: softprops/action-gh-release@v2
+      - name: Create Release
+        uses: svenstaro/upload-release-action@2.9.0
         with:
-          files: /tmp/Conquest32.zip,/tmp/Conquest16.zip
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          tag: ${{ github.ref }}
+          file: /tmp/Conquest32.zip,/tmp/Conquest16.zip
           draft: false
           prerelease: false
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          release_name: ${{ github.event.head_commit.message }}
+          body: |
+            Version: ${{ github.event.inputs.version }}
 
   send-webhook:
     needs: finalize-release
@@ -109,7 +140,7 @@ jobs:
             ### Commit ⚡
             Message » `${{ github.event.head_commit.message }}`
             Commit SHA » `${{ github.sha }}`
-            Commit Author » `${{ github.event.head_commit.author.name }}`
+            Commit Author » `${{ github.event.inputs.commitauthor }}`
             ### Workflow ☢️
             Runner OS » `${{ runner.os }}`
             Branch » `${{ env.branch }}`
@@ -118,4 +149,4 @@ jobs:
             Size » `${{ env.size32 }}`
             Download » [Click here to download 16x⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip)
             Size » `${{ env.size16 }}`
-            Version » `1.21.1`
+            Version » `${{ github.event.inputs.version }}`
