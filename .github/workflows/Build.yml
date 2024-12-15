@@ -25,7 +25,7 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
-            artifact_name = Conquest32
+            artifact_name = 'Conquest32'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
@@ -54,12 +54,12 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
-            artifact_name = Conquest16
+            artifact_name = 'Conquest16'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
             ['**/*?.png']
-            image_data_compression iterations = 40
+            image_data_compression_iterations = 40
 
   finalize-release:
     needs: [packsquash_32x, packsquash_16x]
