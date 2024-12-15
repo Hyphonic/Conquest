@@ -18,6 +18,7 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
+          artifact_name:  'Conquest32'
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest32.zip'
@@ -25,7 +26,6 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
-            artifact_name = 'Conquest32'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
@@ -47,6 +47,7 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
+          artifact_name:  'Conquest16'
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest16.zip'
@@ -54,7 +55,6 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
-            artifact_name = 'Conquest16'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
