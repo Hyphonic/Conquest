@@ -2,31 +2,8 @@ name: Optimize resource pack
 
 on:
   workflow_dispatch:
-    inputs:
-      generatevariant:
-        type: boolean
-        description: Generate a 16x variant? 🔄️
-        required: true
-        default: true
-      createrelease:
-        type: boolean
-        description: Create a release? ⏫
-        required: true
-        default: true
-      commitauthor:
-        type: text
-        description: What is your name? 🔡
-        required: true
-        default: ${{ github.event.head_commit.author.name }}
-      version:
-        type: choice
-        description: What version? 🔢
-        options:
-        - 1.20.4
-        - 1.21.1
-        - 1.21.3
-        - 1.21.4
-        required: true
+  push:
+    branches: main
 
 permissions:
   contents: write
@@ -61,7 +38,6 @@ jobs:
   packsquash_16x:
     name: Optimize 16x resource pack
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.generatevariant == 'true' }}
     steps:
       - name: Clone repository
         uses: actions/checkout@v4
@@ -90,7 +66,6 @@ jobs:
 
   finalize-release:
     needs: [packsquash_32x, packsquash_16x]
-    if: ${{ github.event.inputs.createrelease == 'true' }}
     runs-on: ubuntu-latest
     steps:
       - name: Download 32x artifact
@@ -119,8 +94,6 @@ jobs:
           draft: false
           prerelease: false
           release_name: ${{ github.event.head_commit.message }}
-          body: |
-            Version: ${{ github.event.inputs.version }}
 
   send-webhook:
     needs: finalize-release
@@ -140,7 +113,7 @@ jobs:
             ### Commit ⚡
             Message » `${{ github.event.head_commit.message }}`
             Commit SHA » `${{ github.sha }}`
-            Commit Author » `${{ github.event.inputs.commitauthor }}`
+            Commit Author » `${{ github.event.head_commit.author.name }}`
             ### Workflow ☢️
             Runner OS » `${{ runner.os }}`
             Branch » `${{ env.branch }}`
@@ -149,4 +122,4 @@ jobs:
             Size » `${{ env.size32 }}`
             Download » [Click here to download 16x⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip)
             Size » `${{ env.size16 }}`
-            Version » `${{ github.event.inputs.version }}`
+            Version » `1.21.1`
