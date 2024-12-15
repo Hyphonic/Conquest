@@ -25,16 +25,12 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
+            artifact_name = 'Conquest32'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
             ['**/*?.png']
             image_data_compression_iterations = 40
-      - name: Upload 32x artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Conquest32-${{ github.run_number }}
-          path: /tmp/Conquest32.zip
 
   packsquash_16x:
     name: Optimize 16x resource pack
@@ -58,50 +54,49 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
+            artifact_name = 'Conquest16'
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
             ['**/*?.png']
-            image_data_compression_iterations = 40
-      - name: Upload 16x artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Conquest16-${{ github.run_number }}
-          path: /tmp/Conquest16.zip
+            image_data_compression iterations = 40
 
   finalize-release:
     needs: [packsquash_32x, packsquash_16x]
     runs-on: ubuntu-latest
     steps:
       - name: Download 32x artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
-          name: Conquest32-${{ github.run_number }}
+          name: Conquest32
           path: /tmp
       - name: Download 16x artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4
         with:
-          name: Conquest16-${{ github.run_number }}
+          name: Conquest16
           path: /tmp
-      - name: Publish Release
-        run: |
-          gh release upload action-v${{ github.run_number }} /tmp/Conquest32.zip /tmp/Conquest16.zip --clobber --draft=false
       - name: Get Release Sizes
         id: get_sizes
         run: |
-          curl -L -o release32.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip
-          curl -L -o release16.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip
-          size32=$(du -m release32.zip | cut -f1)
-          size16=$(du -m release16.zip | cut -f1)
+          size32=$(du -m /tmp/Conquest32.zip | cut -f1)
+          size16=$(du -m /tmp/Conquest16.zip | cut -f1)
           echo "size32=$size32 MB" >> $GITHUB_ENV
           echo "size16=$size16 MB" >> $GITHUB_ENV
+      - name: Publish Release
+        run: |
+          gh release upload action-v${{ github.run_number }} /tmp/Conquest32.zip /tmp/Conquest16.zip --clobber --draft=false
+
+  send-webhook:
+    needs: finalize-release
+    runs-on: ubuntu-latest
+    steps:
       - name: Extract branch name
         shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v6.0.0
         with:
-          webhook-url: ${{ secrets.WEBHOOK_URL_TEMP }}
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
           embed-title: New Release 🔔
           embed-url: https://github.com/${{ github.repository }}
           embed-color: 3535423
