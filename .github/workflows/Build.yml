@@ -100,24 +100,17 @@ jobs:
       - name: Get Release Sizes
         id: get_sizes
         run: |
-          if [ -f /tmp/Conquest32.zip ]; then
-            size32=$(du -m /tmp/Conquest32.zip | cut -f1)
-            echo "size32=$size32 MB" >> $GITHUB_ENV
-          else
-            echo "size32=File not found" >> $GITHUB_ENV
-          fi
-          if [ -f /tmp/Conquest16.zip ]; then
-            size16=$(du -m /tmp/Conquest16.zip | cut -f1)
-            echo "size16=$size16 MB" >> $GITHUB_ENV
-          else
-            echo "size16=File not found" >> $GITHUB_ENV
+          size32=$(du -m /tmp/Conquest32.zip | cut -f1)
+          echo "size32=$size32 MB" >> $GITHUB_ENV
+          size16=$(du -m /tmp/Conquest16.zip | cut -f1)
+          echo "size16=$size16 MB" >> $GITHUB_ENV
       - name: Extract branch name
         shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
       - name: Discord Webhook Action
         uses: tsickert/discord-webhook@v6.0.0
         with:
-          webhook-url: https://discord.com/api/webhooks/1317441657309761636/4tSkeVENfvHnGc2-1xXW-MoF_MXusJEHwpAdEbS9-BLeOuEpfSeoXRUX2RTPlrPxdmLF
+          webhook-url: ${{ secrets.WEBHOOK_URL }}
           embed-title: New Release 🔔
           embed-url: https://github.com/${{ github.repository }}
           embed-color: 3535423
