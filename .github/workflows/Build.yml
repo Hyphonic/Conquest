@@ -78,13 +78,6 @@ jobs:
         with:
           name: Conquest16
           path: /tmp
-      - name: Get Release Sizes
-        id: get_sizes
-        run: |
-          size32=$(du -m /tmp/Conquest32.zip | cut -f1)
-          size16=$(du -m /tmp/Conquest16.zip | cut -f1)
-          echo "size32=$size32 MB" >> $GITHUB_ENV
-          echo "size16=$size16 MB" >> $GITHUB_ENV
       - name: Create Release
         uses: svenstaro/upload-release-action@2.9.0
         with:
@@ -100,6 +93,24 @@ jobs:
     needs: finalize-release
     runs-on: ubuntu-latest
     steps:
+      - name: Download Latest Release
+        run: |
+          curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip
+          curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip
+      - name: Get Release Sizes
+        id: get_sizes
+        run: |
+          if [ -f /tmp/Conquest32.zip ]; then
+            size32=$(du -m /tmp/Conquest32.zip | cut -f1)
+            echo "size32=$size32 MB" >> $GITHUB_ENV
+          else
+            echo "size32=File not found" >> $GITHUB_ENV
+          fi
+          if [ -f /tmp/Conquest16.zip ]; then
+            size16=$(du -m /tmp/Conquest16.zip | cut -f1)
+            echo "size16=$size16 MB" >> $GITHUB_ENV
+          else
+            echo "size16=File not found" >> $GITHUB_ENV
       - name: Extract branch name
         shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
