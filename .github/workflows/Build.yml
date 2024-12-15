@@ -90,7 +90,8 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.ref }}
-          file: /tmp/Conquest32.zip,/tmp/Conquest16.zip
+          file: /tmp/*.zip
+          file_glob: true
           draft: false
           prerelease: false
           release_name: ${{ github.event.head_commit.message }}
