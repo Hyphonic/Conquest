@@ -11,25 +11,31 @@ jobs:
     runs-on: ubuntu-latest
     name: 🦙 Ollama Code Review Job
     steps:
+      - name: ⬇️ Checkout Pull Request
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
           ollama
           ollama pull codegemma
-      - name: 📩 Retrieve Changed Files
-        id: modified
-        uses: tj-actions/changed-files@v45
+
       - name: 🔍 Review Changed Files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          for file in ${{ steps.modified.outputs.all_changed_files }}; do
-            echo $file
-            cat $file
-            modified_file_review=$(curl -s http://127.0.0.1:11434/api/generate -d '{"model": "${{ inputs.llm-model }}", "prompt": "Review the following file:\n\n```\n$(cat $file)\n```\n\nYou may use Markdown.", "stream": false}' | jq -r '.response')
-            Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
-            echo "$Comment" >> Review.txt
-            echo "$Comment"
+          echo "" > Review.txt
+          for file in $(git diff --name-only origin/main); do
+            if [ -f "$file" ]; then
+              modified_file_review=$(curl -s http://127.0.0.1:11434/api/generate -d "{\"model\": \"codegemma\", \"prompt\": \"Review the following file:\n\n\`\`\`\n$(cat $file)\n\`\`\`\n\nYou may use Markdown.\", \"stream\": false}" | jq -r '.response')
+              Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
+              echo "$Comment" >> Review.txt
+              echo "$Comment"
+            else
+              echo "File $file does not exist."
+            fi
           done
           gh pr comment ${{ github.event.pull_request.number }} --body "$(cat Review.txt)"
         shell: bash
