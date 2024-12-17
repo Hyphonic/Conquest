@@ -21,43 +21,11 @@ jobs:
           curl -fsSL https://ollama.com/install.sh | bash
           ollama
           ollama pull deepseek-coder-v2
-          ollama list
-          sleep 5
 
       - name: 🔍 Review Changed Files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for file in $(git diff --name-only origin/main); do
-            if [ -f "$file" ]; then
-              # Read file content and replace newlines with '\n'
-              content=$(cat "$file" | sed ':a;N;$!ba;s/\n/\\n/g')
-          
-              # Log Prompt message explicitly
-              echo "❇️ Prompt: Review the following code: \`$content\`"
-          
-              # Send Prompt and Content to Ollama API
-              api_response=$(curl -s http://127.0.0.1:11434/api/generate -d "{
-                \"model\": \"deepseek-coder-v2\",
-                \"prompt\": \"Review the following code:\n\n$content\",
-                \"stream\": false
-              }")
-          
-              # Debug API response
-              echo "API Response: $api_response"
-          
-              # Extract response
-              modified_file_review=$(echo "$api_response" | jq -r '.response')
-              if [ "$modified_file_review" = "null" ]; then
-                modified_file_review="⚠️ Error: No response from Ollama API."
-              fi
-          
-              # Prepare comment
-              Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
-              echo "$Comment" >> Review.txt
-              echo "$Comment"
-            else
-              echo "File $file does not exist or is not a regular file."
-            fi
-          done
+            ollama run deepseek-coder-v2 "Summarize this file: $(cat $file | jq -Rs .)"
         shell: bash
