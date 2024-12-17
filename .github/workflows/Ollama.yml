@@ -17,7 +17,7 @@ jobs:
           ollama pull codegemma
       - name: 📩 Retrieve Changed Files
         id: modified
-        uses: tj-actions/changed-files@master
+        uses: tj-actions/changed-files@v45
       - name: 🔍 Review Changed Files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
