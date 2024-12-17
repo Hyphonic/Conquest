@@ -27,5 +27,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for file in $(git diff --name-only origin/main); do
-            ollama run deepseek-coder-v2 "Summarize this file: $(cat $file | jq -Rs .)"
+            if [ -f "$file" ]; then
+              # Safely read and escape file content
+              content=$(jq -Rs . < "$file")
+                  
+              # Run Ollama with the escaped content
+              ollama run deepseek-coder-v2 "Summarize this file: $content"
+            else
+              echo "File $file does not exist."
+            fi
+          done
         shell: bash
