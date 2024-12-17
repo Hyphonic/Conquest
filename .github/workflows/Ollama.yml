@@ -35,9 +35,18 @@ jobs:
 
       - name: 🔍 Review Changed Files
         run: |
-          for file in $(git diff --name-only origin/main); do
-            if [ -f "$file" ]; then
-              content=$(jq -Rs . < "$file")
-              ollama run deepseek-coder-v2 "Summarize this file: $content"
+          for File in $(git diff --name-only origin/main); do
+            if [ -f "$File" ]; then
+              # Read file content and escape it as a JSON string
+              Content=$(jq -Rs . < "$File")
+                
+              # Run the model with the escaped content
+              Review=$(ollama run deepseek-coder-v2 "Summarize this file, and suggest possible improvements, performance optimizations, and/or bug fixes: $Content")
+                
+              # Prepare the comment for the pull request (you can format this or append it)
+              Comment="### Code Review for $File\n\n$Review\n\n---"
+                
+              # Create a comment on the pull request (example)
+              gh pr comment ${{ github.event.pull_request.number }} --body "$Comment"
             fi
           done
