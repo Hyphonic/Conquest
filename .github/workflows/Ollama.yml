@@ -20,7 +20,7 @@ jobs:
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
           ollama
-          ollama pull codegemma
+          ollama pull deepseek-coder-v2
 
       - name: 🔍 Review Changed Files
         env:
@@ -29,7 +29,8 @@ jobs:
           echo "" > Review.txt
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
-              modified_file_review=$(curl http://127.0.0.1:11434/api/generate -d '{"model": "codegemma", "prompt": "Review the following code: `print(sqr(5 + 5))`", "stream": false}' | jq -r '.response')
+              echo "❇️ Prompt: Review the following code: `$(cat -n $file | sed '10d')`"
+              modified_file_review=$(curl -s http://127.0.0.1:11434/api/generate -d '{"model": "deepseek-coder-v2", "prompt": "Review the following code: `$(cat $file)`", "stream": false}' | jq -r '.response')
               Comment="Ollama Code Review for \`$file\`: $modified_file_review"
               echo "$Comment" >> Review.txt
               echo "$Comment"
