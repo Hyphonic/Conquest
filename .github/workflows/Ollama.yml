@@ -33,6 +33,14 @@ jobs:
             echo "Model already cached!"
           fi
 
+      - name: 🔥 Cache Ollama Model
+        uses: actions/cache@v3
+        with:
+          path: ~/.ollama
+          key: ollama-model-${{ runner.os }}-${{ hashFiles('**/model-file-name') }}
+          restore-keys: |
+            ollama-model-${{ runner.os }}-
+
       - name: 🔍 Review Changed Files
         run: |
           for File in $(git diff --name-only origin/main); do
