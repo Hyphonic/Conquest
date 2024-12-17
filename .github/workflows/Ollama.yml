@@ -19,6 +19,7 @@ jobs:
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
+          ollama
           ollama pull deepseek-coder-v2
 
       - name: 🔍 Review Changed Files
