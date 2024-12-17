@@ -28,27 +28,30 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          curl http://127.0.0.1:11434/api/generate -d '{"model": "deepseek-coder-v2", "prompt": "Hello", "stream": false}'
-          echo "" > Review.txt
-          # Loop through files changed in the PR
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
-              # Read and escape file content
-              escaped_content=$(jq -Rs '.' < "$file")
-              content=$(cat "$file")  # Original raw content for display
-
+              # Read file content and replace newlines with '\n'
+              content=$(cat "$file" | sed ':a;N;$!ba;s/\n/\\n/g')
+          
               # Log Prompt message explicitly
               echo "❇️ Prompt: Review the following code: \`$content\`"
-
+          
               # Send Prompt and Content to Ollama API
               api_response=$(curl -s http://127.0.0.1:11434/api/generate -d "{
                 \"model\": \"deepseek-coder-v2\",
-                \"prompt\": \"Review the following code:\n\n$escaped_content\",
+                \"prompt\": \"Review the following code:\n\n$content\",
                 \"stream\": false
               }")
+          
+              # Debug API response
               echo "API Response: $api_response"
+          
+              # Extract response
               modified_file_review=$(echo "$api_response" | jq -r '.response')
-
+              if [ "$modified_file_review" = "null" ]; then
+                modified_file_review="⚠️ Error: No response from Ollama API."
+              fi
+          
               # Prepare comment
               Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
               echo "$Comment" >> Review.txt
