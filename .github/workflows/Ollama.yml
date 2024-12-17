@@ -3,38 +3,41 @@ name: 🔍 Code Check
 on:
   pull_request:
 
-permissions:
-  contents: write
-
 jobs:
   ollama_review:
     runs-on: ubuntu-latest
-    name: 🦙 Ollama Code Review Job
     steps:
       - name: ⬇️ Checkout Pull Request
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      
+
+      - name: ⚡ Restore Ollama Cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.ollama/models
+          key: ollama-model-${{ runner.os }}-deepseek-coder-v2
+          restore-keys: |
+            ollama-model-${{ runner.os }}-
+
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
-          ollama
-          ollama pull deepseek-coder-v2
+          ollama --version
+
+      - name: 🚀 Pull Model if Missing
+        run: |
+          if [ ! -f ~/.ollama/models/deepseek-coder-v2 ]; then
+            ollama pull deepseek-coder-v2
+          else
+            echo "Model already cached!"
+          fi
 
       - name: 🔍 Review Changed Files
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
-              # Safely read and escape file content
               content=$(jq -Rs . < "$file")
-                  
-              # Run Ollama with the escaped content
               ollama run deepseek-coder-v2 "Summarize this file: $content"
-            else
-              echo "File $file does not exist."
             fi
           done
-        shell: bash
