@@ -1,0 +1,28 @@
+name: Code Check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  ollama:
+    runs-on: ubuntu-latest
+    name: Checkout
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Changed Files
+        id: diff
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: tj-actions/changed-files@v45
+
+      - name: CodeGemma
+        uses: Elevated-Standards/codegemma-action@main
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          changed_files: ${{ steps.diff.outputs.all_changed_and_modified_files }}
