@@ -1,28 +1,32 @@
-name: Code Check
+name: 🔍 Code Check
 
 on:
-  workflow_dispatch:
+  pull_request:
 
 permissions:
   contents: write
 
 jobs:
-  ollama:
+  ollama_review:
     runs-on: ubuntu-latest
-    name: Checkout
+    name: 🦙 Ollama Code Review Job
     steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-
-      - name: Changed Files
-        id: diff
+      - name: ⬇️ Install Ollama
+        run: |
+          curl -fsSL https://ollama.com/install.sh | bash
+          ollama pull codegemma
+      - name: 📩 Retrieve Changed Files
+        id: modified
+        uses: tj-actions/changed-files@master
+      - name: 🔍 Review Changed Files
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: tj-actions/changed-files@v45
-
-      - name: CodeGemma
-        uses: Elevated-Standards/codegemma-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          changed_files: ${{ steps.diff.outputs.all_changed_and_modified_files }}
+        run: |
+          for file in ${{ steps.modified.outputs.all_changed_files }}; do
+            modified_file_review=$(curl -s http://127.0.0.1:11434/api/generate -d '{"model": "${{ inputs.llm-model }}", "prompt": "Review the following file:\n\n```\n$(cat $file)\n```\n\nYou may use Markdown.", "stream": false}' | jq -r '.response')
+            Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
+            echo "$Comment" >> Review.txt
+            echo "$Comment"
+          done
+          gh pr comment ${{ github.event.pull_request.number }} --body "$(cat Review.txt)"
+        shell: bash
