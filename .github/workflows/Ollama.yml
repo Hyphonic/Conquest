@@ -4,7 +4,7 @@ on:
   pull_request:
 
 jobs:
-  Ollama-Review:
+  ollama_review:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout Pull Request
@@ -15,16 +15,14 @@ jobs:
       - name: ⚡ Restore Ollama Cache
         uses: actions/cache@v4
         with:
-          path: ~/.ollama
+          path: ~/.ollama/models
           key: ollama-model-${{ runner.os }}-deepseek-coder-v2
           restore-keys: |
             ollama-model-${{ runner.os }}-
-
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
           ollama --version
-
       - name: 🚀 Pull Model if Missing
         run: |
           if [ ! -f ~/.ollama/models/deepseek-coder-v2 ]; then
@@ -32,21 +30,11 @@ jobs:
           else
             echo "Model already cached!"
           fi
-
       - name: 🔍 Review Changed Files
         run: |
-          for File in $(git diff --name-only origin/main); do
-            if [ -f "$File" ]; then
-              # Read file content and escape it as a JSON string
-              Content=$(jq -Rs . < "$File")
-                
-              # Run the model with the escaped content
-              Review=$(ollama run deepseek-coder-v2 "Summarize this file, and suggest possible improvements, performance optimizations, and/or bug fixes: $Content")
-                
-              # Prepare the comment for the pull request (you can format this or append it)
-              Comment="### Code Review for $File\n\n$Review\n\n---"
-                
-              # Create a comment on the pull request (example)
-              gh pr comment ${{ github.event.pull_request.number }} --body "$Comment"
+          for file in $(git diff --name-only origin/main); do
+            if [ -f "$file" ]; then
+              content=$(jq -Rs . < "$file")
+              ollama run deepseek-coder-v2 "Summarize this file: $content"
             fi
           done
