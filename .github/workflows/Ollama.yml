@@ -29,8 +29,8 @@ jobs:
           echo "" > Review.txt
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
-              cat "$file"
-              modified_file_review=$(curl http://127.0.0.1:11434/api/generate -d '{"model": "codegemma", "prompt": "Review the following code: $(cat $file)", "stream": false}' | jq -r '.response')
+              prompt="Review the following code: $(cat $file)"
+              modified_file_review=$(curl http://127.0.0.1:11434/api/generate -d '{"model": "codegemma", "prompt": "$prompt", "stream": false}' | jq -r '.response')
               Comment="Ollama Code Review for \`$file\`: $modified_file_review"
               echo "$Comment" >> Review.txt
               echo "$Comment"
