@@ -19,7 +19,7 @@ jobs:
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
-          ollama
+          ollama serve
           ollama pull codegemma
 
       - name: 🔍 Review Changed Files
@@ -29,13 +29,13 @@ jobs:
           echo "" > Review.txt
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
+              cat "$file"
               modified_file_review=$(curl -s http://127.0.0.1:11434/api/generate -d "{\"model\": \"codegemma\", \"prompt\": \"Review the following file:\n\n\`\`\`\n$(cat $file)\n\`\`\`\n\nYou may use Markdown.\", \"stream\": false}" | jq -r '.response')
-              Comment="Ollama Code Review for \`$file\`:\n\n$modified_file_review"
+              Comment="Ollama Code Review for \`$file\`: $modified_file_review"
               echo "$Comment" >> Review.txt
               echo "$Comment"
             else
               echo "File $file does not exist."
             fi
           done
-          gh pr comment ${{ github.event.pull_request.number }} --body "$(cat Review.txt)"
         shell: bash
