@@ -9,6 +9,30 @@ permissions:
   contents: write
 
 jobs:
+  # Upgrade resource pack
+  upgrade_pack:
+    name: 🔄 Upgrade Resource Pack
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Clone repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 🔄 Upgrade resource pack
+        uses: AshleyThew/minecraft-resource-pack-upgrader@v1.1.2
+        with:
+          input_path: 'path/to/source/resourcepack'
+      - name: 🗃️ Save upgraded resource pack
+        run: |
+          mkdir -p artifacts
+          mv upgraded_resourcepack.zip artifacts/upgraded_resourcepack.zip
+      - name: 📦 Upload upgraded artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: upgraded-resourcepack
+          path: artifacts/upgraded_resourcepack.zip
+
+  # Optimize 32x original
   packsquash_32x:
     name: 🗜️ Optimize 32x resource pack
     runs-on: ubuntu-latest
@@ -35,6 +59,7 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
+  # Optimize 16x original
   packsquash_16x:
     name: 🗜️ Optimize 16x resource pack
     runs-on: ubuntu-latest
@@ -64,20 +89,80 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
-  finalize-release:
-    name: 🚀 Finalize Release
-    needs: [packsquash_32x, packsquash_16x]
+  # Optimize upgraded 32x
+  packsquash_upgraded_32x:
+    name: 🗜️ Optimize Upgraded 32x resource pack
+    needs: upgrade_pack
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Download 32x artifact
+      - name: 📥 Download upgraded resource pack
         uses: actions/download-artifact@v4
         with:
-          name: Conquest32
+          name: upgraded-resourcepack
           path: /tmp
-      - name: 📥 Download 16x artifact
+      - name: 📂 Extract upgraded resource pack
+        run: unzip /tmp/upgraded_resourcepack.zip -d upgraded_32x
+      - name: 🗜️ Run PackSquash Upgraded 32x
+        uses: ComunidadAylas/PackSquash-action@v4
+        with:
+          packsquash_version: latest-unstable
+          artifact_name: 'Conquest32-Upgraded'
+          options: |
+            pack_directory = 'upgraded_32x'
+            output_file_path = '/tmp/Conquest32-Upgraded.zip'
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
+            zip_spec_conformance_level = 'high'
+            spooling_buffers_size = 512
+            threads = 16
+            zip_compression_iterations = 20
+            ['**/*?.ogg']
+            ogg_obfuscation = true
+            ['**/*?.png']
+            image_data_compression_iterations = 40
+
+  # Optimize upgraded 16x
+  packsquash_upgraded_16x:
+    name: 🗜️ Optimize Upgraded 16x resource pack
+    needs: upgrade_pack
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Download upgraded resource pack
         uses: actions/download-artifact@v4
         with:
-          name: Conquest16
+          name: upgraded-resourcepack
+          path: /tmp
+      - name: 📂 Extract upgraded resource pack
+        run: unzip /tmp/upgraded_resourcepack.zip -d upgraded_16x
+      - name: 📉 Downscale upgraded to 16x
+        run: |
+          find upgraded_16x/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
+      - name: 🗜️ Run PackSquash Upgraded 16x
+        uses: ComunidadAylas/PackSquash-action@v4
+        with:
+          packsquash_version: latest-unstable
+          artifact_name: 'Conquest16-Upgraded'
+          options: |
+            pack_directory = 'upgraded_16x'
+            output_file_path = '/tmp/Conquest16-Upgraded.zip'
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
+            zip_spec_conformance_level = 'high'
+            spooling_buffers_size = 512
+            threads = 16
+            zip_compression_iterations = 20
+            ['**/*?.ogg']
+            ogg_obfuscation = true
+            ['**/*?.png']
+            image_data_compression_iterations = 40
+
+  # Finalize release
+  finalize-release:
+    name: 🚀 Finalize Release
+    needs: [packsquash_32x, packsquash_16x, packsquash_upgraded_32x, packsquash_upgraded_16x]
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📥 Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
           path: /tmp
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
@@ -90,6 +175,7 @@ jobs:
           prerelease: false
           release_name: ${{ github.event.head_commit.message }}
 
+  # Send webhook
   send-webhook:
     name: 📡 Send Webhook
     needs: finalize-release
@@ -99,6 +185,8 @@ jobs:
         run: |
           curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip
           curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip
+          curl -L -o /tmp/Conquest32-Upgraded.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32-Upgraded.zip
+          curl -L -o /tmp/Conquest16-Upgraded.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16-Upgraded.zip
       - name: 📏 Get Release Sizes
         id: get_sizes
         run: |
@@ -106,6 +194,10 @@ jobs:
           echo "size32=$size32 MB" >> $GITHUB_ENV
           size16=$(du -m /tmp/Conquest16.zip | cut -f1)
           echo "size16=$size16 MB" >> $GITHUB_ENV
+          size32_upgraded=$(du -m /tmp/Conquest32-Upgraded.zip | cut -f1)
+          echo "size32_upgraded=$size32_upgraded MB" >> $GITHUB_ENV
+          size16_upgraded=$(du -m /tmp/Conquest16-Upgraded.zip | cut -f1)
+          echo "size16_upgraded=$size16_upgraded MB" >> $GITHUB_ENV
       - name: 🌿 Extract branch name
         shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
@@ -117,7 +209,7 @@ jobs:
       - name: 🔔 Discord Webhook Action
         uses: tsickert/discord-webhook@v6.0.0
         with:
-          webhook-url: ${{ secrets.WEBHOOK_URL }}
+          webhook-url: ${{ secrets.WEBHOOK_URL_DISABLED }}
           embed-title: New Release 🔔
           embed-url: https://github.com/${{ github.repository }}
           embed-color: 3535423
