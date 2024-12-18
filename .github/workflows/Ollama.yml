@@ -1,28 +1,35 @@
-name: Code Check
+name: 🔍 Code Check & Caching Primes
 
 on:
-  workflow_dispatch:
+  pull_request:
 
-permissions:
-  contents: write
+env:
+  ACTIONS_STEP_DEBUG: true
 
 jobs:
-  ollama:
+  ollama_review:
     runs-on: ubuntu-latest
-    name: Checkout
     steps:
-      - uses: actions/checkout@v4
+      - name: ⬇️ Checkout Pull Request
+        uses: actions/checkout@v4
         with:
-          fetch-depth: 2
+          fetch-depth: 0
 
-      - name: Changed Files
-        id: diff
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        uses: tj-actions/changed-files@v45
+      - name: ⬇️ Install Ollama
+        run: |
+          curl -fsSL --silent https://example.com/install.sh | bash
+          ollama --version
 
-      - name: CodeGemma
-        uses: Elevated-Standards/codegemma-action@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          changed_files: ${{ steps.diff.outputs.all_changed_and_modified_files }}
+      - name: 🚀 Pull Model
+        run: |
+          ollama pull qwen2.5-coder:14b
+      
+      - name: 🔍 Review Changed Files
+        run: |
+          for file in $(git diff --name-only origin/main); do
+            if [ -f "$file" ]; then
+              content=$(jq -Rs . < "$file")
+              echo "$file: $content"
+              ollama run qwen2.5-coder:14b "Summarize this file (~200 words): " < $file
+            fi
+          done
