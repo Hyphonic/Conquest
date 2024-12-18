@@ -15,20 +15,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: ⚡ Restore Ollama Cache
-        id: cache-ollama
-        uses: actions/cache@v4
-        with:
-          path: ~/.ollama
-          key: ollama-model-${{ runner.os }}
-
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL --silent https://example.com/install.sh | bash
           ollama --version
 
-      - name: 🚀 Pull Model if Missing
-        if: steps.cache-ollama.outputs.cache-hit != 'true'
+      - name: 🚀 Pull Model
         run: |
           ollama pull qwen2.5-coder:14b
       
@@ -38,6 +30,6 @@ jobs:
             if [ -f "$file" ]; then
               content=$(jq -Rs . < "$file")
               echo "$file: $content"
-              ollama run qwen2.5-coder:14b "Summarize this file (~200 words) and find possible bugs: " < $file
+              ollama run qwen2.5-coder:14b "Summarize this file (~200 words): " < $file
             fi
           done
