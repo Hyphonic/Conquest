@@ -27,6 +27,7 @@ jobs:
           input_path: './'
       - name: 🗃️ Save upgraded resource pack
         run: |
+          ls
           mkdir -p artifacts
           mv upgraded_resourcepack.zip artifacts/upgraded_resourcepack.zip
       - name: 📦 Upload upgraded artifact
