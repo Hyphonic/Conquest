@@ -31,8 +31,8 @@ jobs:
           ls -l
       - name: 🗃️ Save upgraded resource pack
         run: |
-          mkdir -p artifacts
-          cp -r . artifacts/upgraded_resourcepack  # Copy the whole upgraded folder (root level)
+          mkdir -p artifacts/upgraded_resourcepack
+          rsync -av --exclude='.git' ./ artifacts/upgraded_resourcepack/  # Copy everything except .git
       - name: 📦 Upload upgraded resource pack folder
         uses: actions/upload-artifact@v4
         with:
