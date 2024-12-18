@@ -107,6 +107,10 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
+      - name: 🛠️ Debug upgrade output
+        run: |
+          echo "Listing files in the directory after upgrade:"
+          ls -l
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
@@ -136,6 +140,10 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
+      - name: 🛠️ Debug upgrade output
+        run: |
+          echo "Listing files in the directory after upgrade:"
+          ls -l
       - name: 📉 Downscale upgraded to 16x
         run: |
           find /tmp/upgraded_resourcepack/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
