@@ -24,17 +24,20 @@ jobs:
       - name: 🔄 Upgrade resource pack
         uses: AshleyThew/minecraft-resource-pack-upgrader@v1.1.2
         with:
-          input_path: './'
+          input_path: './'  # It processes the current directory, no need to specify the output folder
+      - name: 🛠️ Debug upgrade output
+        run: |
+          echo "Listing files in the directory after upgrade:"
+          ls -l
       - name: 🗃️ Save upgraded resource pack
         run: |
-          ls
           mkdir -p artifacts
-          mv upgraded_resourcepack artifacts/upgraded_resourcepack
-      - name: 📦 Upload upgraded resource pack directory
+          cp -r . artifacts/upgraded_resourcepack  # Copy the whole upgraded folder (root level)
+      - name: 📦 Upload upgraded resource pack folder
         uses: actions/upload-artifact@v4
         with:
           name: upgraded-resourcepack
-          path: artifacts/upgraded_resourcepack
+          path: artifacts/upgraded_resourcepack  # Upload the entire folder as an artifact
 
   # Optimize 32x original
   packsquash_32x:
@@ -104,15 +107,13 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
-      - name: 📂 Copy upgraded resource pack to working directory
-        run: cp -r /tmp/upgraded_resourcepack upgraded_32x
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
           artifact_name: 'Conquest32-Upgraded'
           options: |
-            pack_directory = 'upgraded_32x'
+            pack_directory = '/tmp/upgraded_resourcepack'  # Use the downloaded folder directly
             output_file_path = '/tmp/Conquest32-Upgraded.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
@@ -135,18 +136,16 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
-      - name: 📂 Copy upgraded resource pack to working directory
-        run: cp -r /tmp/upgraded_resourcepack upgraded_16x
       - name: 📉 Downscale upgraded to 16x
         run: |
-          find upgraded_16x/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
+          find /tmp/upgraded_resourcepack/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
       - name: 🗜️ Run PackSquash Upgraded 16x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
           artifact_name: 'Conquest16-Upgraded'
           options: |
-            pack_directory = 'upgraded_16x'
+            pack_directory = '/tmp/upgraded_resourcepack'  # Use the downloaded folder directly
             output_file_path = '/tmp/Conquest16-Upgraded.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
