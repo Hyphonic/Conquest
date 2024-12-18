@@ -1,7 +1,8 @@
-name: 🔍 Code Check
+name: 🔍 Code Check & Caching Primes
 
 on:
   pull_request:
+  push:
 
 jobs:
   ollama_review:
@@ -13,23 +14,24 @@ jobs:
           fetch-depth: 0
 
       - name: ⚡ Restore Ollama Cache
+        id: cache-ollama
         uses: actions/cache@v4
         with:
           path: ~/.ollama/models
-          key: ollama-model-${{ runner.os }}-deepseek-coder-v2
+          key: ollama-model-${{ runner.os }}
           restore-keys: |
-            ollama-model-${{ runner.os }}-
+            ollama-model-${{ runner.os }}
+
       - name: ⬇️ Install Ollama
         run: |
           curl -fsSL https://ollama.com/install.sh | bash
           ollama --version
+
       - name: 🚀 Pull Model if Missing
+        if: steps.cache-ollama.outputs.cache-hit != 'true'
         run: |
-          if [ ! -f ~/.ollama/models/deepseek-coder-v2 ]; then
-            ollama pull deepseek-coder-v2
-          else
-            echo "Model already cached!"
-          fi
+          ollama pull deepseek-coder-v2
+      
       - name: 🔍 Review Changed Files
         run: |
           for file in $(git diff --name-only origin/main); do
