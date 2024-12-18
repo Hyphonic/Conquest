@@ -4,80 +4,24 @@ on:
   workflow_dispatch:
   push:
     branches: main
-  pull_request:
-    branches:
-      - '**'
 
 permissions:
   contents: write
 
 jobs:
-  # Upgrade resource pack
-  upgrade_pack:
-    name: 🔄 Upgrade Resource Pack
+  # 16x Optimization job
+  optimize-16x:
+    name: 📉 Downscale to 16x
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Clone repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - name: 🔄 Upgrade resource pack
-        uses: AshleyThew/minecraft-resource-pack-upgrader@v1.1.2
-        with:
-          input_path: './'  # It processes the current directory, no need to specify the output folder
-      - name: 🛠️ Debug upgrade output
-        run: |
-          echo "Listing files in the directory after upgrade:"
-          ls -l
-      - name: 🗃️ Save upgraded resource pack
-        run: |
-          mkdir -p artifacts/upgraded_resourcepack
-          rsync -av --exclude='.git' ./ artifacts/upgraded_resourcepack/  # Copy everything except .git
-      - name: 📦 Upload upgraded resource pack folder
-        uses: actions/upload-artifact@v4
-        with:
-          name: upgraded-resourcepack
-          path: artifacts/upgraded_resourcepack  # Upload the entire folder as an artifact
 
-  # Optimize 32x original
-  packsquash_32x:
-    name: 🗜️ Optimize 32x resource pack
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - name: 🗜️ Run PackSquash 32x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest32'
-          options: |
-            pack_directory = '.'
-            output_file_path = '/tmp/Conquest32.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  # Optimize 16x original
-  packsquash_16x:
-    name: 🗜️ Optimize 16x resource pack
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
       - name: 📉 Downscale to 16x
-        run: |
-          find assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
+        run: find assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
+
       - name: 🗜️ Run PackSquash 16x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
@@ -96,29 +40,24 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
-  # Optimize upgraded 32x
-  packsquash_upgraded_32x:
-    name: 🗜️ Optimize Upgraded 32x resource pack
-    needs: upgrade_pack
+  # 32x Optimization job (without downscaling)
+  optimize-32x:
+    name: 🗜️ Run PackSquash 32x
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Download upgraded resource pack
-        uses: actions/download-artifact@v4
+      - name: 📂 Clone repository
+        uses: actions/checkout@v4
         with:
-          name: upgraded-resourcepack
-          path: /tmp
-      - name: 🛠️ Debug upgrade output
-        run: |
-          echo "Listing files in the directory after upgrade:"
-          ls -l
-      - name: 🗜️ Run PackSquash Upgraded 32x
+          fetch-depth: 0
+
+      - name: 🗜️ Run PackSquash 32x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
-          artifact_name: 'Conquest32-Upgraded'
+          artifact_name: 'Conquest32'
           options: |
-            pack_directory = '/tmp/upgraded_resourcepack'  # Use the downloaded folder directly
-            output_file_path = '/tmp/Conquest32-Upgraded.zip'
+            pack_directory = '.'
+            output_file_path = '/tmp/Conquest32.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
@@ -129,52 +68,17 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
-  # Optimize upgraded 16x
-  packsquash_upgraded_16x:
-    name: 🗜️ Optimize Upgraded 16x resource pack
-    needs: upgrade_pack
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Download upgraded resource pack
-        uses: actions/download-artifact@v4
-        with:
-          name: upgraded-resourcepack
-          path: /tmp
-      - name: 🛠️ Debug upgrade output
-        run: |
-          echo "Listing files in the directory after upgrade:"
-          ls -l
-      - name: 📉 Downscale upgraded to 16x
-        run: |
-          find /tmp/upgraded_resourcepack/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
-      - name: 🗜️ Run PackSquash Upgraded 16x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest16-Upgraded'
-          options: |
-            pack_directory = '/tmp/upgraded_resourcepack'  # Use the downloaded folder directly
-            output_file_path = '/tmp/Conquest16-Upgraded.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  # Finalize release
+  # Finalize release job
   finalize-release:
     name: 🚀 Finalize Release
-    needs: [packsquash_32x, packsquash_16x, packsquash_upgraded_32x, packsquash_upgraded_16x]
+    needs: [optimize-16x, optimize-32x]
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Download all artifacts
+      - name: 📥 Download optimized artifacts
         uses: actions/download-artifact@v4
         with:
           path: /tmp
+
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
         with:
@@ -185,51 +89,47 @@ jobs:
           draft: false
           prerelease: false
           release_name: ${{ github.event.head_commit.message }}
-      - name: 🛠️ List Generated Files
-        run: ls -lh /tmp
-  
-  # Send webhook
+
+  # Send webhook notification with release details
   send-webhook:
     name: 📡 Send Webhook
     needs: finalize-release
     runs-on: ubuntu-latest
     steps:
-      - name: 📥 Download Latest Release
+      - name: 📏 Get the tag from the context
+        id: get_tag
+        run: echo "tag=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
+      - name: 📥 Download Release Files
         run: |
-          curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip
-          curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip
-          curl -L -o /tmp/Conquest32-Upgraded.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest32-Upgraded.zip
-          curl -L -o /tmp/Conquest16-Upgraded.zip https://github.com/${{ github.repository }}/releases/latest/download/Conquest16-Upgraded.zip
-      - name: 📏 Get Release Sizes
+          curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip
+          curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest16.zip
+
+      - name: 📦 Get release sizes
         id: get_sizes
         run: |
           size32=$(du -m /tmp/Conquest32.zip | cut -f1)
           echo "size32=$size32 MB" >> $GITHUB_ENV
           size16=$(du -m /tmp/Conquest16.zip | cut -f1)
           echo "size16=$size16 MB" >> $GITHUB_ENV
-          size32_upgraded=$(du -m /tmp/Conquest32-Upgraded.zip | cut -f1)
-          echo "size32_upgraded=$size32_upgraded MB" >> $GITHUB_ENV
-          size16_upgraded=$(du -m /tmp/Conquest16-Upgraded.zip | cut -f1)
-          echo "size16_upgraded=$size16_upgraded MB" >> $GITHUB_ENV
+
       - name: 🌿 Extract branch name
-        shell: bash
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
+
       - name: 🔍 Extract version from pack.mcmeta
         id: extract_version
         run: |
           version=$(grep -oP '"description":"\\u00A77\[\u00A76\\u00A7n\K[0-9.]+(?=\\u00A77])' pack.mcmeta)
           echo "version=$version" >> $GITHUB_ENV
+
       - name: 🔔 Discord Webhook Action
         uses: tsickert/discord-webhook@v6.0.0
         with:
           webhook-url: ${{ secrets.WEBHOOK_URL_DISABLED }}
           embed-title: New Release 🔔
-          embed-url: https://github.com/${{ github.repository }}
+          embed-url: https://github.com/${{ github.repository }}/releases/tag/${{ env.tag }}
           embed-color: 3535423
           embed-description: |
-            ### Commit ⚡
-            Message » `${{ github.event.head_commit.message }}`
-            Commit Author » `${{ github.event.head_commit.author.name }}`
             ### Release 📦
             Download » [Click here to download 32x⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip)
             Size » `${{ env.size32 }}`
