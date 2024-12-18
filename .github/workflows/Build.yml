@@ -1,4 +1,4 @@
-name: Optimize resource pack
+name: 🛠️ Optimize resource pack
 
 on:
   workflow_dispatch:
@@ -29,12 +29,12 @@ jobs:
         run: |
           ls
           mkdir -p artifacts
-          mv upgraded_resourcepack.zip artifacts/upgraded_resourcepack.zip
-      - name: 📦 Upload upgraded artifact
+          mv upgraded_resourcepack artifacts/upgraded_resourcepack
+      - name: 📦 Upload upgraded resource pack directory
         uses: actions/upload-artifact@v4
         with:
           name: upgraded-resourcepack
-          path: artifacts/upgraded_resourcepack.zip
+          path: artifacts/upgraded_resourcepack
 
   # Optimize 32x original
   packsquash_32x:
@@ -104,8 +104,8 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
-      - name: 📂 Extract upgraded resource pack
-        run: unzip /tmp/upgraded_resourcepack.zip -d upgraded_32x
+      - name: 📂 Copy upgraded resource pack to working directory
+        run: cp -r /tmp/upgraded_resourcepack upgraded_32x
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
@@ -135,8 +135,8 @@ jobs:
         with:
           name: upgraded-resourcepack
           path: /tmp
-      - name: 📂 Extract upgraded resource pack
-        run: unzip /tmp/upgraded_resourcepack.zip -d upgraded_16x
+      - name: 📂 Copy upgraded resource pack to working directory
+        run: cp -r /tmp/upgraded_resourcepack upgraded_16x
       - name: 📉 Downscale upgraded to 16x
         run: |
           find upgraded_16x/assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
