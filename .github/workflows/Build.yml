@@ -24,7 +24,7 @@ jobs:
       - name: 🔄 Upgrade resource pack
         uses: AshleyThew/minecraft-resource-pack-upgrader@v1.1.2
         with:
-          input_path: 'path/to/source/resourcepack'
+          input_path: './'
       - name: 🗃️ Save upgraded resource pack
         run: |
           mkdir -p artifacts
