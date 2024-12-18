@@ -2,7 +2,6 @@ name: 🔍 Code Check & Caching Primes
 
 on:
   pull_request:
-  push:
 
 jobs:
   ollama_review:
@@ -17,10 +16,8 @@ jobs:
         id: cache-ollama
         uses: actions/cache@v4
         with:
-          path: ~/.ollama/models
+          path: ~/.ollama
           key: ollama-model-${{ runner.os }}
-          restore-keys: |
-            ollama-model-${{ runner.os }}
 
       - name: ⬇️ Install Ollama
         run: |
@@ -30,13 +27,13 @@ jobs:
       - name: 🚀 Pull Model if Missing
         if: steps.cache-ollama.outputs.cache-hit != 'true'
         run: |
-          ollama pull deepseek-coder-v2
+          ollama pull qwen2.5-coder:14b
       
       - name: 🔍 Review Changed Files
         run: |
           for file in $(git diff --name-only origin/main); do
             if [ -f "$file" ]; then
               content=$(jq -Rs . < "$file")
-              ollama run deepseek-coder-v2 "Summarize this file: $content"
+              ollama run qwen2.5-coder:14b "Summarize this file (~200 words) and find possible bugs: `$content`"
             fi
           done
