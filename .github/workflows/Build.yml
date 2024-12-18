@@ -4,6 +4,9 @@ on:
   workflow_dispatch:
   push:
     branches: main
+  pull_request:
+    branches:
+      - '**'
 
 permissions:
   contents: write
@@ -174,7 +177,9 @@ jobs:
           draft: false
           prerelease: false
           release_name: ${{ github.event.head_commit.message }}
-
+      - name: 🛠️ List Generated Files
+        run: ls -lh /tmp
+  
   # Send webhook
   send-webhook:
     name: 📡 Send Webhook
