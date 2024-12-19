@@ -103,7 +103,7 @@ jobs:
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
           ls
-          cp -r temp_output_* .
+          rsync -av --remove-source-files temp_output_*/ ./
           chmod -R 755 .
           echo 📂 Copied
           ls
