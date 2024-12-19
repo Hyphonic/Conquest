@@ -200,10 +200,6 @@ jobs:
         with:
           path: /tmp
 
-      - name: 📚
-        run: |
-          find . -type f -iname "*.zip" -print
-
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
         with:
@@ -229,6 +225,8 @@ jobs:
         run: |
           curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip
           curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest16.zip
+          curl -L -o /tmp/Conquest32-Upgraded.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32-Upgraded.zip
+          curl -L -o /tmp/Conquest16-Upgraded.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest16-Upgraded.zip
 
       - name: 📦 Get Release Sizes
         id: get_sizes
@@ -237,15 +235,13 @@ jobs:
           echo "size32=$size32 MB" >> $GITHUB_ENV
           size16=$(du -m /tmp/Conquest16.zip | cut -f1)
           echo "size16=$size16 MB" >> $GITHUB_ENV
+          size32_upgraded=$(du -m /tmp/Conquest32-Upgraded.zip | cut -f1)
+          echo "size32_upgraded=$size32_upgraded MB" >> $GITHUB_ENV
+          size16_upgraded=$(du -m /tmp/Conquest16-Upgraded.zip | cut -f1)
+          echo "size16_upgraded=$size16_upgraded MB" >> $GITHUB_ENV
 
       - name: 🌿 Extract Branch Name
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
-
-      - name: 🔍 Extract Version From pack.mcmeta
-        id: extract_version
-        run: |
-          version=$(grep -oP '"description":"\\u00A77\[\u00A76\\u00A7n\K[0-9.]+(?=\\u00A77])' pack.mcmeta)
-          echo "version=$version" >> $GITHUB_ENV
 
       - name: 🔔 Discord Webhook Action
         uses: tsickert/discord-webhook@v6.0.0
@@ -256,8 +252,7 @@ jobs:
           embed-color: 3535423
           embed-description: |
             ### Release 📦
-            Download » [Click here to download 32x⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip)
-            Size » `${{ env.size32 }}`
-            Download » [Click here to download 16x⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip)
-            Size » `${{ env.size16 }}`
-            Version » `${{ env.version }}`
+            Download » [32x 1.21.1⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip) | Size » `${{ env.size32 }}`
+            Download » [16x 1.21.1⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip) | Size » `${{ env.size16 }}`
+            Download » [32x 1.21.4⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32-Upgraded.zip) | Size » `${{ env.size32_upgraded }}`
+            Download » [16x 1.21.4⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16-Upgraded.zip) | Size » `${{ env.size16_upgraded }}`
