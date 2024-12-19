@@ -149,7 +149,7 @@ jobs:
           path: 'Migrator'
           fetch-depth: 0
 
-      - name: ⬆️ Upgrade Resource Pack 32x
+      - name: ⬆️ Upgrade Resource Pack 16x
         run: |
           expect << EOF
           spawn python Migrator/run.py
@@ -159,13 +159,16 @@ jobs:
           expect eof
           EOF
 
-      - name: 🔪 Prepare PackSquash Upgraded 32x
+      - name: 🔪 Prepare PackSquash Upgraded 16x
         run: |
           rsync -av --remove-source-files temp_output_*/ ./
           chmod -R 755 .
-          echo 📂 Copied
 
-      - name: 🗜️ Run PackSquash Upgraded 32x
+      - name: 📉 Downscale To 16x
+        run: |
+          find . -type f -name '*.png' -exec mogrify -resize 50% {} \;
+
+      - name: 🗜️ Run PackSquash Upgraded 16x
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
