@@ -104,6 +104,8 @@ jobs:
         run: |
           ls
           cp -r temp_output_* packsquash_32/
+          echo 📂 Copied
+          ls
 
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
@@ -111,7 +113,7 @@ jobs:
           packsquash_version: latest-unstable
           artifact_name: 'Conquest32-Upgraded'
           options: |
-            pack_directory = 'packsquash_32'
+            pack_directory = '/packsquash_32'
             output_file_path = '/tmp/Conquest32-Upgraded.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
