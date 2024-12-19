@@ -200,6 +200,10 @@ jobs:
         with:
           path: /tmp
 
+      - name: 📚
+        run: |
+          ls -R /tmp/
+
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
         with:
