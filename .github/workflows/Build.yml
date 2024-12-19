@@ -48,7 +48,7 @@ jobs:
           fetch-depth: 0
 
       - name: 📉 Downscale To 16x
-        run: find assets/minecraft/textures -type f -name '*.png' -exec mogrify -resize 50% {} \;
+        run: find assets/ -type f -name '*.png' -exec mogrify -resize 50% {} \;
 
       - name: 🗜️ Run PackSquash 16x
         uses: ComunidadAylas/PackSquash-action@v4
