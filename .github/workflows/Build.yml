@@ -102,7 +102,7 @@ jobs:
 
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
-          tree --filelimit=100
+          tree --filelimit=10
           unzip "$(find output -name 'pack_*.zip' | head -n 1)" -d files
 
       - name: 🗜️ Run PackSquash Upgraded 32x
