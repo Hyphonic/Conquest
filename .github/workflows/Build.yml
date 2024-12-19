@@ -92,7 +92,6 @@ jobs:
 
       - name: ⬆️ Upgrade Resource Pack 32x
         run: |
-          ls
           expect << EOF
           spawn python Migrator/run.py
           expect "Please enter 1 or 2" { send "2\r" }
@@ -103,8 +102,8 @@ jobs:
 
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
+          tree
           unzip "$(find output -name 'pack_*.zip' | head -n 1)" -d files
-          ls
 
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
