@@ -103,7 +103,7 @@ jobs:
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
           ls
-          find output -name '*.zip' -exec 7z x {} -o "files" \;
+          find output -name '*.zip' -exec 7z x {} -o"files" \;
 
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
