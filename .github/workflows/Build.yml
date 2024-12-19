@@ -69,7 +69,7 @@ jobs:
             image_data_compression_iterations = 40
 
   upgrade-32x:
-    name: 🗜️ Upgrade 32x
+    name: 🗜️ Run PackSquash Upgraded 32x
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Clone Repository
@@ -128,7 +128,7 @@ jobs:
             image_data_compression_iterations = 40
 
   upgrade-16x:
-    name: 🗜️ Upgrade 16x
+    name: 🗜️ Run PackSquash Upgraded 16x
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Clone Repository
@@ -209,7 +209,7 @@ jobs:
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           tag: ${{ github.run_id }}
-          file: /tmp/*.zip
+          file: /tmp/**.zip
           file_glob: true
           draft: false
           prerelease: false
