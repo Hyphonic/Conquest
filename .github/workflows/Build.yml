@@ -9,6 +9,34 @@ permissions:
   contents: write
 
 jobs:
+  # 32x Optimization job (without downscaling)
+  optimize-32x:
+    name: 🗜️ Run PackSquash 32x
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Clone Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🗜️ Run PackSquash 32x
+        uses: ComunidadAylas/PackSquash-action@v4
+        with:
+          packsquash_version: latest-unstable
+          artifact_name: 'Conquest32'
+          options: |
+            pack_directory = '.'
+            output_file_path = '/tmp/Conquest32.zip'
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
+            zip_spec_conformance_level = 'high'
+            spooling_buffers_size = 512
+            threads = 16
+            zip_compression_iterations = 20
+            ['**/*?.ogg']
+            ogg_obfuscation = true
+            ['**/*?.png']
+            image_data_compression_iterations = 40
+
   # 16x Optimization job
   optimize-16x:
     name: 🗜️ Run PackSquash 16x
@@ -30,34 +58,6 @@ jobs:
           options: |
             pack_directory = '.'
             output_file_path = '/tmp/Conquest16.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  # 32x Optimization job (without downscaling)
-  optimize-32x:
-    name: 🗜️ Run PackSquash 32x
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 🗜️ Run PackSquash 32x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest32'
-          options: |
-            pack_directory = '.'
-            output_file_path = '/tmp/Conquest32.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
@@ -102,11 +102,9 @@ jobs:
 
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
-          ls
           rsync -av --remove-source-files temp_output_*/ ./
           chmod -R 755 .
           echo 📂 Copied
-          ls
 
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
@@ -129,10 +127,69 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
+  upgrade-16x:
+    name: 🗜️ Upgrade 16x
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Clone Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: 'input'
+
+      - name: 📩 Install Dependencies
+        run: |
+          sudo apt install expect
+          pip install rich
+
+      - name: 📂 Clone Migrator Repository
+        uses: actions/checkout@v4
+        with:
+          repository: 'BrilliantTeam/Minecraft-ResourcePack-Migrator'
+          path: 'Migrator'
+          fetch-depth: 0
+
+      - name: ⬆️ Upgrade Resource Pack 32x
+        run: |
+          expect << EOF
+          spawn python Migrator/run.py
+          expect "Please enter 1 or 2" { send "2\r" }
+          expect "Please enter 1, 2 or 3" { send "1\r" }
+          expect "Continue conversion" { send "y\r" }
+          expect eof
+          EOF
+
+      - name: 🔪 Prepare PackSquash Upgraded 32x
+        run: |
+          rsync -av --remove-source-files temp_output_*/ ./
+          chmod -R 755 .
+          echo 📂 Copied
+
+      - name: 🗜️ Run PackSquash Upgraded 32x
+        uses: ComunidadAylas/PackSquash-action@v4
+        with:
+          packsquash_version: latest-unstable
+          artifact_name: 'Conquest16-Upgraded'
+          options: |
+            pack_directory = '.'
+            output_file_path = '/tmp/Conquest16-Upgraded.zip'
+            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
+            zip_spec_conformance_level = 'high'
+            spooling_buffers_size = 512
+            threads = 16
+
+            never_store_squash_times = true
+            
+            zip_compression_iterations = 20
+            ['**/*?.ogg']
+            ogg_obfuscation = true
+            ['**/*?.png']
+            image_data_compression_iterations = 40
+
   # Finalize release job
   finalize-release:
     name: 🚀 Finalize Release
-    needs: [optimize-16x, optimize-32x]
+    needs: [optimize-16x, optimize-32x, upgrade-16x, upgrade-32x]
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Download Optimized Artifacts
@@ -142,7 +199,7 @@ jobs:
 
       - name: 📜 List Files
         run: |
-          ls
+          ls -R | grep '\.zip$'
 
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
