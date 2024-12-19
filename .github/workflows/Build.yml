@@ -97,7 +97,7 @@ jobs:
           spawn python Migrator/run.py
           expect "Please enter 1 or 2" { send "2\r" }
           expect "Please enter 1, 2 or 3" { send "1\r" }
-          expect "Continue conversion? [Y/n]" { send "y\r" }
+          expect "Continue conversion" { send "y\r" }
           expect eof
           EOF
 
