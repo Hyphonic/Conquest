@@ -102,8 +102,8 @@ jobs:
 
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
-          tree --filelimit=10
-          unzip "$(find output -name 'converted_*.zip' | head -n 1)" -d files
+          ls
+          find output -name '*.zip' -exec 7z x {} -o "files" \;
 
       - name: 🗜️ Run PackSquash Upgraded 32x
         uses: ComunidadAylas/PackSquash-action@v4
