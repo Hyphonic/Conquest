@@ -99,7 +99,7 @@ jobs:
           expect "Continue conversion" { send "y\r" }
           expect eof
           EOF
-  
+
       - name: 🔪 Prepare PackSquash Upgraded 32x
         run: |
           ls
@@ -119,6 +119,9 @@ jobs:
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
             threads = 16
+
+            never_store_squash_times = true
+            
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
