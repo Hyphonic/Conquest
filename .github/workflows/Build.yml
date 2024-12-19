@@ -200,10 +200,6 @@ jobs:
         with:
           path: /tmp
 
-      - name: 📜 List Files
-        run: |
-          ls -R | grep '\.zip$'
-
       - name: 📦 Create Release
         uses: svenstaro/upload-release-action@2.9.0
         with:
