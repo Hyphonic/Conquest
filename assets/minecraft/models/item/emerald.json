@@ -1,0 +1,80 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "minecraft:item/emerald"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "custom_model_data": 1
+      },
+      "model": "minecraft:item/amethyst"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 2
+      },
+      "model": "minecraft:item/beryl"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 3
+      },
+      "model": "minecraft:item/diamond_2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 4
+      },
+      "model": "minecraft:item/emerald_2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 5
+      },
+      "model": "minecraft:item/jade"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 6
+      },
+      "model": "minecraft:item/jasper"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 7
+      },
+      "model": "minecraft:item/moonstone"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 8
+      },
+      "model": "minecraft:item/obsidian_2"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 9
+      },
+      "model": "minecraft:item/opal"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 10
+      },
+      "model": "minecraft:item/ruby"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 11
+      },
+      "model": "minecraft:item/sapphire"
+    },
+    {
+      "predicate": {
+        "custom_model_data": 12
+      },
+      "model": "minecraft:item/topaz"
+    }
+  ]
+}

@@ -29,7 +29,7 @@ jobs:
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
             spooling_buffers_size = 512
-            threads = 16
+            threads = ${{ runner.jobs }}
             zip_compression_iterations = 20
             ['**/*?.ogg']
             ogg_obfuscation = true
@@ -51,7 +51,7 @@ jobs:
         uses: svenstaro/upload-release-action@2.9.0
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.run_id }}
+          tag: ${{ github.ref_name }}
           file: /tmp/**/*.zip
           file_glob: true
           draft: false
@@ -90,4 +90,4 @@ jobs:
           embed-color: 3535423
           embed-description: |
             ### Release 📦
-            Download » [32x 1.21.1⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip) | Size » `${{ env.size32 }}`
+            Download » [Click Here ⏬](https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip) | Size » `${{ env.size32 }}`
