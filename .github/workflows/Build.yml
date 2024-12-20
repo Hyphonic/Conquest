@@ -9,7 +9,6 @@ permissions:
   contents: write
 
 jobs:
-  # 32x Optimization job (without downscaling)
   optimize-32x:
     name: 🗜️ Run PackSquash 32x
     runs-on: ubuntu-latest
@@ -37,162 +36,10 @@ jobs:
             ['**/*?.png']
             image_data_compression_iterations = 40
 
-  # 16x Optimization job
-  optimize-16x:
-    name: 🗜️ Run PackSquash 16x
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 📉 Downscale To 16x
-        run: find assets/ -type f -name '*.png' -exec mogrify -resize 50% {} \;
-
-      - name: 🗜️ Run PackSquash 16x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest16'
-          options: |
-            pack_directory = '.'
-            output_file_path = '/tmp/Conquest16.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  upgrade-32x:
-    name: 🗜️ Run PackSquash Upgraded 32x
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          path: 'input'
-
-      - name: 📩 Install Dependencies
-        run: |
-          sudo apt install expect
-          pip install rich
-
-      - name: 📂 Clone Migrator Repository
-        uses: actions/checkout@v4
-        with:
-          repository: 'BrilliantTeam/Minecraft-ResourcePack-Migrator'
-          path: 'Migrator'
-          fetch-depth: 0
-
-      - name: ⬆️ Upgrade Resource Pack 32x
-        run: |
-          expect << EOF
-          spawn python Migrator/run.py
-          expect "Please enter 1 or 2" { send "2\r" }
-          expect "Please enter 1, 2 or 3" { send "1\r" }
-          expect "Continue conversion" { send "y\r" }
-          expect eof
-          EOF
-
-      - name: 🔪 Prepare PackSquash Upgraded 32x
-        run: |
-          rsync -av --remove-source-files temp_output_*/ ./
-          chmod -R 755 .
-          echo 📂 Copied
-
-      - name: 🗜️ Run PackSquash Upgraded 32x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest32-Upgraded'
-          options: |
-            pack_directory = '.'
-            output_file_path = '/tmp/Conquest32-Upgraded.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-
-            never_store_squash_times = true
-            
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  upgrade-16x:
-    name: 🗜️ Run PackSquash Upgraded 16x
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📂 Clone Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          path: 'input'
-
-      - name: 📩 Install Dependencies
-        run: |
-          sudo apt install expect
-          pip install rich
-
-      - name: 📂 Clone Migrator Repository
-        uses: actions/checkout@v4
-        with:
-          repository: 'BrilliantTeam/Minecraft-ResourcePack-Migrator'
-          path: 'Migrator'
-          fetch-depth: 0
-
-      - name: ⬆️ Upgrade Resource Pack 16x
-        run: |
-          expect << EOF
-          spawn python Migrator/run.py
-          expect "Please enter 1 or 2" { send "2\r" }
-          expect "Please enter 1, 2 or 3" { send "1\r" }
-          expect "Continue conversion" { send "y\r" }
-          expect eof
-          EOF
-
-      - name: 🔪 Prepare PackSquash Upgraded 16x
-        run: |
-          rsync -av --remove-source-files temp_output_*/ ./
-          chmod -R 755 .
-
-      - name: 📉 Downscale To 16x
-        run: |
-          find . -type f -name '*.png' -exec mogrify -resize 50% {} \;
-
-      - name: 🗜️ Run PackSquash Upgraded 16x
-        uses: ComunidadAylas/PackSquash-action@v4
-        with:
-          packsquash_version: latest-unstable
-          artifact_name: 'Conquest16-Upgraded'
-          options: |
-            pack_directory = '.'
-            output_file_path = '/tmp/Conquest16-Upgraded.zip'
-            allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
-            zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
-            threads = 16
-
-            never_store_squash_times = true
-            
-            zip_compression_iterations = 20
-            ['**/*?.ogg']
-            ogg_obfuscation = true
-            ['**/*?.png']
-            image_data_compression_iterations = 40
-
   # Finalize release job
   finalize-release:
     name: 🚀 Finalize Release
-    needs: [optimize-16x, optimize-32x, upgrade-16x, upgrade-32x]
+    needs: optimize-32x
     runs-on: ubuntu-latest
     steps:
       - name: 📥 Download Optimized Artifacts
@@ -224,21 +71,12 @@ jobs:
       - name: 📥 Download Release Files
         run: |
           curl -L -o /tmp/Conquest32.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip
-          curl -L -o /tmp/Conquest16.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest16.zip
-          curl -L -o /tmp/Conquest32-Upgraded.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32-Upgraded.zip
-          curl -L -o /tmp/Conquest16-Upgraded.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest16-Upgraded.zip
 
       - name: 📦 Get Release Sizes
         id: get_sizes
         run: |
           size32=$(du -m /tmp/Conquest32.zip | cut -f1)
           echo "size32=$size32 MB" >> $GITHUB_ENV
-          size16=$(du -m /tmp/Conquest16.zip | cut -f1)
-          echo "size16=$size16 MB" >> $GITHUB_ENV
-          size32_upgraded=$(du -m /tmp/Conquest32-Upgraded.zip | cut -f1)
-          echo "size32_upgraded=$size32_upgraded MB" >> $GITHUB_ENV
-          size16_upgraded=$(du -m /tmp/Conquest16-Upgraded.zip | cut -f1)
-          echo "size16_upgraded=$size16_upgraded MB" >> $GITHUB_ENV
 
       - name: 🌿 Extract Branch Name
         run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
@@ -253,6 +91,3 @@ jobs:
           embed-description: |
             ### Release 📦
             Download » [32x 1.21.1⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32.zip) | Size » `${{ env.size32 }}`
-            Download » [16x 1.21.1⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16.zip) | Size » `${{ env.size16 }}`
-            Download » [32x 1.21.4⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest32-Upgraded.zip) | Size » `${{ env.size32_upgraded }}`
-            Download » [16x 1.21.4⏬](https://github.com/${{ github.repository }}/releases/latest/download/Conquest16-Upgraded.zip) | Size » `${{ env.size16_upgraded }}`
