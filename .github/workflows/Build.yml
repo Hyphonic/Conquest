@@ -49,7 +49,7 @@ jobs:
           git log --pretty=format:"* %s" $(git describe --tags --abbrev=0 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD >> RELEASE_NOTES.md
           tree
 
-      - name: Create Release
+      - name: 📦 Create Release
         if: ${{ inputs.create_release }}
         uses: softprops/action-gh-release@v2.2.1
         with:
