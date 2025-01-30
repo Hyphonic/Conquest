@@ -23,4 +23,4 @@ jobs:
         with:
           packsquash_version: latest-unstable
           artifact_name: 'Conquest'
-          options: Optimize.toml
+          options: .github/workflows/Optimize.toml
