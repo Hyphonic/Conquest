@@ -37,6 +37,8 @@ jobs:
           # Update pack.mcmeta with branch and tag
           sed -i "s/<branch>/$BRANCH/g" pack.mcmeta
           sed -i "s/<latest tag>/$LATEST_TAG/g" pack.mcmeta
+          echo "⬆️ Updated pack.mcmeta with branch: $BRANCH and latest tag: $LATEST_TAG"
+          cat pack.mcmeta
 
       - name: 🗜️ Run PackSquash
         uses: ComunidadAylas/PackSquash-action@v4
