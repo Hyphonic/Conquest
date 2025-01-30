@@ -1,4 +1,4 @@
-pack_directory = 'pack'
+pack_directory = '/home/runner/work/Hyphonic/Conquest'
 output_file_path = 'Conquest.zip'
 allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
 zip_spec_conformance_level = 'high'
