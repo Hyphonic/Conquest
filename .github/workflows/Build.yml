@@ -26,6 +26,17 @@ jobs:
         if: ${{ inputs.keep_optifine == false }}
         run: |
           sed -i "s/allow_mods = \['OptiFine', 'Minecraft Transit Railway 3'\]/allow_mods = \['Minecraft Transit Railway 3'\]/" .github/workflows/Optimize.toml
+      
+      - name: 🔄 Update pack.mcmeta
+        run: |
+          # Get current branch name
+          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          # Get latest tag
+          LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+          
+          # Update pack.mcmeta with branch and tag
+          sed -i "s/<branch>/$BRANCH/g" pack.mcmeta
+          sed -i "s/<latest tag>/$LATEST_TAG/g" pack.mcmeta
 
       - name: 🗜️ Run PackSquash
         uses: ComunidadAylas/PackSquash-action@v4
