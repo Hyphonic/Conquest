@@ -1,4 +1,4 @@
-pack_directory = '/home/runner/work/Hyphonic/Conquest'
+pack_directory = '.'
 output_file_path = 'Conquest.zip'
 allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
 zip_spec_conformance_level = 'high'
@@ -11,3 +11,9 @@ ogg_obfuscation = true
 ['**/*?.png']
 image_data_compression_iterations = 128
 maximum_width_and_height = 4096
+['README.txt']
+force_include = true
+['LICENSE']
+force_include = true
+['How to install.txt']
+force_include = true
