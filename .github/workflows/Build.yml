@@ -9,8 +9,8 @@ permissions:
   contents: write
 
 jobs:
-  optimize-32x:
-    name: 🗜️ Run PackSquash 32x
+  optimize:
+    name: 🗜️ Run PackSquash
     runs-on: ubuntu-latest
     steps:
       - name: 📂 Clone Repository
@@ -18,107 +18,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: 🗜️ Run PackSquash 32x
+      - name: 🗜️ Run PackSquash
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
-          artifact_name: 'Conquest32'
+          artifact_name: 'Conquest'
           options: |
             pack_directory = '.'
-            output_file_path = 'Conquest32.zip'
+            output_file_path = 'Conquest.zip'
             allow_mods = ['OptiFine', 'Minecraft Transit Railway 3']
             zip_spec_conformance_level = 'high'
-            spooling_buffers_size = 512
+            spooling_buffers_size = 2048
+            color_quantization_target = 'none'
             threads = 12
-            zip_compression_iterations = 20
+            zip_compression_iterations = 40
             ['**/*?.ogg']
             ogg_obfuscation = true
             ['**/*?.png']
-            image_data_compression_iterations = 40
-
-  # Finalize release job
-  finalize-release:
-    name: 🚀 Finalize Release
-    needs: optimize-32x
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📥 Download Optimized Artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: .
-
-      - name: 📂 Clone Repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: 📝 Extract Commit Title and Body
-        id: commit_info
-        run: |
-          commit_title=$(git log -1 --pretty=%s)
-          commit_body=$(git log -1 --pretty=%b)
-          echo "commit_title=$commit_title" >> $GITHUB_ENV
-          echo "commit_body=$commit_body" >> $GITHUB_ENV
-
-      - name: 📝 Generate Changelog
-        id: changelog
-        run: |
-          previous_tag=$(git describe --tags --abbrev=0 HEAD^ || echo "")
-          if [ -z "$previous_tag" ]; then
-            changelog=$(git log --pretty=format:"- %s (%an)")
-          else
-            changelog=$(git log $previous_tag..HEAD --pretty=format:"- %s (%an)")
-          fi
-          echo "changelog<<EOF" >> $GITHUB_ENV
-          echo "$changelog" >> $GITHUB_ENV
-          echo "EOF" >> $GITHUB_ENV
-
-      - name: 📦 Create Release
-        uses: svenstaro/upload-release-action@2.9.0
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          tag: ${{ github.ref_name }}
-          file: '**/*.zip'
-          file_glob: true
-          draft: false
-          prerelease: false
-          release_name: ${{ env.commit_title }}
-          body: |
-            ${{ env.commit_body }}
-
-            ## Changelog
-            ${{ env.changelog }}
-
-  # Send webhook notification with release details
-  send-webhook:
-    name: 📡 Send Webhook
-    needs: finalize-release
-    runs-on: ubuntu-latest
-    steps:
-      - name: 📏 Get Tag From Context
-        id: get_tag
-        run: echo "tag=${GITHUB_REF##*/}" >> $GITHUB_ENV
-
-      - name: 📥 Download Release Files
-        run: |
-          curl -L -o Conquest32.zip https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip
-
-      - name: 📦 Get Release Sizes
-        id: get_sizes
-        run: |
-          size32=$(du -m Conquest32.zip | cut -f1)
-          echo "size32=$size32 MB" >> $GITHUB_ENV
-
-      - name: 🌿 Extract Branch Name
-        run: echo "branch=${GITHUB_HEAD_REF:-${GITHUB_REF#refs/heads/}}" >> $GITHUB_ENV
-
-      - name: 🔔 Discord Webhook Action
-        uses: tsickert/discord-webhook@v6.0.0
-        with:
-          webhook-url: ${{ secrets.WEBHOOK_URL_DISABLED }}
-          embed-title: New Release 🔔
-          embed-url: https://github.com/${{ github.repository }}/releases/tag/${{ env.tag }}
-          embed-color: 3535423
-          embed-description: |
-            ### Release 📦
-            Download » [Click Here ⏬](https://github.com/${{ github.repository }}/releases/download/${{ env.tag }}/Conquest32.zip) | Size » `${{ env.size32 }}`
+            image_data_compression_iterations = 128
+            maximum_width_and_height = 4096
