@@ -17,6 +17,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      
+      - name: 🗑️ Remove Failed Workflows
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh run list --limit 100 --json databaseId,status \
+          | jq -r '.[] | select(.status=="failed" or .status=="cancelled") | .databaseId' \
+          | xargs -I {} gh run delete {} -y
 
       - name: 🗜️ Run PackSquash
         uses: ComunidadAylas/PackSquash-action@v4
