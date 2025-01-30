@@ -10,7 +10,7 @@ ogg_obfuscation = true
 ['**/*?.png']
 color_quantization_target = 'none'
 image_data_compression_iterations = 128
-maximum_width_and_height = 4096
+maximum_width_and_height = 8192
 ['README.txt']
 force_include = true
 ['LICENSE']
