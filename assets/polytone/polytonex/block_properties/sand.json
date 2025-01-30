@@ -1,0 +1,6 @@
+{
+    "targets": [
+        "minecraft:sand"
+    ],
+    "colormap": "triangular_biome_sample"
+}

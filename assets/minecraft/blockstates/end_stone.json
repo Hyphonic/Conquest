@@ -1,0 +1,24 @@
+{
+    "variants": {
+        "": [
+            { "model": "block/end_stone",
+                "weight": 120 },
+            { "model": "block/end_stone_2",
+                "weight": 10 },
+            { "model": "block/end_stone_2", "y": 90,
+                "weight": 10 },
+            { "model": "block/end_stone_2", "y": 180,
+                "weight": 10 },
+            { "model": "block/end_stone_2", "y": 270,
+                "weight": 10 },
+            { "model": "block/end_stone_3",
+                "weight": 5 },
+            { "model": "block/end_stone_3", "y": 90,
+                "weight": 5 },
+            { "model": "block/end_stone_3", "y": 180,
+                "weight": 5 },
+            { "model": "block/end_stone_3", "y": 270,
+                "weight": 5 }
+        ]
+    }
+}

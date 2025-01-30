@@ -1,0 +1,45 @@
+
+
+
+{
+  "multipart": [
+     {
+      "apply": [
+        
+        {"model": "block/grass_block", "weight": 5},
+        {"model": "block/grass_block2", "weight": 5}
+
+      ],
+       "when": {
+        "snowy": "false" }
+    },
+
+    {
+      "apply": [
+      { "model": "block/grass_block_ext"},
+      {  "model": "block/grass_block_ext", "y": 90 },
+      {  "model": "block/grass_block_ext", "y": 180 },
+      {  "model": "block/grass_block_ext", "y": 270 },
+      {  "model": "block/grass_block_ext2"},
+      {  "model": "block/grass_block_ext2", "y": 90 },
+      {  "model": "block/grass_block_ext2", "y": 180},
+      {  "model": "block/grass_block_ext2", "y": 270}
+        ],
+      "when": {
+        "snowy": "false" }
+    },
+
+    {
+      "apply": {
+        "model": "block/grass_block_snow"
+      },
+          "when": {
+        "snowy": "true" }
+    }
+    
+    
+  ]
+}
+
+
+

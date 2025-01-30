@@ -1,0 +1,37 @@
+{
+    "targets": [
+        "conquest:grass",
+        "minecraft:grass",
+        "minecraft:tall_grass",
+        "minecraft:short_grass",
+        "conquest:tall_grass",
+        "conquest:tall_grass_utility",
+        "minecraft:grass_block",
+        "conquest:grass_block_corner_slab",
+        "conquest:grass_block_eighth_slab",
+        "conquest:grass_block_layer",
+        "conquest:grass_block_quarter_slab",
+        "conquest:grass_block_stairs",
+        "conquest:grass_block_vertical_corner",
+        "conquest:grass_block_vertical_quarter",
+        "conquest:grass_block_vertical_slab",
+        "minecraft:sugar_cane",
+        "conquest:clover_covered_grass",
+        "conquest:clover_covered_grass_stairs",
+        "conquest:clover_covered_grass_layer",
+        "conquest:clover_covered_grass_vertical_slab",
+        "conquest:clover_covered_grass_vertical_quarter",
+        "conquest:clover_covered_grass_vertical_corner",
+        "conquest:taiga_grass",
+        "conquest:taiga_grass_layer",
+        "conquest:taiga_grass_vertical_slab",
+        "conquest:taiga_grass_vertical_corner",
+        "conquest:taiga_grass_vertical_quarter",
+        "conquest:taiga_grass_stairs"
+    ],
+    "colormap": {
+        "x_axis": "biome_id",
+        "y_axis": "y_level",
+        "biome_id_mapper": "polytone:biome_mapper"
+    }
+}

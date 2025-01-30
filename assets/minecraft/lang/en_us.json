@@ -1,0 +1,22 @@
+{
+    "demo.help.later": "Play §dVoidTales",
+    "demo.help.title": "Welcome to §dVoidTales",
+    "demo.help.movementShort": "In this RPG-styled server, you will survive in a world filled with quests, dungeons, and other players.",
+    "menu.returnToGame": "Return to §dVoidTales",
+    "options.graphics.fancy": "§6Fancy",
+    "options.graphics.fast": "§cFast",
+    "options.video": "§6Video Settings...",
+    "menu.options": "§6Options...",
+    "options.graphics": "§6Graphics",
+    "options.mipmapLevels": "§6Mipmap Levels",
+    "of.options.AA_LEVEL": "Antialiasing",
+    "options.title": "Options ",
+    "options.videoTitle": "Video Settings ",
+    "options.graphics.fast.tooltip": "Fast graphics reduces the amount of visible rain and snow.\nTransparency effects are disabled for various blocks such as leaves which will look very bad when set to fast!!!.",
+    "pack.dropInfo": "Drag and drop files into this window to add packs §6and use Optifine for ctm when using Conquest!",
+    "menu.disconnect": "",
+    "menu.game": "",
+    "menu.returnToMenu": "",
+    "container.brewing": "                          §f§8              Brewing Stand             §f",
+    "container.repair": "§f                                       §8Repair & Name"
+}

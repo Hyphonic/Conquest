@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/hv_rat_king_sleep"},"elements":[{"from":[0.0,0.0,8.0],"to":[16.0,16.0,8.0],"faces":{"south":{"uv":[8.0,0.0,0.0,8.0],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[0.0,0.0,8.0,8.0],"tintindex":0,"rotation":0,"texture":"#0"}},"rotation":{"origin":[8.0,8.0,8.0],"angle":-22.5,"axis":"y"}}],"display":{"gui":{"rotation":[30,225,0]}}}

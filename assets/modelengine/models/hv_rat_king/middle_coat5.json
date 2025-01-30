@@ -1,0 +1,1 @@
+{"textures":{"1":"modelengine:entity/hv_rat_king"},"elements":[{"from":[-1.224,7.5,8.3239975],"to":[17.223999,7.5,21.675999],"faces":{"up":{"uv":[8.222222,7.7222223,7.2222223,7.0],"tintindex":0,"rotation":0,"texture":"#1"},"down":{"uv":[8.222222,7.7222223,7.2222223,8.444445],"tintindex":0,"rotation":0,"texture":"#1"}}}],"display":{"gui":{"rotation":[30,225,0]}}}

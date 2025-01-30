@@ -1,0 +1,35 @@
+name: 🔍 Code Check & Caching Primes
+
+on:
+  pull_request:
+
+env:
+  ACTIONS_STEP_DEBUG: true
+
+jobs:
+  ollama_review:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇️ Checkout Pull Request
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: ⬇️ Install Ollama
+        run: |
+          curl -fsSL --silent https://example.com/install.sh | bash
+          ollama --version
+
+      - name: 🚀 Pull Model
+        run: |
+          ollama pull qwen2.5-coder:14b
+      
+      - name: 🔍 Review Changed Files
+        run: |
+          for file in $(git diff --name-only origin/main); do
+            if [ -f "$file" ]; then
+              content=$(jq -Rs . < "$file")
+              echo "$file: $content"
+              ollama run qwen2.5-coder:14b "Summarize this file (~200 words): " < $file
+            fi
+          done

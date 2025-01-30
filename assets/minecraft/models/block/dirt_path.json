@@ -1,0 +1,33 @@
+{
+	"credit": "Designed by Monsterfish_ with Cubik Studio - https://cubik.studio",
+	"parent": "block/cube_all",
+	"textures": {
+		"particle": "block/grass_path_top",
+		"texture": "block/grass_path_top"
+	},
+	"elements": [
+		{
+			"name": "Cube1",
+			"from": [0, 0, 0],
+			"to": [16, 15, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -1, 0]},
+			"faces": {
+				"north": {"uv": [0, 1, 16, 16], "texture": "#texture", "cullface": "north", "tintindex": 1},
+				"east": {"uv": [0, 1, 16, 16], "texture": "#texture", "cullface": "east"},
+				"south": {"uv": [0, 1, 16, 16], "texture": "#texture", "cullface": "south"},
+				"west": {"uv": [0, 1, 16, 16], "texture": "#texture", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#texture", "tintindex": 0},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#texture", "cullface": "down"}
+			}
+		},
+		{
+			"name": "Cube2",
+			"from": [0, 15.10938, 0],
+			"to": [16, 15.10938, 16],
+			"rotation": {"angle": 0, "axis": "y", "origin": [0, -0.89062, 0]},
+			"faces": {
+				"up": {"uv": [0, 0, 16, 16], "texture": "#texture"}
+			}
+		}
+	]
+}

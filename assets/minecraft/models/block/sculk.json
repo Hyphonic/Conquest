@@ -1,0 +1,509 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "minecraft:block/cube_all",
+	"texture_size": [32, 32],
+	"textures": {
+		"1": "block/sculk_vein_extend",
+		"particle": "block/sculk_vein_extend",
+		"all": "block/sculk"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 16, 16],
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "north"},
+				"east": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "east"},
+				"south": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "south"},
+				"west": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "up"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#all", "cullface": "down"}
+			}
+		},
+		{
+			"from": [-3, 0, 5.5],
+			"to": [2.5, 3.5, 7.5],
+			"rotation": {"angle": 45, "axis": "z", "origin": [-1, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 5.5, 3.5], "texture": "#all", "cullface": "west"},
+				"east": {"uv": [0, 0, 2, 3.5], "texture": "#all", "cullface": "west"},
+				"south": {"uv": [0, 0, 5.5, 3.5], "texture": "#all", "cullface": "west"},
+				"west": {"uv": [0, 0, 2, 3.5], "texture": "#all", "cullface": "west"},
+				"up": {"uv": [0, 0, 5.5, 2], "texture": "#all", "cullface": "west"},
+				"down": {"uv": [0, 0, 5.5, 2], "texture": "#all", "cullface": "west"}
+			}
+		},
+		{
+			"from": [10.5, 1, 3],
+			"to": [13.5, 4.5, 7],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3.5], "texture": "#all", "cullface": "north"},
+				"east": {"uv": [0, 0, 4, 3.5], "texture": "#all", "cullface": "north"},
+				"west": {"uv": [0, 0, 4, 3.5], "texture": "#all", "cullface": "north"},
+				"up": {"uv": [0, 0, 3, 4], "texture": "#all", "cullface": "north"},
+				"down": {"uv": [0, 0, 3, 4], "texture": "#all", "cullface": "north"}
+			}
+		},
+		{
+			"from": [-3.5, 3.5, 6],
+			"to": [0, 9, 8],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [-1, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 5.5, 3.5], "rotation": 90, "texture": "#all", "cullface": "west"},
+				"south": {"uv": [0, 0, 5.5, 3.5], "rotation": 270, "texture": "#all", "cullface": "west"},
+				"west": {"uv": [0, 0, 5.5, 2], "rotation": 270, "texture": "#all", "cullface": "west"},
+				"down": {"uv": [0, 0, 2, 3.5], "rotation": 270, "texture": "#all", "cullface": "west"}
+			}
+		},
+		{
+			"from": [0, 3.5, -2.5],
+			"to": [3.5, 9, -0.5],
+			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 5.5, 3.5], "rotation": 90, "texture": "#all", "cullface": "north"},
+				"south": {"uv": [0, 0, 5.5, 3.5], "rotation": 270, "texture": "#all", "cullface": "north"},
+				"west": {"uv": [0, 0, 5.5, 2], "rotation": 270, "texture": "#all", "cullface": "north"},
+				"up": {"uv": [0, 0, 2, 3.5], "rotation": 270, "texture": "#all", "cullface": "north"},
+				"down": {"uv": [0, 0, 2, 3.5], "rotation": 270, "texture": "#all", "cullface": "north"}
+			}
+		},
+		{
+			"from": [-6.5, 1, 11],
+			"to": [-3.5, 4.5, 13],
+			"rotation": {"angle": 22.5, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 3, 3.5], "texture": "#all", "cullface": "west"},
+				"south": {"uv": [0, 0, 3, 3.5], "texture": "#all", "cullface": "west"},
+				"west": {"uv": [0, 0, 2, 3.5], "texture": "#all", "cullface": "west"},
+				"up": {"uv": [0, 0, 3, 2], "texture": "#all", "cullface": "west"},
+				"down": {"uv": [0, 0, 3, 2], "texture": "#all", "cullface": "west"}
+			}
+		},
+		{
+			"from": [10, 2.84619, 14.51346],
+			"to": [12, 6.34619, 19.01346],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [11, 4.59619, 16.26346]},
+			"faces": {
+				"east": {"uv": [0, 0, 4.5, 3.5], "texture": "#all", "cullface": "south"},
+				"south": {"uv": [0, 0, 2, 3.5], "texture": "#all", "cullface": "south"},
+				"west": {"uv": [0, 0, 4.5, 3.5], "texture": "#all", "cullface": "south"},
+				"up": {"uv": [0, 0, 4.5, 2], "rotation": 90, "texture": "#all", "cullface": "south"},
+				"down": {"uv": [0, 0, 4.5, 2], "rotation": 270, "texture": "#all", "cullface": "south"}
+			}
+		},
+		{
+			"from": [13.25, 9.84619, 9.26346],
+			"to": [17.25, 13.34619, 11.26346],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [11, 4.59619, 16.26346]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 3.5], "texture": "#all", "cullface": "east"},
+				"east": {"uv": [0, 0, 2, 3.5], "texture": "#all", "cullface": "east"},
+				"south": {"uv": [0, 0, 4, 3.5], "texture": "#all", "cullface": "east"},
+				"up": {"uv": [0, 0, 4, 2], "texture": "#all", "cullface": "east"},
+				"down": {"uv": [0, 0, 4, 2], "texture": "#all", "cullface": "east"}
+			}
+		},
+		{
+			"from": [17.97259, 7.09619, 11.89346],
+			"to": [18.97259, 11.09619, 13.89346],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [17.22259, 11.59619, 12.34658]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 1], "rotation": 270, "texture": "#all", "cullface": "east"},
+				"east": {"uv": [0, 0, 4, 2], "rotation": 90, "texture": "#all", "cullface": "east"},
+				"south": {"uv": [0, 0, 4, 1], "rotation": 90, "texture": "#all", "cullface": "east"},
+				"west": {"uv": [0, 0, 4, 2], "rotation": 90, "texture": "#all", "cullface": "east"},
+				"up": {"uv": [0, 0, 2, 1], "rotation": 90, "texture": "#all", "cullface": "east"},
+				"down": {"uv": [0, 0, 2, 1], "rotation": 90, "texture": "#all", "cullface": "east"}
+			}
+		},
+		{
+			"from": [5, -3, 0],
+			"to": [12.5, 0, 7.5],
+			"rotation": {"angle": -22.5, "axis": "y", "origin": [0, 2.5, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 7.5, 3], "texture": "#all", "cullface": "down"},
+				"east": {"uv": [0, 0, 7.5, 3], "texture": "#all", "cullface": "down"},
+				"south": {"uv": [0, 0, 7.5, 3], "texture": "#all", "cullface": "down"},
+				"west": {"uv": [0, 0, 7.5, 3], "texture": "#all", "cullface": "down"},
+				"down": {"uv": [0, 0, 7.5, 7.5], "texture": "#all", "cullface": "down"}
+			}
+		},
+		{
+			"from": [5, -8.5, 3],
+			"to": [9, -3, 7.5],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 2.5, 0]},
+			"faces": {
+				"north": {"uv": [0, 0, 4, 5.5], "texture": "#all", "cullface": "down"},
+				"east": {"uv": [0, 0, 4.5, 5.5], "texture": "#all", "cullface": "down"},
+				"south": {"uv": [0, 0, 4, 5.5], "texture": "#all", "cullface": "down"},
+				"west": {"uv": [0, 0, 4.5, 5.5], "texture": "#all", "cullface": "down"},
+				"down": {"uv": [0, 0, 4, 4.5], "texture": "#all", "cullface": "down"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_1",
+			"from": [4, 19.67188, 12.5],
+			"to": [5.5, 20.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [5.5, 2, 4, 2.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [4, 2, 5.5, 2.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_3",
+			"from": [10, 19.17188, 12.5],
+			"to": [11.5, 20.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [11.5, 2, 10, 3], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [10, 2, 11.5, 3], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_4",
+			"from": [4.5, 19.17188, 12.5],
+			"to": [5.5, 19.67188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [5.5, 2.5, 4.5, 3], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [4.5, 2.5, 5.5, 3], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_5",
+			"from": [7, 17.67188, 12.5],
+			"to": [7.5, 19.67188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [7.5, 2.5, 7, 4.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [7, 2.5, 7.5, 4.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_6",
+			"from": [9.5, 15.67188, 12.5],
+			"to": [10, 19.67188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [10, 2.5, 9.5, 6.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [9.5, 2.5, 10, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_7",
+			"from": [5, 15.67188, 12.5],
+			"to": [5.5, 19.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [5.5, 3, 5, 6.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [5, 3, 5.5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_8",
+			"from": [7.5, 15.67188, 12.5],
+			"to": [8, 19.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [8.5, 5, 9, 8.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [7.5, 3, 8, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_9",
+			"from": [10, 18.67188, 12.5],
+			"to": [10.5, 19.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [10.5, 3, 10, 3.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [10, 3, 10.5, 3.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_10",
+			"from": [2.5, 15.67188, 12.5],
+			"to": [3, 18.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [3, 4, 2.5, 6.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [2.5, 4, 3, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_11",
+			"from": [4.5, 15.67188, 12.5],
+			"to": [5, 18.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [5, 4, 4.5, 6.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [4.5, 4, 5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_12",
+			"from": [10, 16.17188, 12.5],
+			"to": [10.5, 18.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [10.5, 4, 10, 6], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [10, 4, 10.5, 6], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_13",
+			"from": [2, 16.17188, 12.5],
+			"to": [2.5, 17.67188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [2.5, 4.5, 2, 6], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [2, 4.5, 2.5, 6], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_14",
+			"from": [10.5, 16.67188, 12.5],
+			"to": [11, 17.67188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [11, 4.5, 10.5, 5.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [10.5, 4.5, 11, 5.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_15",
+			"from": [8, 15.67188, 12.5],
+			"to": [9.5, 17.17188, 12.5],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [6.5, 18.5, 12.5]},
+			"faces": {
+				"north": {"uv": [9.5, 5, 8, 6.5], "texture": "#1", "cullface": "up"},
+				"south": {"uv": [8, 5, 9.5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_1",
+			"from": [-4.5, 19, 0],
+			"to": [-4.5, 20, 1],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [11.5, 1.5, 12.5, 2.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [12.5, 1.5, 11.5, 2.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_2",
+			"from": [-4.5, 19, 7],
+			"to": [-4.5, 19.5, 8.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [4, 2, 5.5, 2.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [5.5, 2, 4, 2.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_3",
+			"from": [-4.5, 19, 5],
+			"to": [-4.5, 19.5, 6],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [6.5, 2, 7.5, 2.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [7.5, 2, 6.5, 2.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_4",
+			"from": [-4.5, 18.5, 1],
+			"to": [-4.5, 19.5, 2.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [10, 2, 11.5, 3], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [11.5, 2, 10, 3], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_5",
+			"from": [-4.5, 18.5, 7],
+			"to": [-4.5, 19, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [4.5, 2.5, 5.5, 3], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [5.5, 2.5, 4.5, 3], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_6",
+			"from": [-4.5, 17, 5],
+			"to": [-4.5, 19, 5.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [7, 2.5, 7.5, 4.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [7.5, 2.5, 7, 4.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_7",
+			"from": [-4.5, 15, 2.5],
+			"to": [-4.5, 19, 3],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [9.5, 2.5, 10, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [10, 2.5, 9.5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_8",
+			"from": [-4.5, 15, 7],
+			"to": [-4.5, 18.5, 7.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [5, 3, 5.5, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [5.5, 3, 5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_9",
+			"from": [-4.5, 15, 4.5],
+			"to": [-4.5, 18.5, 5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [7.5, 3, 8, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [8.5, 5, 9, 8.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_10",
+			"from": [-4.5, 18, 2],
+			"to": [-4.5, 18.5, 2.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [10, 3, 10.5, 3.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [10.5, 3, 10, 3.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_11",
+			"from": [-4.5, 15, 9.5],
+			"to": [-4.5, 17.5, 10],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [2.5, 4, 3, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [3, 4, 2.5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_12",
+			"from": [-4.5, 15, 7.5],
+			"to": [-4.5, 17.5, 8],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [4.5, 4, 5, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [5, 4, 4.5, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_13",
+			"from": [-4.5, 15.5, 2],
+			"to": [-4.5, 17.5, 2.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [10, 4, 10.5, 6], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [10.5, 4, 10, 6], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_14",
+			"from": [-4.5, 15.5, 10],
+			"to": [-4.5, 17, 10.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [2, 4.5, 2.5, 6], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [2.5, 4.5, 2, 6], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_15",
+			"from": [-4.5, 16, 1.5],
+			"to": [-4.5, 17, 2],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [10.5, 4.5, 11, 5.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [11, 4.5, 10.5, 5.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_16",
+			"from": [-4.5, 15, 3],
+			"to": [-4.5, 16.5, 4.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [8, 5, 9.5, 6.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [9.5, 5, 8, 6.5], "texture": "#1", "cullface": "up"}
+			}
+		},
+		{
+			"name": "sculk_vein_extend_17",
+			"from": [-4.5, 16, 0],
+			"to": [-4.5, 16.5, 1.5],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [2.25, 17.625, -11.125]},
+			"faces": {
+				"east": {"uv": [11, 5, 12.5, 5.5], "texture": "#1", "cullface": "up"},
+				"west": {"uv": [12.5, 5, 11, 5.5], "texture": "#1", "cullface": "up"}
+			}
+		}
+	],
+	"groups": [
+		0,
+		{
+			"name": "group",
+			"origin": [0, 2.5, 0],
+			"color": 0,
+			"children": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+		},
+		{
+			"name": "bone",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"shade": false,
+			"children": [11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+		},
+		{
+			"name": "bone",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"shade": false,
+			"children": [25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41]
+		}
+	]
+}
