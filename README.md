@@ -23,7 +23,7 @@ This pack is designed specifically for the [`VoidTales`](https://web.voidtales.w
 
 ## 📦 Installation  
 
-Follow our detailed guide on how to install the **Conquest** resource pack [`here`](How to install.md).
+Follow our detailed guide on how to install the **Conquest** resource pack [`here`](How%20to%20install.md).
 
 ⚠️ **Disclaimer:** I am *not* the original creator of this resource pack. Full credit goes to [`Monsterfish`](https://www.curseforge.com/members/monsterfish_/projects) for their amazing work.  
 
