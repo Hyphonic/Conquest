@@ -17,3 +17,7 @@ force_include = true
 force_include = true
 ['How to install.txt']
 force_include = true
+['overlay_*/**/*']
+force_include = true
+['**/*?.{fsh,vsh,glsl}']
+shader_source_transformation_strategy = 'keep_as_is'
