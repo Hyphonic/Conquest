@@ -1,4 +1,12 @@
 {
+    "block.minecraft.crimson_stem": "Crimson Log",
+    "block.minecraft.stripped_crimson_stem": "Stripped Crimson Log",
+    "block.minecraft.crimson_hyphae": "Crimson Wood",
+    "block.minecraft.stripped_crimson_hyphae": "Stripped Crimson Wood",
+    "block.minecraft.warped_stem": "Warped Log",
+    "block.minecraft.stripped_warped_stem": "Stripped Warped Log",
+    "block.minecraft.warped_hyphae": "Warped Wood",
+    "block.minecraft.stripped_warped_hyphae": "Stripped Warped Wood",
     "demo.help.later": "Play §dVoidTales",
     "demo.help.title": "Welcome to §dVoidTales",
     "demo.help.movementShort": "In this RPG-styled server, you will survive in a world filled with quests, dungeons, and other players.",
