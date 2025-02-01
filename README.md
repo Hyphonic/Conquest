@@ -8,7 +8,7 @@
 ![🏷️ Repo Size](https://img.shields.io/github/repo-size/Hyphonic/Conquest?style=flat&label=%F0%9F%8F%B7%EF%B8%8F%20Repo%20Size&labelColor=black&color=white)
 [![💬 Chat with us](https://img.shields.io/discord/1264616683671388252?style=flat&label=%F0%9F%92%AC%20Chat%20with%20us&labelColor=black&color=white)](https://discord.gg/a526aRaMxh)
 
-A modified version of [Monsterfish's Conquest Resource Pack](https://conquestreforged.com/conquest-pack), tailored for the RPG-style Minecraft server [`VoidTales`](https://web.voidtales.win/)!  
+A modified version of [`Monsterfish's Conquest Resource Pack`](https://conquestreforged.com/conquest-pack), tailored for the RPG-style Minecraft server [`VoidTales`](https://web.voidtales.win/)!  
 
 ## ✨ Features & Customizations  
 
