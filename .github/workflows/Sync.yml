@@ -21,18 +21,23 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
 
-      - name: 🔄 Switch To 1.21-leafless
-        run: git checkout 1.21-leafless
-
-      - name: 🍒 Cherry-Pick New Commits From 1.21
-        run: |
-          git checkout 1.21
-          git log 1.21-leafless..1.21 --pretty=format:"%H" | tac | while read commit; do
-            git checkout 1.21-leafless
-            git cherry-pick -X theirs $commit || (git cherry-pick --abort && echo "Conflict detected, skipping commit $commit")
-          done
-
-      - name: ➡️ Push Changes To 1.21-leafless
+      - name: 🔄 Cherry-Pick New Commits
         run: |
           git checkout 1.21-leafless
+          
+          # Store commits in array
+          mapfile -t commits < <(git log --reverse --pretty=format:"%H" 1.21-leafless..1.21)
+          
+          # Debug output
+          echo "Found ${#commits[@]} commits to cherry-pick"
+          
+          # Process each commit
+          for commit in "${commits[@]}"; do
+            echo "Cherry-picking commit: $commit"
+            if ! git cherry-pick -X theirs "$commit"; then
+              echo "Conflict in commit $commit - skipping"
+              git cherry-pick --abort
+            fi
+          done
+          
           git push origin 1.21-leafless
