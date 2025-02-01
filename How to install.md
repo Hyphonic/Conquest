@@ -50,5 +50,5 @@ Dive into your world and experience **the immersive RPG feel of Conquest**!
 ---
   
 > [!NOTE]
-> 📝 Created by Monster_
+> 📝 Created by Monster_\
 > All credits go to the original creator of the Conquest resource pack.
