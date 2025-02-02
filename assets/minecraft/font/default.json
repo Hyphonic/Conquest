@@ -17,17 +17,6 @@
         },
         {
             "type": "bitmap",
-            "file": "font/spritesheet.png",
-            "height": 7,
-            "ascent": 6,
-            "chars": [
-                "",
-                "",
-                ""
-            ]
-        },
-        {
-            "type": "bitmap",
             "file": "font/emojis/emojis.png",
             "ascent": 8,
             "height": 9,
