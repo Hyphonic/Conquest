@@ -14,13 +14,17 @@ permissions:
 
 jobs:
   optimize:
-    name: 🗜️ Run PackSquash
+    name: 🗜️ Run PackSquash (${{ matrix.branch }})
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        branch: ['1.21', '1.21-leafless']
     steps:
       - name: 📂 Clone Repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ matrix.branch }}
       
       - name: 🔧 Modify Optimize.toml (Remove OptiFine if needed)
         if: ${{ inputs.keep_optifine == false }}
@@ -30,7 +34,7 @@ jobs:
       - name: 🔄 Update pack.mcmeta
         run: |
           # Get current branch name
-          BRANCH=$(git rev-parse --abbrev-ref HEAD)
+          BRANCH="${{ matrix.branch }}"
           # Get latest tag
           LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
           
@@ -44,5 +48,5 @@ jobs:
         uses: ComunidadAylas/PackSquash-action@v4
         with:
           packsquash_version: latest-unstable
-          artifact_name: 'Conquest'
+          artifact_name: 'Conquest-${{ matrix.branch }}'
           options: .github/workflows/Optimize.toml
