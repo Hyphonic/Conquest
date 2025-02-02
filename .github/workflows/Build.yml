@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: ['1.21', '1.21-leafless']
+        branch: ['1.21', '1.21-leafless', '1.21-preview']
     steps:
       - name: 📂 Clone Repository
         uses: actions/checkout@v4
