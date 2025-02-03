@@ -64,6 +64,6 @@ if __name__ == "__main__":
     Parser = argparse.ArgumentParser(description="Convert text to a bitmap.")
     Parser.add_argument("--text", help="The text to convert.", required=True, default="Hello, World")
     Parser.add_argument("--color", help="The color to use: Red, Blue, or Green.", default="Red")
-    Parser.add_argument("--space", help="Add an extra space to the beginning and end of the text.", action="store_true")
+    Parser.add_argument("--space", help="Add an extra space to the beginning and end of the text.", type=lambda x: (str(x).lower() == 'true'), default=False)
     Args = Parser.parse_args()
     TextToBitmap(Args.text, Args.color, Args.space)
