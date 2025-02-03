@@ -43,6 +43,16 @@
                 "",
                 ""
             ]
+        },        {
+            "type": "bitmap",
+            "file": "font/spritesheet.png",
+            "height": 7,
+            "ascent": 6,
+            "chars": [
+                "",
+                "",
+                ""
+            ]
         },
         {
             "type": "bitmap",
