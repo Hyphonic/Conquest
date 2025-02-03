@@ -23,5 +23,5 @@ force_include = true
 force_include = true
 ['**/*?.{fsh,vsh,glsl}']
 shader_source_transformation_strategy = 'keep_as_is'
-['assets/space/**/*']
+['**/space/**/*']
 force_include = true
