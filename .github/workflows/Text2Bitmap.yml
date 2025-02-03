@@ -1,0 +1,40 @@
+name: 📜 Generate Text From Bitmap
+
+on:
+  workflow_dispatch:
+    inputs:
+      text: 
+        description: 'Text to convert to characters'
+        required: true
+        default: ''
+        type: string
+      color: 
+        description: 'Color of the text, red, green, blue'
+        required: true
+        options:
+            - 'red'
+            - 'green'
+            - 'blue'
+        type: choice
+      space: 
+        description: 'Add extra space to beginning and end of text'
+        required: true
+        default: true
+        type: boolean
+
+permissions:
+  contents: write
+
+jobs:
+  optimize:
+    name: 📜 Generate Text From Bitmap
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📂 Clone Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: 🧪 Convert Text To Characters
+        run: |
+          python scripts/Text2Bitmap.py --text "${{ inputs.text }}" --color "${{ inputs.color }}" --space "${{ inputs.space }}"
