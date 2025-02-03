@@ -17,9 +17,9 @@ BitmapRows = [
 ]
 
 ColorMapping = {
-    "Red": 0,
+    "Purple": 0,
     "Blue": 1,
-    "Green": 2
+    "Yellow": 2
 }
 
 def TextToBitmap(InputText: str, ColorChoice: str, Space: bool) -> str:
@@ -30,7 +30,7 @@ def TextToBitmap(InputText: str, ColorChoice: str, Space: bool) -> str:
     Returns the concatenated glyphs, separated by the zero width character.
     """
     if ColorChoice.title() not in ColorMapping:
-        sys.exit("Invalid color choice. Use Red, Blue, or Green.")
+        sys.exit("Invalid color choice. Use Purple, Blue, or Yellow.")
 
     SelectedRow = BitmapRows[ColorMapping[ColorChoice.title()]]
     BitmapList = []
