@@ -55,7 +55,7 @@ def TextToBitmap(InputText: str, ColorChoice: str, Space: bool) -> str:
     BitmapList.append(SelectedRow[len(SelectedRow)-1]) if Space else None
     InputTextVisual = f" {InputText.upper()} " if Space else InputText.upper()
 
-    console = Console()
+    console = Console(force_terminal=True)
     console.print(InputTextVisual, style=Style(bgcolor=ColorChoice.title().lower()))
 
     console.print(ZeroWidthCharacter.join(BitmapList))
