@@ -1,0 +1,40 @@
+name: 🔄️ Sync Branches
+
+on:
+  push:
+    branches:
+      - 1.21
+
+jobs:
+  sync-branches:
+    name: 🔄️ Sync Branches
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📂 Checkout 1.21
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Fetch all history for proper branch handling
+
+      - name: 🔍 Set Up Git
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - name: 🍃 Sync To 1.21-leafless
+        run: |
+          git checkout 1.21-leafless 2>/dev/null || git checkout -b 1.21-leafless
+          git reset --hard origin/1.21
+          git checkout origin/1.21 -- "assets/minecraft/models/block"
+          git add -A
+          git commit -m "🔄️ Sync with 1.21 (preserving leafless changes)" || true
+          git push origin 1.21-leafless --force
+
+      - name: 🔹 Sync To 1.21-lite
+        run: |
+          git checkout 1.21-lite 2>/dev/null || git checkout -b 1.21-lite
+          git reset --hard origin/1.21
+          rm -rf "assets/minecraft/optifine"
+          git add -A
+          git commit -m "🔄️ Sync with 1.21 (removing optifine)" || true
+          git push origin 1.21-lite --force
