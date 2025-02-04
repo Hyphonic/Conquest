@@ -2,12 +2,6 @@ name: 🛠️ Optimize Resource Pack
 
 on:
   workflow_dispatch:
-    inputs:
-      keep_optifine: 
-        description: 'Keep Optifine-Specific Features?'
-        required: false
-        default: true
-        type: boolean
 
 permissions:
   contents: write
@@ -18,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        branch: ['1.21', '1.21-leafless']
+        branch: [1.21, 1.21-leafless, 1.21-lite]
     steps:
       - name: 📂 Clone Repository
         uses: actions/checkout@v4
@@ -26,15 +20,11 @@ jobs:
           fetch-depth: 0
           ref: ${{ matrix.branch }}
       
-      - name: 🔧 Modify Optimize.toml (Remove OptiFine if needed)
-        if: ${{ inputs.keep_optifine == false }}
-        run: |
-          sed -i "s/allow_mods = \['OptiFine', 'Minecraft Transit Railway 3'\]/allow_mods = \['Minecraft Transit Railway 3'\]/" .github/workflows/Optimize.toml
-      
       - name: 🔄 Update pack.mcmeta
         run: |
           # Get current branch name
           BRANCH="${{ matrix.branch }}"
+
           # Get latest tag
           LATEST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
           
