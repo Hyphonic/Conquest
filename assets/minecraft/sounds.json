@@ -1,1332 +1,3733 @@
 {
-  "music.menu": {
-      "sounds": [
-          {
-              "name": "music/game/deeper",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/eld_unknown",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/endless",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/featherfall",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/komorebi",
-              "stream": true,
-              "volume": 0.8
-          },
-          {
-              "name": "music/game/pokopoko",
-              "stream": true,
-              "volume": 0.8
-          },
-          {
-              "name": "music/game/puzzlebox",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/watcher",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/yakusoku",
-              "stream": true,
-              "volume": 0.8
-          },
-          {
-              "name": "music/game/a_familiar_room",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/bromeliad",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/crescent_dunes",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/echo_in_the_wind",
-              "stream": true,
-              "volume": 0.4
-          },
-          {
-              "name": "music/game/swamp/aerie",
-              "stream": true
-          },
-          {
-              "name": "music/game/swamp/firebugs",
-              "stream": true
-          },
-          {
-              "name": "music/game/swamp/labyrinthine",
-              "stream": true
-          },
-          {
-              "name": "music/game/infinite_amethyst",
-              "stream": true
-          },
-          {
-              "name": "music/game/left_to_bloom",
-              "stream": true
-          },
-          {
-              "name": "music/game/one_more_day",
-              "stream": true
-          },
-          {
-              "name": "music/game/stand_tall",
-              "stream": true
-          },
-          {
-              "name": "music/game/wending",
-              "stream": true
-          },
-          {
-              "name": "music/menu/beginning_2",
-              "stream": true
-          },
-          {
-              "name": "music/menu/floating_trees",
-              "stream": true
-          },
-          {
-              "name": "music/menu/moog_city_2",
-              "stream": true
-          },
-          {
-              "name": "music/menu/mutation",
-              "stream": true
-          }
-      ]
-  },
-  "block.portal.ambient": {
-      "sounds": [
-          {
-              "attenuation_distance": 10,
-              "name": "portal/portal",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.portal.ambient"
-  },
-  "block.portal.travel": {
-      "sounds": [
-          {
-              "name": "portal/travel",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "block.portal.trigger": {
-      "sounds": [
-          {
-              "name": "portal/trigger",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.portal.trigger"
-  },
-  "ambient.underwater.enter": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/enter1",
-              "volume": 0.025
-          },
-          {
-              "name": "ambient/underwater/enter2",
-              "volume": 0.025
-          },
-          {
-              "name": "ambient/underwater/enter3",
-              "volume": 0.025
-          }
-      ],
-      "replace": true
-  },
-  "ambient.underwater.exit": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/exit1",
-              "volume": 0.015
-          },
-          {
-              "name": "ambient/underwater/exit2",
-              "volume": 0.015
-          },
-          {
-              "name": "ambient/underwater/exit3",
-              "volume": 0.015
-          }
-      ],
-      "replace": true
-  },
-  "ambient.underwater.loop": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/underwater_ambience",
-              "stream": true,
-              "volume": 0.0325
-          }
-      ],
-      "replace": true
-  },
-  "ambient.underwater.loop.additions": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/additions/bubbles1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/bubbles2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/bubbles3",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/bubbles4",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/bubbles5",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/bubbles6",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/water1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/water2",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "ambient.underwater.loop.additions.rare": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/additions/animal1",
-              "volume": 0.0225
-          },
-          {
-              "name": "ambient/underwater/additions/bass_whale1",
-              "volume": 0.0225
-          },
-          {
-              "name": "ambient/underwater/additions/bass_whale2",
-              "volume": 0.025
-          },
-          {
-              "name": "ambient/underwater/additions/crackles1",
-              "volume": 0.035
-          },
-          {
-              "name": "ambient/underwater/additions/crackles2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/driplets1",
-              "volume": 0.025
-          },
-          {
-              "name": "ambient/underwater/additions/driplets2",
-              "volume": 0.025
-          },
-          {
-              "name": "ambient/underwater/additions/earth_crack",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "ambient.underwater.loop.additions.ultra_rare": {
-      "sounds": [
-          {
-              "name": "ambient/underwater/additions/animal2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/dark1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/dark2",
-              "volume": 0.035
-          },
-          {
-              "name": "ambient/underwater/additions/dark3",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/underwater/additions/dark4",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "block.pointed_dripstone.drip_water": {
-      "sounds": [
-          {
-              "name": "block/pointed_dripstone/drip_water1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water6",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water7",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water8",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water9",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water10",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water11",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water12",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water13",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water14",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water15",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.pointed_dripstone.drip_water"
-  },
-  "block.pointed_dripstone.drip_water_into_cauldron": {
-      "sounds": [
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron6",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron7",
-              "volume": 0.05
-          },
-          {
-              "name": "block/pointed_dripstone/drip_water_cauldron8",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.pointed_dripstone.drip_water_into_cauldron"
-  },
-  "block.water.ambient": {
-      "sounds": [
-          {
-              "name": "liquid/water",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.water.ambient"
-  },
-  "entity.player.swim": {
-      "sounds": [
-          {
-              "name": "liquid/swim5",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim6",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim7",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim8",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim9",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim10",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim11",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim12",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim13",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim14",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim15",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim16",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim17",
-              "volume": 0.05
-          },
-          {
-              "name": "liquid/swim18",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.generic.swim"
-  },
-  "entity.player.burp": {
-      "sounds": [
-          {
-              "name": "random/burp",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.player.burp"
-  },
-  "entity.generic.drink": {
-      "sounds": [
-          {
-              "name": "random/drink",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.generic.drink"
-  },
-  "entity.generic.eat": {
-      "sounds": [
-          {
-              "name": "random/eat1",
-              "volume": 0.05
-          },
-          {
-              "name": "random/eat2",
-              "volume": 0.05
-          },
-          {
-              "name": "random/eat3",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.generic.eat"
-  },
-  "block.sculk_sensor.break": {
-      "sounds": [
-          {
-              "name": "block/sculk_sensor/break1",
-              "pitch": 1.2,
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_sensor/break2",
-              "pitch": 1.2,
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_sensor/break3",
-              "pitch": 1.2,
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_sensor/break4",
-              "pitch": 1.2,
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_sensor/break5",
-              "pitch": 1.2,
-              "volume": 0.045
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.break"
-  },
-  "block.sculk_sensor.clicking": {
-      "sounds": [
-          {
-              "name": "block/sculk_sensor/sculk_clicking1",
-              "volume": 0.0365
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking2",
-              "volume": 0.0365
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking3",
-              "volume": 0.0365
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking4",
-              "volume": 0.0365
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking5",
-              "volume": 0.0365
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking6",
-              "volume": 0.0365
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.sculk_sensor.clicking"
-  },
-  "block.sculk_sensor.clicking_stop": {
-      "sounds": [
-          {
-              "name": "block/sculk_sensor/sculk_clicking_stop1",
-              "volume": 0.031
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking_stop2",
-              "volume": 0.031
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking_stop3",
-              "volume": 0.031
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking_stop4",
-              "volume": 0.031
-          },
-          {
-              "name": "block/sculk_sensor/sculk_clicking_stop5",
-              "volume": 0.031
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.sculk_sensor.clicking_stop"
-  },
-  "block.sculk_sensor.fall": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "block.sculk_sensor.hit": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.hit"
-  },
-  "block.sculk_sensor.place": {
-      "sounds": [
-          {
-              "name": "block/sculk_sensor/place1",
-              "pitch": 1.2,
-              "volume": 0.04
-          },
-          {
-              "name": "block/sculk_sensor/place2",
-              "pitch": 1.2,
-              "volume": 0.04
-          },
-          {
-              "name": "block/sculk_sensor/place3",
-              "pitch": 1.2,
-              "volume": 0.04
-          },
-          {
-              "name": "block/sculk_sensor/place4",
-              "pitch": 1.2,
-              "volume": 0.04
-          },
-          {
-              "name": "block/sculk_sensor/place5",
-              "pitch": 1.2,
-              "volume": 0.04
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.place"
-  },
-  "block.sculk_sensor.step": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.footsteps"
-  },
-  "block.sculk_shrieker.break": {
-      "sounds": [
-          {
-              "name": "block/sculk_shrieker/break1",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/break2",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/break3",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/break4",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/break5",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/break6",
-              "volume": 0.045
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.break"
-  },
-  "block.sculk_shrieker.fall": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "block.sculk_shrieker.hit": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.hit"
-  },
-  "block.sculk_shrieker.place": {
-      "sounds": [
-          {
-              "name": "block/sculk_shrieker/place1",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/place2",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/place3",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/place4",
-              "volume": 0.045
-          },
-          {
-              "name": "block/sculk_shrieker/place5",
-              "volume": 0.045
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.place"
-  },
-  "block.sculk_shrieker.shriek": {
-      "sounds": [
-          {
-              "name": "block/sculk_shrieker/shriek1",
-              "volume": 0.0425
-          },
-          {
-              "name": "block/sculk_shrieker/shriek2",
-              "volume": 0.0425
-          },
-          {
-              "name": "block/sculk_shrieker/shriek3",
-              "volume": 0.0425
-          },
-          {
-              "name": "block/sculk_shrieker/shriek4",
-              "volume": 0.0425
-          },
-          {
-              "name": "block/sculk_shrieker/shriek5",
-              "volume": 0.0425
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.sculk_shrieker.shriek"
-  },
-  "block.sculk_shrieker.step": {
-      "sounds": [
-          {
-              "name": "block/sculk/step1",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step2",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step3",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step4",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step5",
-              "volume": 0.05
-          },
-          {
-              "name": "block/sculk/step6",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.generic.footsteps"
-  },
-  "block.piston.contract": {
-      "sounds": [
-          {
-              "name": "tile/piston/in",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.piston.move"
-  },
-  "block.piston.extend": {
-      "sounds": [
-          {
-              "name": "tile/piston/out",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.piston.move"
-  },
-  "item.flintandsteel.use": {
-      "sounds": [
-          {
-              "name": "fire/ignite",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.item.flintandsteel.use"
-  },
-  "entity.generic.extinguish_fire": {
-      "sounds": [
-          {
-              "name": "random/fizz",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.generic.extinguish_fire"
-  },
-  "block.fire.extinguish": {
-      "sounds": [
-          {
-              "name": "random/fizz",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.fire.extinguish"
-  },
-  "entity.player.hurt_on_fire": {
-      "sounds": [
-          {
-              "name": "entity/player/hurt/fire_hurt1",
-              "volume": 0.05
-          },
-          {
-              "name": "entity/player/hurt/fire_hurt2",
-              "volume": 0.05
-          },
-          {
-              "name": "entity/player/hurt/fire_hurt3",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.player.hurt_on_fire"
-  },
-  "block.fire.ambient": {
-      "sounds": [
-          {
-              "name": "fire/fire",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.fire.ambient"
-  },
-  "entity.minecart.inside": {
-      "sounds": [
-          {
-              "name": "minecart/inside",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "entity.minecart.inside.underwater": {
-      "sounds": [
-          {
-              "name": "minecart/inside_underwater1",
-              "volume": 0.05
-          },
-          {
-              "name": "minecart/inside_underwater2",
-              "volume": 0.05
-          },
-          {
-              "name": "minecart/inside_underwater3",
-              "volume": 0.05
-          }
-      ],
-      "replace": true
-  },
-  "entity.minecart.riding": {
-      "sounds": [
-          {
-              "name": "minecart/base",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.minecart.riding"
-  },
-  "block.dispenser.dispense": {
-      "sounds": [
-          {
-              "name": "random/click",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.dispenser.dispense"
-  },
-  "block.dispenser.fail": {
-      "sounds": [
-          {
-              "name": "random/click",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.dispenser.fail"
-  },
-  "block.dispenser.launch": {
-      "sounds": [
-          {
-              "name": "random/bow",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.block.dispenser.dispense"
-  },
-  "entity.generic.explode": {
-      "sounds": [
-          {
-              "name": "random/explode1",
-              "volume": 0.05
-          },
-          {
-              "name": "random/explode2",
-              "volume": 0.05
-          },
-          {
-              "name": "random/explode3",
-              "volume": 0.05
-          },
-          {
-              "name": "random/explode4",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.generic.explode"
-  },
-  "entity.lightning_bolt.thunder": {
-      "sounds": [
-          {
-              "name": "ambient/weather/thunder1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/thunder2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/thunder3",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.entity.lightning_bolt.thunder"
-  },
-  "item.trident.thunder": {
-      "sounds": [
-          {
-              "name": "item/trident/thunder1",
-              "volume": 0.05
-          },
-          {
-              "name": "item/trident/thunder2",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.item.trident.thunder"
-  },
-  "weather.rain": {
-      "sounds": [
-          {
-              "name": "ambient/weather/rain1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain3",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain4",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain5",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain6",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain7",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain8",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.weather.rain"
-  },
-  "weather.rain.above": {
-      "sounds": [
-          {
-              "name": "ambient/weather/rain1",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain2",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain3",
-              "volume": 0.05
-          },
-          {
-              "name": "ambient/weather/rain4",
-              "volume": 0.05
-          }
-      ],
-      "replace": true,
-      "subtitle": "subtitles.weather.rain"
-  },
-  "wolves": {
-      "sounds": [
-          "extra/wolf"
-      ]
-  },
-  "wind": {
-      "sounds": [
-          "extra/wind"
-      ]
-  },
-  "waterfall": {
-      "sounds": [
-          "extra/waterfall"
-      ]
-  },
-  "tavern": {
-      "sounds": [
-          "extra/tavern"
-      ]
-  },
-  "seagulls": {
-      "sounds": [
-          "extra/seagulls"
-      ]
-  },
-  "rainforest": {
-      "sounds": [
-          "extra/rainforest"
-      ]
-  },
-  "ocean": {
-      "sounds": [
-          "extra/ocean"
-      ]
-  },
-  "market": {
-      "sounds": [
-          "extra/market"
-      ]
-  },
-  "forest": {
-      "sounds": [
-          "extra/forest"
-      ]
-  },
-  "crickets": {
-      "sounds": [
-          "extra/crickets"
-      ]
-  },
-  "bells": {
-      "sounds": [
-          "extra/bells"
-      ]
-  },
-  "stream": {
-      "sounds": [
-          "extra/stream"
-      ]
-  },
-  "smallwaterfall": {
-      "sounds": [
-          "extra/smallwaterfall"
-      ]
-  },
-  "city": {
-      "sounds": [
-          "extra/city"
-      ]
-  },
-  "harbor": {
-      "sounds": [
-          "extra/harbor"
-      ]
-  },
-  "village": {
-      "sounds": [
-          "extra/village"
-      ]
-  },
-  "hall": {
-      "sounds": [
-          "extra/hall"
-      ]
-  },
-  "bees": {
-      "sounds": [
-          "extra/bees"
-      ]
-  },
-  "cannon": {
-      "sounds": [
-          "extra/cannon"
-      ]
-  },
-  "dripping": {
-      "sounds": [
-          "extra/dripping"
-      ]
-  },
-  "goats": {
-      "sounds": [
-          "extra/goats"
-      ]
-  },
-  "windchimes": {
-      "sounds": [
-          "extra/windchimes"
-      ]
-  },
-  "raven": {
-      "sounds": [
-          "extra/raven"
-      ]
-  },
-  "battle": {
-      "sounds": [
-          "extra/battle"
-      ]
-  },
-  "chains": {
-      "sounds": [
-          "extra/chains"
-      ]
-  },
-  "torture": {
-      "sounds": [
-          "extra/torture"
-      ]
-  },
-  "gong": {
-      "sounds": [
-          "extra/gong"
-      ]
-  },
-  "frogs": {
-      "sounds": [
-          "extra/frogs"
-      ]
-  },
-  "ducks": {
-      "sounds": [
-          "extra/ducks"
-      ]
-  },
-  "boilingwater": {
-      "sounds": [
-          "extra/boilingwater"
-      ]
-  },
-  "bats": {
-      "sounds": [
-          "extra/bats"
-      ]
-  },
-  "chop": {
-      "sounds": [
-          "extra/chop"
-      ]
-  },
-  "hv_rats.sword": {
-      "sounds": [
-          "hv_rats/sword"
-      ]
-  },
-  "hv_rats.cloth": {
-      "sounds": [
-          "hv_rats/cloth"
-      ]
-  },
-  "hv_rats.active": {
-      "sounds": [
-          "hv_rats/active"
-      ]
-  },
-  "hv_rats.woosh": {
-      "sounds": [
-          "hv_rats/woosh"
-      ]
-  },
-  "amethyst_wind_chimes": {
-      "sounds": [
-          "voidtales/amethyst_wind_chimes"
-      ]
-  },
-  "bamboo_wind_chimes": {
-      "sounds": [
-          "voidtales/bamboo_wind_chimes"
-      ]
-  }
+    "300": {
+        "sounds": [
+            "memes/300"
+        ]
+    },
+    "aaa": {
+        "sounds": [
+            "memes/aaa"
+        ]
+    },
+    "aaaa": {
+        "sounds": [
+            "memes/aaaa"
+        ]
+    },
+    "aaaaa": {
+        "sounds": [
+            "memes/aaaaa"
+        ]
+    },
+    "abusadores": {
+        "sounds": [
+            "memes/abusadores"
+        ]
+    },
+    "adios": {
+        "sounds": [
+            "memes/adios"
+        ]
+    },
+    "ahahaha": {
+        "sounds": [
+            "memes/ahahaha"
+        ]
+    },
+    "ahhh": {
+        "sounds": [
+            "memes/ahhh"
+        ]
+    },
+    "air": {
+        "sounds": [
+            "memes/air"
+        ]
+    },
+    "alert": {
+        "sounds": [
+            "memes/alert"
+        ]
+    },
+    "america": {
+        "sounds": [
+            "memes/america"
+        ]
+    },
+    "america2": {
+        "sounds": [
+            "memes/america2"
+        ]
+    },
+    "anywomen": {
+        "sounds": [
+            "memes/anywomen"
+        ]
+    },
+    "areasecure": {
+        "sounds": [
+            "memes/areasecure"
+        ]
+    },
+    "argh": {
+        "sounds": [
+            "memes/argh"
+        ]
+    },
+    "arigato": {
+        "sounds": [
+            "memes/arigato"
+        ]
+    },
+    "assholes": {
+        "sounds": [
+            "memes/assholes"
+        ]
+    },
+    "atatata": {
+        "sounds": [
+            "memes/atatata"
+        ]
+    },
+    "au": {
+        "sounds": [
+            "memes/au"
+        ]
+    },
+    "aua": {
+        "sounds": [
+            "memes/aua"
+        ]
+    },
+    "avispate": {
+        "sounds": [
+            "memes/avispate"
+        ]
+    },
+    "awcrap": {
+        "sounds": [
+            "memes/awcrap"
+        ]
+    },
+    "aww": {
+        "sounds": [
+            "memes/aww"
+        ]
+    },
+    "awww": {
+        "sounds": [
+            "memes/awww"
+        ]
+    },
+    "badole": {
+        "sounds": [
+            "memes/badole"
+        ]
+    },
+    "badum": {
+        "sounds": [
+            "memes/badum"
+        ]
+    },
+    "banido": {
+        "sounds": [
+            "memes/banido"
+        ]
+    },
+    "banzai": {
+        "sounds": [
+            "memes/banzai"
+        ]
+    },
+    "bass": {
+        "sounds": [
+            "memes/bass"
+        ]
+    },
+    "bastage": {
+        "sounds": [
+            "memes/bastage"
+        ]
+    },
+    "batman": {
+        "sounds": [
+            "memes/batman"
+        ]
+    },
+    "battlecry": {
+        "sounds": [
+            "memes/battlecry"
+        ]
+    },
+    "be": {
+        "sounds": [
+            "memes/be"
+        ]
+    },
+    "beatshit": {
+        "sounds": [
+            "memes/beatshit"
+        ]
+    },
+    "beefcake": {
+        "sounds": [
+            "memes/beefcake"
+        ]
+    },
+    "beep": {
+        "sounds": [
+            "memes/beep"
+        ]
+    },
+    "belch": {
+        "sounds": [
+            "memes/belch"
+        ]
+    },
+    "belch2": {
+        "sounds": [
+            "memes/belch2"
+        ]
+    },
+    "ben": {
+        "sounds": [
+            "memes/ben"
+        ]
+    },
+    "bendovr": {
+        "sounds": [
+            "memes/bendovr"
+        ]
+    },
+    "bequiet": {
+        "sounds": [
+            "memes/bequiet"
+        ]
+    },
+    "bidding": {
+        "sounds": [
+            "memes/bidding"
+        ]
+    },
+    "bionic": {
+        "sounds": [
+            "memes/bionic"
+        ]
+    },
+    "bitch": {
+        "sounds": [
+            "memes/bitch"
+        ]
+    },
+    "bitchbit": {
+        "sounds": [
+            "memes/bitchbit"
+        ]
+    },
+    "bites": {
+        "sounds": [
+            "memes/bites"
+        ]
+    },
+    "blah": {
+        "sounds": [
+            "memes/blah"
+        ]
+    },
+    "blina": {
+        "sounds": [
+            "memes/blina"
+        ]
+    },
+    "blockhead": {
+        "sounds": [
+            "memes/blockhead"
+        ]
+    },
+    "blowmedown": {
+        "sounds": [
+            "memes/blowmedown"
+        ]
+    },
+    "blyat": {
+        "sounds": [
+            "memes/blyat"
+        ]
+    },
+    "blyat2": {
+        "sounds": [
+            "memes/blyat2"
+        ]
+    },
+    "bober": {
+        "sounds": [
+            "memes/bober"
+        ]
+    },
+    "bocejo": {
+        "sounds": [
+            "memes/bocejo"
+        ]
+    },
+    "bonzai": {
+        "sounds": [
+            "memes/bonzai"
+        ]
+    },
+    "boobies": {
+        "sounds": [
+            "memes/boobies"
+        ]
+    },
+    "boring": {
+        "sounds": [
+            "memes/boring"
+        ]
+    },
+    "bork": {
+        "sounds": [
+            "memes/bork"
+        ]
+    },
+    "brain-fart": {
+        "sounds": [
+            "memes/brain-fart"
+        ]
+    },
+    "brains": {
+        "sounds": [
+            "memes/brains"
+        ]
+    },
+    "brains2": {
+        "sounds": [
+            "memes/brains2"
+        ]
+    },
+    "bruce": {
+        "sounds": [
+            "memes/bruce"
+        ]
+    },
+    "bruce2": {
+        "sounds": [
+            "memes/bruce2"
+        ]
+    },
+    "bruh": {
+        "sounds": [
+            "memes/bruh"
+        ]
+    },
+    "bruh2": {
+        "sounds": [
+            "memes/bruh2"
+        ]
+    },
+    "bugle": {
+        "sounds": [
+            "memes/bugle"
+        ]
+    },
+    "bully": {
+        "sounds": [
+            "memes/bully"
+        ]
+    },
+    "burnbitch": {
+        "sounds": [
+            "memes/burnbitch"
+        ]
+    },
+    "burning": {
+        "sounds": [
+            "memes/burning"
+        ]
+    },
+    "burp": {
+        "sounds": [
+            "memes/burp"
+        ]
+    },
+    "burp2": {
+        "sounds": [
+            "memes/burp2"
+        ]
+    },
+    "byebye": {
+        "sounds": [
+            "memes/byebye"
+        ]
+    },
+    "callmymama": {
+        "sounds": [
+            "memes/callmymama"
+        ]
+    },
+    "camel": {
+        "sounds": [
+            "memes/camel"
+        ]
+    },
+    "camper": {
+        "sounds": [
+            "memes/camper"
+        ]
+    },
+    "canon": {
+        "sounds": [
+            "memes/canon"
+        ]
+    },
+    "car": {
+        "sounds": [
+            "memes/car"
+        ]
+    },
+    "cat": {
+        "sounds": [
+            "memes/cat"
+        ]
+    },
+    "cat2": {
+        "sounds": [
+            "memes/cat2"
+        ]
+    },
+    "cavalry": {
+        "sounds": [
+            "memes/cavalry"
+        ]
+    },
+    "champion": {
+        "sounds": [
+            "memes/champion"
+        ]
+    },
+    "chaos": {
+        "sounds": [
+            "memes/chaos"
+        ]
+    },
+    "cheesetax": {
+        "sounds": [
+            "memes/cheesetax"
+        ]
+    },
+    "chimp": {
+        "sounds": [
+            "memes/chimp"
+        ]
+    },
+    "china": {
+        "sounds": [
+            "memes/china"
+        ]
+    },
+    "combobreaker": {
+        "sounds": [
+            "memes/combobreaker"
+        ]
+    },
+    "comeonman": {
+        "sounds": [
+            "memes/comeonman"
+        ]
+    },
+    "coq": {
+        "sounds": [
+            "memes/coq"
+        ]
+    },
+    "cornholio": {
+        "sounds": [
+            "memes/cornholio"
+        ]
+    },
+    "cow": {
+        "sounds": [
+            "memes/cow"
+        ]
+    },
+    "cristian": {
+        "sounds": [
+            "memes/cristian"
+        ]
+    },
+    "critter": {
+        "sounds": [
+            "memes/critter"
+        ]
+    },
+    "cry": {
+        "sounds": [
+            "memes/cry"
+        ]
+    },
+    "crybaby": {
+        "sounds": [
+            "memes/crybaby"
+        ]
+    },
+    "ctm": {
+        "sounds": [
+            "memes/ctm"
+        ]
+    },
+    "ctm2": {
+        "sounds": [
+            "memes/ctm2"
+        ]
+    },
+    "cuckoo": {
+        "sounds": [
+            "memes/cuckoo"
+        ]
+    },
+    "cyberpunk": {
+        "sounds": [
+            "memes/cyberpunk"
+        ]
+    },
+    "cyberpunk2077": {
+        "sounds": [
+            "memes/cyberpunk2077"
+        ]
+    },
+    "cyka": {
+        "sounds": [
+            "memes/cyka"
+        ]
+    },
+    "daddy": {
+        "sounds": [
+            "memes/daddy"
+        ]
+    },
+    "damn": {
+        "sounds": [
+            "memes/damn"
+        ]
+    },
+    "darkvador": {
+        "sounds": [
+            "memes/darkvador"
+        ]
+    },
+    "darkvador2": {
+        "sounds": [
+            "memes/darkvador2"
+        ]
+    },
+    "dayo": {
+        "sounds": [
+            "memes/dayo"
+        ]
+    },
+    "deadmeat": {
+        "sounds": [
+            "memes/deadmeat"
+        ]
+    },
+    "democracy": {
+        "sounds": [
+            "memes/democracy"
+        ]
+    },
+    "despacito": {
+        "sounds": [
+            "memes/despacito"
+        ]
+    },
+    "destroyou": {
+        "sounds": [
+            "memes/destroyou"
+        ]
+    },
+    "destroystuff": {
+        "sounds": [
+            "memes/destroystuff"
+        ]
+    },
+    "didyouhear": {
+        "sounds": [
+            "memes/didyouhear"
+        ]
+    },
+    "diebloodsucker": {
+        "sounds": [
+            "memes/diebloodsucker"
+        ]
+    },
+    "diedie1": {
+        "sounds": [
+            "memes/diedie1"
+        ]
+    },
+    "diehard2": {
+        "sounds": [
+            "memes/diehard2"
+        ]
+    },
+    "dimon": {
+        "sounds": [
+            "memes/dimon"
+        ]
+    },
+    "directedby": {
+        "sounds": [
+            "memes/directedby"
+        ]
+    },
+    "dirigible": {
+        "sounds": [
+            "memes/dirigible"
+        ]
+    },
+    "dirty": {
+        "sounds": [
+            "memes/dirty"
+        ]
+    },
+    "disco": {
+        "sounds": [
+            "memes/disco"
+        ]
+    },
+    "dog": {
+        "sounds": [
+            "memes/dog"
+        ]
+    },
+    "doh": {
+        "sounds": [
+            "memes/doh"
+        ]
+    },
+    "donkey": {
+        "sounds": [
+            "memes/donkey"
+        ]
+    },
+    "dontbeadick": {
+        "sounds": [
+            "memes/dontbeadick"
+        ]
+    },
+    "doom": {
+        "sounds": [
+            "memes/doom"
+        ]
+    },
+    "dope": {
+        "sounds": [
+            "memes/dope"
+        ]
+    },
+    "drop": {
+        "sounds": [
+            "memes/drop"
+        ]
+    },
+    "dun": {
+        "sounds": [
+            "memes/dun"
+        ]
+    },
+    "dust": {
+        "sounds": [
+            "memes/dust"
+        ]
+    },
+    "elephant": {
+        "sounds": [
+            "memes/elephant"
+        ]
+    },
+    "elmos-song": {
+        "sounds": [
+            "memes/elmos-song"
+        ]
+    },
+    "emotional-damage": {
+        "sounds": [
+            "memes/emotional-damage"
+        ]
+    },
+    "esanta": {
+        "sounds": [
+            "memes/esanta"
+        ]
+    },
+    "father": {
+        "sounds": [
+            "memes/father"
+        ]
+    },
+    "fbi": {
+        "sounds": [
+            "memes/fbi"
+        ]
+    },
+    "feltgood": {
+        "sounds": [
+            "memes/feltgood"
+        ]
+    },
+    "fire": {
+        "sounds": [
+            "memes/fire"
+        ]
+    },
+    "france": {
+        "sounds": [
+            "memes/france"
+        ]
+    },
+    "france2": {
+        "sounds": [
+            "memes/france2"
+        ]
+    },
+    "france3": {
+        "sounds": [
+            "memes/france3"
+        ]
+    },
+    "freak": {
+        "sounds": [
+            "memes/freak"
+        ]
+    },
+    "fuck": {
+        "sounds": [
+            "memes/fuck"
+        ]
+    },
+    "fuck2": {
+        "sounds": [
+            "memes/fuck2"
+        ]
+    },
+    "fuckyou": {
+        "sounds": [
+            "memes/fuckyou"
+        ]
+    },
+    "funnynoises": {
+        "sounds": [
+            "memes/funnynoises"
+        ]
+    },
+    "fusrodah": {
+        "sounds": [
+            "memes/fusrodah"
+        ]
+    },
+    "germany": {
+        "sounds": [
+            "memes/germany"
+        ]
+    },
+    "getdown": {
+        "sounds": [
+            "memes/getdown"
+        ]
+    },
+    "giggle": {
+        "sounds": [
+            "memes/giggle"
+        ]
+    },
+    "goat": {
+        "sounds": [
+            "memes/goat"
+        ]
+    },
+    "goat2": {
+        "sounds": [
+            "memes/goat2"
+        ]
+    },
+    "goat3": {
+        "sounds": [
+            "memes/goat3"
+        ]
+    },
+    "gong": {
+        "sounds": [
+            "memes/gong",
+            "extra/gong"
+        ]
+    },
+    "gong2": {
+        "sounds": [
+            "memes/gong2"
+        ]
+    },
+    "goofys": {
+        "sounds": [
+            "memes/goofys"
+        ]
+    },
+    "gotohell": {
+        "sounds": [
+            "memes/gotohell"
+        ]
+    },
+    "gotyasucker": {
+        "sounds": [
+            "memes/gotyasucker"
+        ]
+    },
+    "greatgo": {
+        "sounds": [
+            "memes/greatgo"
+        ]
+    },
+    "groove": {
+        "sounds": [
+            "memes/groove"
+        ]
+    },
+    "ha": {
+        "sounds": [
+            "memes/ha"
+        ]
+    },
+    "ha2": {
+        "sounds": [
+            "memes/ha2"
+        ]
+    },
+    "haa": {
+        "sounds": [
+            "memes/haa"
+        ]
+    },
+    "haaa": {
+        "sounds": [
+            "memes/haaa"
+        ]
+    },
+    "hadouken": {
+        "sounds": [
+            "memes/hadouken"
+        ]
+    },
+    "hadouken2": {
+        "sounds": [
+            "memes/hadouken2"
+        ]
+    },
+    "hadouken3": {
+        "sounds": [
+            "memes/hadouken3"
+        ]
+    },
+    "haha": {
+        "sounds": [
+            "memes/haha"
+        ]
+    },
+    "halle": {
+        "sounds": [
+            "memes/halle"
+        ]
+    },
+    "hallelujah": {
+        "sounds": [
+            "memes/hallelujah"
+        ]
+    },
+    "hammer": {
+        "sounds": [
+            "memes/hammer"
+        ]
+    },
+    "happyenough": {
+        "sounds": [
+            "memes/happyenough"
+        ]
+    },
+    "hardbass": {
+        "sounds": [
+            "memes/hardbass"
+        ]
+    },
+    "hatestpd": {
+        "sounds": [
+            "memes/hatestpd"
+        ]
+    },
+    "heehee": {
+        "sounds": [
+            "memes/heehee"
+        ]
+    },
+    "hell": {
+        "sounds": [
+            "memes/hell"
+        ]
+    },
+    "hello": {
+        "sounds": [
+            "memes/hello"
+        ]
+    },
+    "help": {
+        "sounds": [
+            "memes/help"
+        ]
+    },
+    "here": {
+        "sounds": [
+            "memes/here"
+        ]
+    },
+    "heyheybye": {
+        "sounds": [
+            "memes/heyheybye"
+        ]
+    },
+    "highground": {
+        "sounds": [
+            "memes/highground"
+        ]
+    },
+    "highlander": {
+        "sounds": [
+            "memes/highlander"
+        ]
+    },
+    "holdears": {
+        "sounds": [
+            "memes/holdears"
+        ]
+    },
+    "holdup": {
+        "sounds": [
+            "memes/holdup"
+        ]
+    },
+    "hostilty": {
+        "sounds": [
+            "memes/hostilty"
+        ]
+    },
+    "huge": {
+        "sounds": [
+            "memes/huge"
+        ]
+    },
+    "icq": {
+        "sounds": [
+            "memes/icq"
+        ]
+    },
+    "ididnt": {
+        "sounds": [
+            "memes/ididnt"
+        ]
+    },
+    "Ihateyou": {
+        "sounds": [
+            "memes/Ihateyou"
+        ]
+    },
+    "ilikeit": {
+        "sounds": [
+            "memes/ilikeit"
+        ]
+    },
+    "intense": {
+        "sounds": [
+            "memes/intense"
+        ]
+    },
+    "invince": {
+        "sounds": [
+            "memes/invince"
+        ]
+    },
+    "italian": {
+        "sounds": [
+            "memes/italian"
+        ]
+    },
+    "Jackson": {
+        "sounds": [
+            "memes/Jackson"
+        ]
+    },
+    "Jackson2": {
+        "sounds": [
+            "memes/Jackson2"
+        ]
+    },
+    "jaws": {
+        "sounds": [
+            "memes/jaws"
+        ]
+    },
+    "jc": {
+        "sounds": [
+            "memes/jc"
+        ]
+    },
+    "jesus": {
+        "sounds": [
+            "memes/jesus"
+        ]
+    },
+    "jiggy": {
+        "sounds": [
+            "memes/jiggy"
+        ]
+    },
+    "jizz": {
+        "sounds": [
+            "memes/jizz"
+        ]
+    },
+    "jumbo": {
+        "sounds": [
+            "memes/jumbo"
+        ]
+    },
+    "kaboom": {
+        "sounds": [
+            "memes/kaboom"
+        ]
+    },
+    "kamehamehaa": {
+        "sounds": [
+            "memes/kamehamehaa"
+        ]
+    },
+    "kekw": {
+        "sounds": [
+            "memes/kekw"
+        ]
+    },
+    "king": {
+        "sounds": [
+            "memes/king"
+        ]
+    },
+    "kinoson": {
+        "sounds": [
+            "memes/kinoson"
+        ]
+    },
+    "kiss2": {
+        "sounds": [
+            "memes/kiss2"
+        ]
+    },
+    "knockout": {
+        "sounds": [
+            "memes/knockout"
+        ]
+    },
+    "kurwa": {
+        "sounds": [
+            "memes/kurwa"
+        ]
+    },
+    "kurwa2": {
+        "sounds": [
+            "memes/kurwa2"
+        ]
+    },
+    "kurwa3": {
+        "sounds": [
+            "memes/kurwa3"
+        ]
+    },
+    "lalala": {
+        "sounds": [
+            "memes/lalala"
+        ]
+    },
+    "lalala2": {
+        "sounds": [
+            "memes/lalala2"
+        ]
+    },
+    "lalala3": {
+        "sounds": [
+            "memes/lalala3"
+        ]
+    },
+    "lame": {
+        "sounds": [
+            "memes/lame"
+        ]
+    },
+    "laugh": {
+        "sounds": [
+            "memes/laugh"
+        ]
+    },
+    "laugh2": {
+        "sounds": [
+            "memes/laugh2"
+        ]
+    },
+    "laugh3": {
+        "sounds": [
+            "memes/laugh3"
+        ]
+    },
+    "laugh4": {
+        "sounds": [
+            "memes/laugh4"
+        ]
+    },
+    "laugh5": {
+        "sounds": [
+            "memes/laugh5"
+        ]
+    },
+    "laugh6": {
+        "sounds": [
+            "memes/laugh6"
+        ]
+    },
+    "laugh7": {
+        "sounds": [
+            "memes/laugh7"
+        ]
+    },
+    "letsgo": {
+        "sounds": [
+            "memes/letsgo"
+        ]
+    },
+    "letsrock": {
+        "sounds": [
+            "memes/letsrock"
+        ]
+    },
+    "liar": {
+        "sounds": [
+            "memes/liar"
+        ]
+    },
+    "livesey": {
+        "sounds": [
+            "memes/livesey"
+        ]
+    },
+    "lokh": {
+        "sounds": [
+            "memes/lokh"
+        ]
+    },
+    "lokh2": {
+        "sounds": [
+            "memes/lokh2"
+        ]
+    },
+    "lokh3": {
+        "sounds": [
+            "memes/lokh3"
+        ]
+    },
+    "lol": {
+        "sounds": [
+            "memes/lol"
+        ]
+    },
+    "lol2": {
+        "sounds": [
+            "memes/lol2"
+        ]
+    },
+    "lol3": {
+        "sounds": [
+            "memes/lol3"
+        ]
+    },
+    "lol4": {
+        "sounds": [
+            "memes/lol4"
+        ]
+    },
+    "lol5": {
+        "sounds": [
+            "memes/lol5"
+        ]
+    },
+    "loominarty": {
+        "sounds": [
+            "memes/loominarty"
+        ]
+    },
+    "loser": {
+        "sounds": [
+            "memes/loser"
+        ]
+    },
+    "loveu": {
+        "sounds": [
+            "memes/loveu"
+        ]
+    },
+    "lullaby": {
+        "sounds": [
+            "memes/lullaby"
+        ]
+    },
+    "mama": {
+        "sounds": [
+            "memes/mama"
+        ]
+    },
+    "mamahuevo": {
+        "sounds": [
+            "memes/mamahuevo"
+        ]
+    },
+    "masterpiece": {
+        "sounds": [
+            "memes/masterpiece"
+        ]
+    },
+    "math": {
+        "sounds": [
+            "memes/math"
+        ]
+    },
+    "matrix": {
+        "sounds": [
+            "memes/matrix"
+        ]
+    },
+    "max": {
+        "sounds": [
+            "memes/max"
+        ]
+    },
+    "meanlaugh": {
+        "sounds": [
+            "memes/meanlaugh"
+        ]
+    },
+    "meow": {
+        "sounds": [
+            "memes/meow"
+        ]
+    },
+    "metal-pipe": {
+        "sounds": [
+            "memes/metal-pipe"
+        ]
+    },
+    "metal": {
+        "sounds": [
+            "memes/metal"
+        ]
+    },
+    "metal2": {
+        "sounds": [
+            "memes/metal2"
+        ]
+    },
+    "metal3": {
+        "sounds": [
+            "memes/metal3"
+        ]
+    },
+    "metalica": {
+        "sounds": [
+            "memes/metalica"
+        ]
+    },
+    "mew": {
+        "sounds": [
+            "memes/mew"
+        ]
+    },
+    "minecraft": {
+        "sounds": [
+            "memes/minecraft"
+        ]
+    },
+    "mmm": {
+        "sounds": [
+            "memes/mmm"
+        ]
+    },
+    "monkey": {
+        "sounds": [
+            "memes/monkey"
+        ]
+    },
+    "moo": {
+        "sounds": [
+            "memes/moo"
+        ]
+    },
+    "morons": {
+        "sounds": [
+            "memes/morons"
+        ]
+    },
+    "moveit": {
+        "sounds": [
+            "memes/moveit"
+        ]
+    },
+    "moveon": {
+        "sounds": [
+            "memes/moveon"
+        ]
+    },
+    "muhaha": {
+        "sounds": [
+            "memes/muhaha"
+        ]
+    },
+    "mybody": {
+        "sounds": [
+            "memes/mybody"
+        ]
+    },
+    "nahuy": {
+        "sounds": [
+            "memes/nahuy"
+        ]
+    },
+    "nani": {
+        "sounds": [
+            "memes/nani"
+        ]
+    },
+    "neenrazz": {
+        "sounds": [
+            "memes/neenrazz"
+        ]
+    },
+    "nfl": {
+        "sounds": [
+            "memes/nfl"
+        ]
+    },
+    "nipple": {
+        "sounds": [
+            "memes/nipple"
+        ]
+    },
+    "nochyu": {
+        "sounds": [
+            "memes/nochyu"
+        ]
+    },
+    "nonono": {
+        "sounds": [
+            "memes/nonono"
+        ]
+    },
+    "noo": {
+        "sounds": [
+            "memes/noo"
+        ]
+    },
+    "noo2": {
+        "sounds": [
+            "memes/noo2"
+        ]
+    },
+    "noo3": {
+        "sounds": [
+            "memes/noo3"
+        ]
+    },
+    "noproblemo": {
+        "sounds": [
+            "memes/noproblemo"
+        ]
+    },
+    "normie": {
+        "sounds": [
+            "memes/normie"
+        ]
+    },
+    "nozhyk": {
+        "sounds": [
+            "memes/nozhyk"
+        ]
+    },
+    "nword": {
+        "sounds": [
+            "memes/nword"
+        ]
+    },
+    "nya": {
+        "sounds": [
+            "memes/nya"
+        ]
+    },
+    "ohmypc": {
+        "sounds": [
+            "memes/ohmypc"
+        ]
+    },
+    "ohno": {
+        "sounds": [
+            "memes/ohno"
+        ]
+    },
+    "ohyeah2": {
+        "sounds": [
+            "memes/ohyeah2"
+        ]
+    },
+    "okok": {
+        "sounds": [
+            "memes/okok"
+        ]
+    },
+    "oldhorn": {
+        "sounds": [
+            "memes/oldhorn"
+        ]
+    },
+    "omg": {
+        "sounds": [
+            "memes/omg"
+        ]
+    },
+    "only": {
+        "sounds": [
+            "memes/only"
+        ]
+    },
+    "ooh": {
+        "sounds": [
+            "memes/ooh"
+        ]
+    },
+    "opa": {
+        "sounds": [
+            "memes/opa"
+        ]
+    },
+    "order66": {
+        "sounds": [
+            "memes/order66"
+        ]
+    },
+    "ouch": {
+        "sounds": [
+            "memes/ouch"
+        ]
+    },
+    "papai": {
+        "sounds": [
+            "memes/papai"
+        ]
+    },
+    "papai2": {
+        "sounds": [
+            "memes/papai2"
+        ]
+    },
+    "paybone": {
+        "sounds": [
+            "memes/paybone"
+        ]
+    },
+    "peekabo": {
+        "sounds": [
+            "memes/peekabo"
+        ]
+    },
+    "pendejo1": {
+        "sounds": [
+            "memes/pendejo1"
+        ]
+    },
+    "pendejo2": {
+        "sounds": [
+            "memes/pendejo2"
+        ]
+    },
+    "pendejo3": {
+        "sounds": [
+            "memes/pendejo3"
+        ]
+    },
+    "pepe": {
+        "sounds": [
+            "memes/pepe"
+        ]
+    },
+    "pepe2": {
+        "sounds": [
+            "memes/pepe2"
+        ]
+    },
+    "perkele": {
+        "sounds": [
+            "memes/perkele"
+        ]
+    },
+    "pet": {
+        "sounds": [
+            "memes/pet"
+        ]
+    },
+    "pet2": {
+        "sounds": [
+            "memes/pet2"
+        ]
+    },
+    "pet3": {
+        "sounds": [
+            "memes/pet3"
+        ]
+    },
+    "pet4": {
+        "sounds": [
+            "memes/pet4"
+        ]
+    },
+    "phonk": {
+        "sounds": [
+            "memes/phonk"
+        ]
+    },
+    "piano": {
+        "sounds": [
+            "memes/piano"
+        ]
+    },
+    "pidr": {
+        "sounds": [
+            "memes/pidr"
+        ]
+    },
+    "pieceofcake": {
+        "sounds": [
+            "memes/pieceofcake"
+        ]
+    },
+    "pierdole": {
+        "sounds": [
+            "memes/pierdole"
+        ]
+    },
+    "pinoch": {
+        "sounds": [
+            "memes/pinoch"
+        ]
+    },
+    "pissedoff": {
+        "sounds": [
+            "memes/pissedoff"
+        ]
+    },
+    "pizda": {
+        "sounds": [
+            "memes/pizda"
+        ]
+    },
+    "pizda2": {
+        "sounds": [
+            "memes/pizda2"
+        ]
+    },
+    "pizdec": {
+        "sounds": [
+            "memes/pizdec"
+        ]
+    },
+    "pizdec2": {
+        "sounds": [
+            "memes/pizdec2"
+        ]
+    },
+    "pognali": {
+        "sounds": [
+            "memes/pognali"
+        ]
+    },
+    "poland": {
+        "sounds": [
+            "memes/poland"
+        ]
+    },
+    "police": {
+        "sounds": [
+            "memes/police"
+        ]
+    },
+    "predator": {
+        "sounds": [
+            "memes/predator"
+        ]
+    },
+    "predator2": {
+        "sounds": [
+            "memes/predator2"
+        ]
+    },
+    "predator3": {
+        "sounds": [
+            "memes/predator3"
+        ]
+    },
+    "privet": {
+        "sounds": [
+            "memes/privet"
+        ]
+    },
+    "prowler": {
+        "sounds": [
+            "memes/prowler"
+        ]
+    },
+    "psycho": {
+        "sounds": [
+            "memes/psycho"
+        ]
+    },
+    "psychological": {
+        "sounds": [
+            "memes/psychological"
+        ]
+    },
+    "pufferfish": {
+        "sounds": [
+            "memes/pufferfish"
+        ]
+    },
+    "pushed": {
+        "sounds": [
+            "memes/pushed"
+        ]
+    },
+    "pushka": {
+        "sounds": [
+            "memes/pushka"
+        ]
+    },
+    "pussyass": {
+        "sounds": [
+            "memes/pussyass"
+        ]
+    },
+    "putput": {
+        "sounds": [
+            "memes/putput"
+        ]
+    },
+    "rammstein": {
+        "sounds": [
+            "memes/rammstein"
+        ]
+    },
+    "red-monkey": {
+        "sounds": [
+            "memes/red-monkey"
+        ]
+    },
+    "renlaf": {
+        "sounds": [
+            "memes/renlaf"
+        ]
+    },
+    "rickroll": {
+        "sounds": [
+            "memes/rickroll"
+        ]
+    },
+    "rip": {
+        "sounds": [
+            "memes/rip"
+        ]
+    },
+    "roadrunner": {
+        "sounds": [
+            "memes/roadrunner"
+        ]
+    },
+    "romance": {
+        "sounds": [
+            "memes/romance"
+        ]
+    },
+    "rumble": {
+        "sounds": [
+            "memes/rumble"
+        ]
+    },
+    "run": {
+        "sounds": [
+            "memes/run"
+        ]
+    },
+    "russia": {
+        "sounds": [
+            "memes/russia"
+        ]
+    },
+    "sad": {
+        "sounds": [
+            "memes/sad"
+        ]
+    },
+    "sad2": {
+        "sounds": [
+            "memes/sad2"
+        ]
+    },
+    "sad3": {
+        "sounds": [
+            "memes/sad3"
+        ]
+    },
+    "sadtrombone": {
+        "sounds": [
+            "memes/sadtrombone"
+        ]
+    },
+    "salo": {
+        "sounds": [
+            "memes/salo"
+        ]
+    },
+    "santa": {
+        "sounds": [
+            "memes/santa"
+        ]
+    },
+    "santa2": {
+        "sounds": [
+            "memes/santa2"
+        ]
+    },
+    "santa3": {
+        "sounds": [
+            "memes/santa3"
+        ]
+    },
+    "santa4": {
+        "sounds": [
+            "memes/santa4"
+        ]
+    },
+    "senate": {
+        "sounds": [
+            "memes/senate"
+        ]
+    },
+    "shit": {
+        "sounds": [
+            "memes/shit"
+        ]
+    },
+    "shit2": {
+        "sounds": [
+            "memes/shit2"
+        ]
+    },
+    "shrek": {
+        "sounds": [
+            "memes/shrek"
+        ]
+    },
+    "shrek2": {
+        "sounds": [
+            "memes/shrek2"
+        ]
+    },
+    "shrek3": {
+        "sounds": [
+            "memes/shrek3"
+        ]
+    },
+    "shrek4": {
+        "sounds": [
+            "memes/shrek4"
+        ]
+    },
+    "shrek5": {
+        "sounds": [
+            "memes/shrek5"
+        ]
+    },
+    "shrek6": {
+        "sounds": [
+            "memes/shrek6"
+        ]
+    },
+    "shrek7": {
+        "sounds": [
+            "memes/shrek7"
+        ]
+    },
+    "shrek8": {
+        "sounds": [
+            "memes/shrek8"
+        ]
+    },
+    "shut": {
+        "sounds": [
+            "memes/shut"
+        ]
+    },
+    "shutdown": {
+        "sounds": [
+            "memes/shutdown"
+        ]
+    },
+    "simp": {
+        "sounds": [
+            "memes/simp"
+        ]
+    },
+    "siren": {
+        "sounds": [
+            "memes/siren"
+        ]
+    },
+    "siren2": {
+        "sounds": [
+            "memes/siren2"
+        ]
+    },
+    "siuu": {
+        "sounds": [
+            "memes/siuu"
+        ]
+    },
+    "skype": {
+        "sounds": [
+            "memes/skype"
+        ]
+    },
+    "smoke": {
+        "sounds": [
+            "memes/smoke"
+        ]
+    },
+    "sneaky": {
+        "sounds": [
+            "memes/sneaky"
+        ]
+    },
+    "sob": {
+        "sounds": [
+            "memes/sob"
+        ]
+    },
+    "sonfa": {
+        "sounds": [
+            "memes/sonfa"
+        ]
+    },
+    "soupe": {
+        "sounds": [
+            "memes/soupe"
+        ]
+    },
+    "spain": {
+        "sounds": [
+            "memes/spain"
+        ]
+    },
+    "spain2": {
+        "sounds": [
+            "memes/spain2"
+        ]
+    },
+    "spain3": {
+        "sounds": [
+            "memes/spain3"
+        ]
+    },
+    "spain4": {
+        "sounds": [
+            "memes/spain4"
+        ]
+    },
+    "spain5": {
+        "sounds": [
+            "memes/spain5"
+        ]
+    },
+    "spain6": {
+        "sounds": [
+            "memes/spain6"
+        ]
+    },
+    "starwarz": {
+        "sounds": [
+            "memes/starwarz"
+        ]
+    },
+    "stayin": {
+        "sounds": [
+            "memes/stayin"
+        ]
+    },
+    "stfu": {
+        "sounds": [
+            "memes/stfu"
+        ]
+    },
+    "stupid": {
+        "sounds": [
+            "memes/stupid"
+        ]
+    },
+    "sugoi": {
+        "sounds": [
+            "memes/sugoi"
+        ]
+    },
+    "sus": {
+        "sounds": [
+            "memes/sus"
+        ]
+    },
+    "tarzan": {
+        "sounds": [
+            "memes/tarzan"
+        ]
+    },
+    "taunt1": {
+        "sounds": [
+            "memes/taunt1"
+        ]
+    },
+    "taunt10": {
+        "sounds": [
+            "memes/taunt10"
+        ]
+    },
+    "taunt11": {
+        "sounds": [
+            "memes/taunt11"
+        ]
+    },
+    "taunt12": {
+        "sounds": [
+            "memes/taunt12"
+        ]
+    },
+    "taunt13": {
+        "sounds": [
+            "memes/taunt13"
+        ]
+    },
+    "taunt14": {
+        "sounds": [
+            "memes/taunt14"
+        ]
+    },
+    "taunt2": {
+        "sounds": [
+            "memes/taunt2"
+        ]
+    },
+    "taunt3": {
+        "sounds": [
+            "memes/taunt3"
+        ]
+    },
+    "taunt4": {
+        "sounds": [
+            "memes/taunt4"
+        ]
+    },
+    "taunt5": {
+        "sounds": [
+            "memes/taunt5"
+        ]
+    },
+    "taunt6": {
+        "sounds": [
+            "memes/taunt6"
+        ]
+    },
+    "taunt7": {
+        "sounds": [
+            "memes/taunt7"
+        ]
+    },
+    "taunt8": {
+        "sounds": [
+            "memes/taunt8"
+        ]
+    },
+    "taunt9": {
+        "sounds": [
+            "memes/taunt9"
+        ]
+    },
+    "telegram": {
+        "sounds": [
+            "memes/telegram"
+        ]
+    },
+    "thatshot": {
+        "sounds": [
+            "memes/thatshot"
+        ]
+    },
+    "thelaugh": {
+        "sounds": [
+            "memes/thelaugh"
+        ]
+    },
+    "thephone": {
+        "sounds": [
+            "memes/thephone"
+        ]
+    },
+    "thinking": {
+        "sounds": [
+            "memes/thinking"
+        ]
+    },
+    "thriller": {
+        "sounds": [
+            "memes/thriller"
+        ]
+    },
+    "Thunberg": {
+        "sounds": [
+            "memes/Thunberg"
+        ]
+    },
+    "timallen": {
+        "sounds": [
+            "memes/timallen"
+        ]
+    },
+    "toasty": {
+        "sounds": [
+            "memes/toasty"
+        ]
+    },
+    "topkekw": {
+        "sounds": [
+            "memes/topkekw"
+        ]
+    },
+    "toupee": {
+        "sounds": [
+            "memes/toupee"
+        ]
+    },
+    "trap": {
+        "sounds": [
+            "memes/trap"
+        ]
+    },
+    "troll": {
+        "sounds": [
+            "memes/troll"
+        ]
+    },
+    "trololo": {
+        "sounds": [
+            "memes/trololo"
+        ]
+    },
+    "trololo2": {
+        "sounds": [
+            "memes/trololo2"
+        ]
+    },
+    "trundle": {
+        "sounds": [
+            "memes/trundle"
+        ]
+    },
+    "ukraine": {
+        "sounds": [
+            "memes/ukraine"
+        ]
+    },
+    "ultra": {
+        "sounds": [
+            "memes/ultra"
+        ]
+    },
+    "ultra2": {
+        "sounds": [
+            "memes/ultra2"
+        ]
+    },
+    "ultra3": {
+        "sounds": [
+            "memes/ultra3"
+        ]
+    },
+    "ura": {
+        "sounds": [
+            "memes/ura"
+        ]
+    },
+    "uridiot": {
+        "sounds": [
+            "memes/uridiot"
+        ]
+    },
+    "ussr": {
+        "sounds": [
+            "memes/ussr"
+        ]
+    },
+    "uuy": {
+        "sounds": [
+            "memes/uuy"
+        ]
+    },
+    "vetealamierda": {
+        "sounds": [
+            "memes/vetealamierda"
+        ]
+    },
+    "vrot": {
+        "sounds": [
+            "memes/vrot"
+        ]
+    },
+    "wakeup": {
+        "sounds": [
+            "memes/wakeup"
+        ]
+    },
+    "wamba": {
+        "sounds": [
+            "memes/wamba"
+        ]
+    },
+    "warcry": {
+        "sounds": [
+            "memes/warcry"
+        ]
+    },
+    "wewill": {
+        "sounds": [
+            "memes/wewill"
+        ]
+    },
+    "whatsup1": {
+        "sounds": [
+            "memes/whatsup1"
+        ]
+    },
+    "whatsup2": {
+        "sounds": [
+            "memes/whatsup2"
+        ]
+    },
+    "whatsup3": {
+        "sounds": [
+            "memes/whatsup3"
+        ]
+    },
+    "whatsup4": {
+        "sounds": [
+            "memes/whatsup4"
+        ]
+    },
+    "whatsup5": {
+        "sounds": [
+            "memes/whatsup5"
+        ]
+    },
+    "whatsup6": {
+        "sounds": [
+            "memes/whatsup6"
+        ]
+    },
+    "when": {
+        "sounds": [
+            "memes/when"
+        ]
+    },
+    "who": {
+        "sounds": [
+            "memes/who"
+        ]
+    },
+    "why": {
+        "sounds": [
+            "memes/why"
+        ]
+    },
+    "windows": {
+        "sounds": [
+            "memes/windows"
+        ]
+    },
+    "wolf": {
+        "sounds": [
+            "memes/wolf"
+        ]
+    },
+    "wolf2": {
+        "sounds": [
+            "memes/wolf2"
+        ]
+    },
+    "wolf3": {
+        "sounds": [
+            "memes/wolf3"
+        ]
+    },
+    "wolf4": {
+        "sounds": [
+            "memes/wolf4"
+        ]
+    },
+    "wolf5": {
+        "sounds": [
+            "memes/wolf5"
+        ]
+    },
+    "wookie": {
+        "sounds": [
+            "memes/wookie"
+        ]
+    },
+    "wow": {
+        "sounds": [
+            "memes/wow"
+        ]
+    },
+    "wow2": {
+        "sounds": [
+            "memes/wow2"
+        ]
+    },
+    "wtf": {
+        "sounds": [
+            "memes/wtf"
+        ]
+    },
+    "wth": {
+        "sounds": [
+            "memes/wth"
+        ]
+    },
+    "wth2": {
+        "sounds": [
+            "memes/wth2"
+        ]
+    },
+    "xdddddd": {
+        "sounds": [
+            "memes/xdddddd"
+        ]
+    },
+    "xmas": {
+        "sounds": [
+            "memes/xmas"
+        ]
+    },
+    "yabai": {
+        "sounds": [
+            "memes/yabai"
+        ]
+    },
+    "yahoo": {
+        "sounds": [
+            "memes/yahoo"
+        ]
+    },
+    "yay": {
+        "sounds": [
+            "memes/yay"
+        ]
+    },
+    "yeahbaby": {
+        "sounds": [
+            "memes/yeahbaby"
+        ]
+    },
+    "yessir": {
+        "sounds": [
+            "memes/yessir"
+        ]
+    },
+    "yey": {
+        "sounds": [
+            "memes/yey"
+        ]
+    },
+    "yeye": {
+        "sounds": [
+            "memes/yeye"
+        ]
+    },
+    "yeye2": {
+        "sounds": [
+            "memes/yeye2"
+        ]
+    },
+    "yodel": {
+        "sounds": [
+            "memes/yodel"
+        ]
+    },
+    "yolo": {
+        "sounds": [
+            "memes/yolo"
+        ]
+    },
+    "yoo": {
+        "sounds": [
+            "memes/yoo"
+        ]
+    },
+    "youdare": {
+        "sounds": [
+            "memes/youdare"
+        ]
+    },
+    "youdick": {
+        "sounds": [
+            "memes/youdick"
+        ]
+    },
+    "yourefunny": {
+        "sounds": [
+            "memes/yourefunny"
+        ]
+    },
+    "yousuck": {
+        "sounds": [
+            "memes/yousuck"
+        ]
+    },
+    "yummy": {
+        "sounds": [
+            "memes/yummy"
+        ]
+    },
+    "yummy2": {
+        "sounds": [
+            "memes/yummy2"
+        ]
+    },
+    "zazhali": {
+        "sounds": [
+            "memes/zazhali"
+        ]
+    },
+    "_ban": {
+        "sounds": [
+            "memes/_ban"
+        ]
+    },
+    "_bye": {
+        "sounds": [
+            "memes/_bye"
+        ]
+    },
+    "_cool": {
+        "sounds": [
+            "memes/_cool"
+        ]
+    },
+    "_discord": {
+        "sounds": [
+            "memes/_discord"
+        ]
+    },
+    "_gg": {
+        "sounds": [
+            "memes/_gg"
+        ]
+    },
+    "_gn": {
+        "sounds": [
+            "memes/_gn"
+        ]
+    },
+    "_gn2": {
+        "sounds": [
+            "memes/_gn2"
+        ]
+    },
+    "_good": {
+        "sounds": [
+            "memes/_good"
+        ]
+    },
+    "_hi": {
+        "sounds": [
+            "memes/_hi"
+        ]
+    },
+    "_idk": {
+        "sounds": [
+            "memes/_idk"
+        ]
+    },
+    "_lag": {
+        "sounds": [
+            "memes/_lag"
+        ]
+    },
+    "_nice": {
+        "sounds": [
+            "memes/_nice"
+        ]
+    },
+    "_nice2": {
+        "sounds": [
+            "memes/_nice2"
+        ]
+    },
+    "_nice3": {
+        "sounds": [
+            "memes/_nice3"
+        ]
+    },
+    "_phone": {
+        "sounds": [
+            "memes/_phone"
+        ]
+    },
+    "_sorry": {
+        "sounds": [
+            "memes/_sorry"
+        ]
+    },
+    "music.menu": {
+        "sounds": [
+            {
+                "name": "music/game/deeper",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/eld_unknown",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/endless",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/featherfall",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/komorebi",
+                "stream": true,
+                "volume": 0.8
+            },
+            {
+                "name": "music/game/pokopoko",
+                "stream": true,
+                "volume": 0.8
+            },
+            {
+                "name": "music/game/puzzlebox",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/watcher",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/yakusoku",
+                "stream": true,
+                "volume": 0.8
+            },
+            {
+                "name": "music/game/a_familiar_room",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/bromeliad",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/crescent_dunes",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/echo_in_the_wind",
+                "stream": true,
+                "volume": 0.4
+            },
+            {
+                "name": "music/game/swamp/aerie",
+                "stream": true
+            },
+            {
+                "name": "music/game/swamp/firebugs",
+                "stream": true
+            },
+            {
+                "name": "music/game/swamp/labyrinthine",
+                "stream": true
+            },
+            {
+                "name": "music/game/infinite_amethyst",
+                "stream": true
+            },
+            {
+                "name": "music/game/left_to_bloom",
+                "stream": true
+            },
+            {
+                "name": "music/game/one_more_day",
+                "stream": true
+            },
+            {
+                "name": "music/game/stand_tall",
+                "stream": true
+            },
+            {
+                "name": "music/game/wending",
+                "stream": true
+            },
+            {
+                "name": "music/menu/beginning_2",
+                "stream": true
+            },
+            {
+                "name": "music/menu/floating_trees",
+                "stream": true
+            },
+            {
+                "name": "music/menu/moog_city_2",
+                "stream": true
+            },
+            {
+                "name": "music/menu/mutation",
+                "stream": true
+            }
+        ]
+    },
+    "block.portal.ambient": {
+        "sounds": [
+            {
+                "attenuation_distance": 10,
+                "name": "portal/portal",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.portal.ambient"
+    },
+    "block.portal.travel": {
+        "sounds": [
+            {
+                "name": "portal/travel",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "block.portal.trigger": {
+        "sounds": [
+            {
+                "name": "portal/trigger",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.portal.trigger"
+    },
+    "ambient.underwater.enter": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/enter1",
+                "volume": 0.025
+            },
+            {
+                "name": "ambient/underwater/enter2",
+                "volume": 0.025
+            },
+            {
+                "name": "ambient/underwater/enter3",
+                "volume": 0.025
+            }
+        ],
+        "replace": true
+    },
+    "ambient.underwater.exit": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/exit1",
+                "volume": 0.015
+            },
+            {
+                "name": "ambient/underwater/exit2",
+                "volume": 0.015
+            },
+            {
+                "name": "ambient/underwater/exit3",
+                "volume": 0.015
+            }
+        ],
+        "replace": true
+    },
+    "ambient.underwater.loop": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/underwater_ambience",
+                "stream": true,
+                "volume": 0.0325
+            }
+        ],
+        "replace": true
+    },
+    "ambient.underwater.loop.additions": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/additions/bubbles1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/bubbles2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/bubbles3",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/bubbles4",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/bubbles5",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/bubbles6",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/water1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/water2",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "ambient.underwater.loop.additions.rare": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/additions/animal1",
+                "volume": 0.0225
+            },
+            {
+                "name": "ambient/underwater/additions/bass_whale1",
+                "volume": 0.0225
+            },
+            {
+                "name": "ambient/underwater/additions/bass_whale2",
+                "volume": 0.025
+            },
+            {
+                "name": "ambient/underwater/additions/crackles1",
+                "volume": 0.035
+            },
+            {
+                "name": "ambient/underwater/additions/crackles2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/driplets1",
+                "volume": 0.025
+            },
+            {
+                "name": "ambient/underwater/additions/driplets2",
+                "volume": 0.025
+            },
+            {
+                "name": "ambient/underwater/additions/earth_crack",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "ambient.underwater.loop.additions.ultra_rare": {
+        "sounds": [
+            {
+                "name": "ambient/underwater/additions/animal2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/dark1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/dark2",
+                "volume": 0.035
+            },
+            {
+                "name": "ambient/underwater/additions/dark3",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/underwater/additions/dark4",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "block.pointed_dripstone.drip_water": {
+        "sounds": [
+            {
+                "name": "block/pointed_dripstone/drip_water1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water6",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water7",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water8",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water9",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water10",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water11",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water12",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water13",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water14",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water15",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.pointed_dripstone.drip_water"
+    },
+    "block.pointed_dripstone.drip_water_into_cauldron": {
+        "sounds": [
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron6",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron7",
+                "volume": 0.05
+            },
+            {
+                "name": "block/pointed_dripstone/drip_water_cauldron8",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.pointed_dripstone.drip_water_into_cauldron"
+    },
+    "block.water.ambient": {
+        "sounds": [
+            {
+                "name": "liquid/water",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.water.ambient"
+    },
+    "entity.player.swim": {
+        "sounds": [
+            {
+                "name": "liquid/swim5",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim6",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim7",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim8",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim9",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim10",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim11",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim12",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim13",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim14",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim15",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim16",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim17",
+                "volume": 0.05
+            },
+            {
+                "name": "liquid/swim18",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.generic.swim"
+    },
+    "entity.player.burp": {
+        "sounds": [
+            {
+                "name": "random/burp",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.player.burp"
+    },
+    "entity.generic.drink": {
+        "sounds": [
+            {
+                "name": "random/drink",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.generic.drink"
+    },
+    "entity.generic.eat": {
+        "sounds": [
+            {
+                "name": "random/eat1",
+                "volume": 0.05
+            },
+            {
+                "name": "random/eat2",
+                "volume": 0.05
+            },
+            {
+                "name": "random/eat3",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.generic.eat"
+    },
+    "block.sculk_sensor.break": {
+        "sounds": [
+            {
+                "name": "block/sculk_sensor/break1",
+                "pitch": 1.2,
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_sensor/break2",
+                "pitch": 1.2,
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_sensor/break3",
+                "pitch": 1.2,
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_sensor/break4",
+                "pitch": 1.2,
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_sensor/break5",
+                "pitch": 1.2,
+                "volume": 0.045
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.sculk_sensor.clicking": {
+        "sounds": [
+            {
+                "name": "block/sculk_sensor/sculk_clicking1",
+                "volume": 0.0365
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking2",
+                "volume": 0.0365
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking3",
+                "volume": 0.0365
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking4",
+                "volume": 0.0365
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking5",
+                "volume": 0.0365
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking6",
+                "volume": 0.0365
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.sculk_sensor.clicking"
+    },
+    "block.sculk_sensor.clicking_stop": {
+        "sounds": [
+            {
+                "name": "block/sculk_sensor/sculk_clicking_stop1",
+                "volume": 0.031
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking_stop2",
+                "volume": 0.031
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking_stop3",
+                "volume": 0.031
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking_stop4",
+                "volume": 0.031
+            },
+            {
+                "name": "block/sculk_sensor/sculk_clicking_stop5",
+                "volume": 0.031
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.sculk_sensor.clicking_stop"
+    },
+    "block.sculk_sensor.fall": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "block.sculk_sensor.hit": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.sculk_sensor.place": {
+        "sounds": [
+            {
+                "name": "block/sculk_sensor/place1",
+                "pitch": 1.2,
+                "volume": 0.04
+            },
+            {
+                "name": "block/sculk_sensor/place2",
+                "pitch": 1.2,
+                "volume": 0.04
+            },
+            {
+                "name": "block/sculk_sensor/place3",
+                "pitch": 1.2,
+                "volume": 0.04
+            },
+            {
+                "name": "block/sculk_sensor/place4",
+                "pitch": 1.2,
+                "volume": 0.04
+            },
+            {
+                "name": "block/sculk_sensor/place5",
+                "pitch": 1.2,
+                "volume": 0.04
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.sculk_sensor.step": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.sculk_shrieker.break": {
+        "sounds": [
+            {
+                "name": "block/sculk_shrieker/break1",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/break2",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/break3",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/break4",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/break5",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/break6",
+                "volume": 0.045
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.break"
+    },
+    "block.sculk_shrieker.fall": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "block.sculk_shrieker.hit": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.hit"
+    },
+    "block.sculk_shrieker.place": {
+        "sounds": [
+            {
+                "name": "block/sculk_shrieker/place1",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/place2",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/place3",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/place4",
+                "volume": 0.045
+            },
+            {
+                "name": "block/sculk_shrieker/place5",
+                "volume": 0.045
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.place"
+    },
+    "block.sculk_shrieker.shriek": {
+        "sounds": [
+            {
+                "name": "block/sculk_shrieker/shriek1",
+                "volume": 0.0425
+            },
+            {
+                "name": "block/sculk_shrieker/shriek2",
+                "volume": 0.0425
+            },
+            {
+                "name": "block/sculk_shrieker/shriek3",
+                "volume": 0.0425
+            },
+            {
+                "name": "block/sculk_shrieker/shriek4",
+                "volume": 0.0425
+            },
+            {
+                "name": "block/sculk_shrieker/shriek5",
+                "volume": 0.0425
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.sculk_shrieker.shriek"
+    },
+    "block.sculk_shrieker.step": {
+        "sounds": [
+            {
+                "name": "block/sculk/step1",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step2",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step3",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step4",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step5",
+                "volume": 0.05
+            },
+            {
+                "name": "block/sculk/step6",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.generic.footsteps"
+    },
+    "block.piston.contract": {
+        "sounds": [
+            {
+                "name": "tile/piston/in",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.piston.move"
+    },
+    "block.piston.extend": {
+        "sounds": [
+            {
+                "name": "tile/piston/out",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.piston.move"
+    },
+    "item.flintandsteel.use": {
+        "sounds": [
+            {
+                "name": "fire/ignite",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.item.flintandsteel.use"
+    },
+    "entity.generic.extinguish_fire": {
+        "sounds": [
+            {
+                "name": "random/fizz",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.generic.extinguish_fire"
+    },
+    "block.fire.extinguish": {
+        "sounds": [
+            {
+                "name": "random/fizz",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.fire.extinguish"
+    },
+    "entity.player.hurt_on_fire": {
+        "sounds": [
+            {
+                "name": "entity/player/hurt/fire_hurt1",
+                "volume": 0.05
+            },
+            {
+                "name": "entity/player/hurt/fire_hurt2",
+                "volume": 0.05
+            },
+            {
+                "name": "entity/player/hurt/fire_hurt3",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.player.hurt_on_fire"
+    },
+    "block.fire.ambient": {
+        "sounds": [
+            {
+                "name": "fire/fire",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.fire.ambient"
+    },
+    "entity.minecart.inside": {
+        "sounds": [
+            {
+                "name": "minecart/inside",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "entity.minecart.inside.underwater": {
+        "sounds": [
+            {
+                "name": "minecart/inside_underwater1",
+                "volume": 0.05
+            },
+            {
+                "name": "minecart/inside_underwater2",
+                "volume": 0.05
+            },
+            {
+                "name": "minecart/inside_underwater3",
+                "volume": 0.05
+            }
+        ],
+        "replace": true
+    },
+    "entity.minecart.riding": {
+        "sounds": [
+            {
+                "name": "minecart/base",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.minecart.riding"
+    },
+    "block.dispenser.dispense": {
+        "sounds": [
+            {
+                "name": "random/click",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.dispenser.dispense"
+    },
+    "block.dispenser.fail": {
+        "sounds": [
+            {
+                "name": "random/click",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.dispenser.fail"
+    },
+    "block.dispenser.launch": {
+        "sounds": [
+            {
+                "name": "random/bow",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.block.dispenser.dispense"
+    },
+    "entity.generic.explode": {
+        "sounds": [
+            {
+                "name": "random/explode1",
+                "volume": 0.05
+            },
+            {
+                "name": "random/explode2",
+                "volume": 0.05
+            },
+            {
+                "name": "random/explode3",
+                "volume": 0.05
+            },
+            {
+                "name": "random/explode4",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.generic.explode"
+    },
+    "entity.lightning_bolt.thunder": {
+        "sounds": [
+            {
+                "name": "ambient/weather/thunder1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/thunder2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/thunder3",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.entity.lightning_bolt.thunder"
+    },
+    "item.trident.thunder": {
+        "sounds": [
+            {
+                "name": "item/trident/thunder1",
+                "volume": 0.05
+            },
+            {
+                "name": "item/trident/thunder2",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.item.trident.thunder"
+    },
+    "weather.rain": {
+        "sounds": [
+            {
+                "name": "ambient/weather/rain1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain3",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain4",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain5",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain6",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain7",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain8",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.weather.rain"
+    },
+    "weather.rain.above": {
+        "sounds": [
+            {
+                "name": "ambient/weather/rain1",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain2",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain3",
+                "volume": 0.05
+            },
+            {
+                "name": "ambient/weather/rain4",
+                "volume": 0.05
+            }
+        ],
+        "replace": true,
+        "subtitle": "subtitles.weather.rain"
+    },
+    "wolves": {
+        "sounds": [
+            "extra/wolf"
+        ]
+    },
+    "wind": {
+        "sounds": [
+            "extra/wind"
+        ]
+    },
+    "waterfall": {
+        "sounds": [
+            "extra/waterfall"
+        ]
+    },
+    "tavern": {
+        "sounds": [
+            "extra/tavern"
+        ]
+    },
+    "seagulls": {
+        "sounds": [
+            "extra/seagulls"
+        ]
+    },
+    "rainforest": {
+        "sounds": [
+            "extra/rainforest"
+        ]
+    },
+    "ocean": {
+        "sounds": [
+            "extra/ocean"
+        ]
+    },
+    "market": {
+        "sounds": [
+            "extra/market"
+        ]
+    },
+    "forest": {
+        "sounds": [
+            "extra/forest"
+        ]
+    },
+    "crickets": {
+        "sounds": [
+            "extra/crickets"
+        ]
+    },
+    "bells": {
+        "sounds": [
+            "extra/bells"
+        ]
+    },
+    "stream": {
+        "sounds": [
+            "extra/stream"
+        ]
+    },
+    "smallwaterfall": {
+        "sounds": [
+            "extra/smallwaterfall"
+        ]
+    },
+    "city": {
+        "sounds": [
+            "extra/city"
+        ]
+    },
+    "harbor": {
+        "sounds": [
+            "extra/harbor"
+        ]
+    },
+    "village": {
+        "sounds": [
+            "extra/village"
+        ]
+    },
+    "hall": {
+        "sounds": [
+            "extra/hall"
+        ]
+    },
+    "bees": {
+        "sounds": [
+            "extra/bees"
+        ]
+    },
+    "cannon": {
+        "sounds": [
+            "extra/cannon"
+        ]
+    },
+    "dripping": {
+        "sounds": [
+            "extra/dripping"
+        ]
+    },
+    "goats": {
+        "sounds": [
+            "extra/goats"
+        ]
+    },
+    "windchimes": {
+        "sounds": [
+            "extra/windchimes"
+        ]
+    },
+    "raven": {
+        "sounds": [
+            "extra/raven"
+        ]
+    },
+    "battle": {
+        "sounds": [
+            "extra/battle"
+        ]
+    },
+    "chains": {
+        "sounds": [
+            "extra/chains"
+        ]
+    },
+    "torture": {
+        "sounds": [
+            "extra/torture"
+        ]
+    },
+    "frogs": {
+        "sounds": [
+            "extra/frogs"
+        ]
+    },
+    "ducks": {
+        "sounds": [
+            "extra/ducks"
+        ]
+    },
+    "boilingwater": {
+        "sounds": [
+            "extra/boilingwater"
+        ]
+    },
+    "bats": {
+        "sounds": [
+            "extra/bats"
+        ]
+    },
+    "chop": {
+        "sounds": [
+            "extra/chop"
+        ]
+    },
+    "hv_rats.sword": {
+        "sounds": [
+            "hv_rats/sword"
+        ]
+    },
+    "hv_rats.cloth": {
+        "sounds": [
+            "hv_rats/cloth"
+        ]
+    },
+    "hv_rats.active": {
+        "sounds": [
+            "hv_rats/active"
+        ]
+    },
+    "hv_rats.woosh": {
+        "sounds": [
+            "hv_rats/woosh"
+        ]
+    },
+    "amethyst_wind_chimes": {
+        "sounds": [
+            "voidtales/amethyst_wind_chimes"
+        ]
+    },
+    "bamboo_wind_chimes": {
+        "sounds": [
+            "voidtales/bamboo_wind_chimes"
+        ]
+    }
 }
