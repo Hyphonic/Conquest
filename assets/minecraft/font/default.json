@@ -55,7 +55,7 @@
         },
         {
             "type": "bitmap",
-            "file": "font/spritesheet.png",
+            "file": "font/text.png",
             "height": 7,
             "ascent": 6,
             "chars": [
