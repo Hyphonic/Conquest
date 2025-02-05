@@ -12,9 +12,9 @@ on:
         description: 'Color of the text, red, green, blue'
         required: true
         options:
-            - 'red'
-            - 'green'
+            - 'purple'
             - 'blue'
+            - 'yellow'
         type: choice
       space: 
         description: 'Add extra space to beginning and end of text'
