@@ -60,11 +60,21 @@ jobs:
           # Reset to first commit
           git reset --hard $FIRST_COMMIT
           
-          # Create a patch of all changes since first commit
-          git diff $FIRST_COMMIT origin/1.21 | git apply
+          # Create temp directory and copy changed files
+          mkdir -p ../temp_changes
+          git diff --name-only $FIRST_COMMIT origin/1.21 | while read file; do
+            if [ -f "$(git rev-parse --show-toplevel)/$file" ]; then
+              mkdir -p "../temp_changes/$(dirname "$file")"
+              cp -f "$(git rev-parse --show-toplevel)/$file" "../temp_changes/$file"
+            fi
+          done
           
-          # Remove files that are identical to base
-          git diff --name-only $FIRST_COMMIT origin/1.21 | xargs git add
+          # Clean working directory and copy changed files back
+          git clean -fdx
+          cp -rf ../temp_changes/* ./
+          rm -rf ../temp_changes
           
+          # Add and commit changes
+          git add -A
           git commit -m "🔄️ Sync with 1.21 (diff only)" || true
           git push origin 1.21-diff --force
