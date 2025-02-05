@@ -48,3 +48,23 @@ jobs:
           git add -A
           git commit -m "🔄️ Sync with 1.21 (removing optifine)" || true
           git push origin 1.21-lite+ --force
+      
+      - name: 📝 Sync To 1.21-diff
+        run: |
+          # Get the first commit hash
+          FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
+          
+          # Create/checkout diff branch
+          git checkout 1.21-diff 2>/dev/null || git checkout -b 1.21-diff
+          
+          # Reset to first commit
+          git reset --hard $FIRST_COMMIT
+          
+          # Create a patch of all changes since first commit
+          git diff $FIRST_COMMIT origin/1.21 | git apply
+          
+          # Remove files that are identical to base
+          git diff --name-only $FIRST_COMMIT origin/1.21 | xargs git add
+          
+          git commit -m "🔄️ Sync with 1.21 (diff only)" || true
+          git push origin 1.21-diff --force
