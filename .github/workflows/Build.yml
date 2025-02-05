@@ -2,6 +2,10 @@ name: 🛠️ Optimize Resource Pack
 
 on:
   workflow_dispatch:
+  workflow_run:
+    workflows: ["🔄️ Sync Branches"]
+    types:
+      - completed
 
 permissions:
   contents: write
