@@ -10,14 +10,14 @@ zip_compression_iterations = 40
 ['**/*?.ogg']
 ogg_obfuscation = true
 ['**/*?.png']
-color_quantization_target = 'none'
+color_quantization_target = 'auto'
 image_data_compression_iterations = 128
 maximum_width_and_height = 8192
-['README.txt']
+['README.md']
 force_include = true
 ['LICENSE']
 force_include = true
-['How to install.txt']
+['How to install.md']
 force_include = true
 ['overlay_*/**/*']
 force_include = true
