@@ -35,16 +35,6 @@ jobs:
           git checkout 1.21-lite 2>/dev/null || git checkout -b 1.21-lite
           git reset --hard origin/1.21
           rm -rf "assets/minecraft/optifine"
-          rm -rf "assets/memes"
           git add -A
           git commit -m "🔄️ Sync with 1.21 (removing optifine and memes)" || true
           git push origin 1.21-lite --force
-      
-      - name: 🔸 Sync To 1.21-lite+
-        run: |
-          git checkout 1.21-lite+ 2>/dev/null || git checkout -b 1.21-lite+
-          git reset --hard origin/1.21
-          rm -rf "assets/minecraft/optifine"
-          git add -A
-          git commit -m "🔄️ Sync with 1.21 (removing optifine)" || true
-          git push origin 1.21-lite+ --force
