@@ -48,33 +48,3 @@ jobs:
           git add -A
           git commit -m "🔄️ Sync with 1.21 (removing optifine)" || true
           git push origin 1.21-lite+ --force
-      
-      - name: 📝 Sync To 1.21-diff
-        run: |
-          # Get the first commit hash
-          FIRST_COMMIT=$(git rev-list --max-parents=0 HEAD)
-          
-          # Create/checkout diff branch
-          git checkout 1.21-diff 2>/dev/null || git checkout -b 1.21-diff
-          
-          # Reset to first commit
-          git reset --hard $FIRST_COMMIT
-          
-          # Create temp directory and copy changed files
-          mkdir -p ../temp_changes
-          git diff --name-only $FIRST_COMMIT origin/1.21 | while read file; do
-            if [ -f "$(git rev-parse --show-toplevel)/$file" ]; then
-              mkdir -p "../temp_changes/$(dirname "$file")"
-              cp -f "$(git rev-parse --show-toplevel)/$file" "../temp_changes/$file"
-            fi
-          done
-          
-          # Clean working directory and copy changed files back
-          git clean -fdx
-          cp -rf ../temp_changes/* ./
-          rm -rf ../temp_changes
-          
-          # Add and commit changes
-          git add -A
-          git commit -m "🔄️ Sync with 1.21 (diff only)" || true
-          git push origin 1.21-diff --force
