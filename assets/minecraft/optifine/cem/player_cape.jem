@@ -1,0 +1,26 @@
+{
+	"credit": "Made with Blockbench",
+	"textureSize": [64, 32],
+	"models": [
+		{
+			"part": "cape",
+			"id": "cape",
+			"invertAxis": "xy",
+			"translate": [0, -24, -2],
+			"scale": 1,
+			"boxes": [
+				{"coordinates": [-5, 8, 1, 10, 16, 1], "textureOffset": [0, 0]}
+			],
+			"animations": [
+				{
+					"cape.tx": " var.player_body_tx",
+					"cape.ty": " var.player_body_ty - var.player_sneaking * 4.5",
+					"cape.tz": " var.player_body_tz + 2",
+					"cape.rx": " torad(180) - torad(7.5) - torad(20)*var.limb_speed - (torad(15) - torad(2.5)*sin(2*var.ls))*var.player_sprinting - torad(85)*var.parcool_slide",
+					"cape.ry": " -var.player_body_ry",
+					"cape.rz": " -var.player_body_rz + torad(180)"
+				}
+			]
+		}
+	]
+}
