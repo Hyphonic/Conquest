@@ -1029,19 +1029,19 @@
         "sounds": [
             {
                 "name": "random/explode1",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "random/explode2",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "random/explode3",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "random/explode4",
-                "volume": 0.05
+                "volume": 0.5
             }
         ],
         "replace": true,
@@ -1051,15 +1051,15 @@
         "sounds": [
             {
                 "name": "ambient/weather/thunder1",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "ambient/weather/thunder2",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "ambient/weather/thunder3",
-                "volume": 0.05
+                "volume": 0.5
             }
         ],
         "replace": true,
@@ -1069,11 +1069,11 @@
         "sounds": [
             {
                 "name": "item/trident/thunder1",
-                "volume": 0.05
+                "volume": 0.5
             },
             {
                 "name": "item/trident/thunder2",
-                "volume": 0.05
+                "volume": 0.5
             }
         ],
         "replace": true,
