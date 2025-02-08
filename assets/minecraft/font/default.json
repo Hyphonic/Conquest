@@ -25,15 +25,6 @@
             "id": "minecraft:include/unifont"
         },
         {
-            "type":"bitmap",
-            "file":"betonquest:portraits/hypho.png",
-            "ascent": -1,
-            "height": 72,
-            "chars": [
-                ""
-            ]
-        },
-        {
             "type": "bitmap",
             "file": "font/emojis/emojis.png",
             "ascent": 8,

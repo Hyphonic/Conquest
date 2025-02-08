@@ -1,0 +1,15 @@
+{
+    "providers": [
+        {
+            "type":"bitmap",
+            "file":"betonquest:portraits/hypho.png",
+            "ascent": -1,
+            "height": 54,
+            "chars": [
+                "",
+                " ",
+                "   "
+            ]
+        }
+    ]
+}
