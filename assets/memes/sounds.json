@@ -4,6 +4,21 @@
       "memes:memes/allstar"
     ]
   },
+  "darksouls": {
+    "sounds": [
+      "memes:memes/darksouls"
+    ]
+  },
+  "didlaugh": {
+    "sounds": [
+      "memes:memes/didlaugh"
+    ]
+  },
+  "discord": {
+    "sounds": [
+      "memes:memes/discord"
+    ]
+  },
   "auh": {
     "sounds": [
       "memes:memes/auh"
@@ -94,9 +109,44 @@
       "memes:memes/emotional-damage"
     ]
   },
-  "funkietown": {
+  "funkytown": {
     "sounds": [
-      "memes:memes/funkietown"
+      "memes:memes/funkytown"
+    ]
+  },
+  "gibberish": {
+    "sounds": [
+      "memes:memes/gibberish"
+    ]
+  },
+  "korea": {
+    "sounds": [
+      "memes:memes/korea"
+    ]
+  },
+  "mario": {
+    "sounds": [
+      "memes:memes/mario"
+    ]
+  },
+  "nuhuh": {
+    "sounds": [
+      "memes:memes/nuhuh"
+    ]
+  },
+  "ooh": {
+    "sounds": [
+      "memes:memes/ooh"
+    ]
+  },
+  "sus": {
+    "sounds": [
+      "memes:memes/sus"
+    ]
+  },
+  "uuy": {
+    "sounds": [
+      "memes:memes/uuy"
     ]
   },
   "germany": {
