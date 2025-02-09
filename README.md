@@ -3,10 +3,11 @@
 ![🔍 Latest Build Status](https://img.shields.io/github/actions/workflow/status/Hyphonic/Conquest/Build.yml?branch=1.21&style=flat&label=%F0%9F%94%8D%20Latest%20Build%20Status&labelColor=black)
 [![📦 GitHub Release](https://img.shields.io/github/v/release/Hyphonic/Conquest?include_prereleases&style=flat&logo=github&labelColor=black&color=white)](https://github.com/Hyphonic/Conquest/releases)
 [![⬇️ Installation](https://img.shields.io/badge/How_to-install-8ca1af?style=flat&logo=readthedocs&labelColor=black&color=white)](./How%20to%20install.md)
+[![🎖️ Credits](https://img.shields.io/badge/Roll_the-credits-8ca1af?style=flat&logo=gitbook&labelColor=black&color=white)](./Credits.md)
 
 ![📈 Commit Activity](https://img.shields.io/github/commit-activity/m/Hyphonic/Conquest?style=flat&label=%F0%9F%93%88%20Commit%20Activity&labelColor=black&color=white)
 ![🏷️ Repo Size](https://img.shields.io/github/repo-size/Hyphonic/Conquest?style=flat&label=%F0%9F%8F%B7%EF%B8%8F%20Repo%20Size&labelColor=black&color=white)
-[![💬 Chat with us](https://img.shields.io/discord/1264616683671388252?style=flat&label=%F0%9F%92%AC%20Chat%20with%20us&labelColor=black&color=white)](https://discord.gg/a526aRaMxh)
+[![💬 Chat with us](https://img.shields.io/discord/1264616683671388252?style=flat&logo=discord&label=Chat%20with%20us&labelColor=black&color=white)](https://discord.gg/a526aRaMxh)
 
 A modified version of [`Monsterfish's Conquest Resource Pack`](https://conquestreforged.com/conquest-pack), tailored for the RPG-style Minecraft server [`VoidTales`](https://web.voidtales.win/)!  
 
