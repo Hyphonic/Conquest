@@ -1,0 +1,1728 @@
+fur-arm_chair:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-arm_chair;save=true} @self ~onSpawn
+    - model{m=fur-arm_chair;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bed_bunk:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bed_bunk;save=true} @self ~onSpawn
+    - model{m=fur-bed_bunk;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bed_double:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bed_double;save=true} @self ~onSpawn
+    - model{m=fur-bed_double;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bed_single:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bed_single;save=true} @self ~onSpawn
+    - model{m=fur-bed_single;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-book_open:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-book_open;save=true} @self ~onSpawn
+    - model{m=fur-book_open;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-book_stack_horizontal_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-book_stack_horizontal_1;save=true} @self ~onSpawn
+    - model{m=fur-book_stack_horizontal_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-book_stack_horizontal_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-book_stack_horizontal_2;save=true} @self ~onSpawn
+    - model{m=fur-book_stack_horizontal_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-book_stack_vertical_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-book_stack_vertical_1;save=true} @self ~onSpawn
+    - model{m=fur-book_stack_vertical_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-book_stack_vertical_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-book_stack_vertical_2;save=true} @self ~onSpawn
+    - model{m=fur-book_stack_vertical_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-brown_mushroom_patch:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-brown_mushroom_patch;save=true} @self ~onSpawn
+    - model{m=fur-brown_mushroom_patch;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-brown_mushroom_patch_large:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-brown_mushroom_patch_large;save=true} @self ~onSpawn
+    - model{m=fur-brown_mushroom_patch_large;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bulletin_board:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bulletin_board;save=true} @self ~onSpawn
+    - model{m=fur-bulletin_board;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bulletin_board_small:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bulletin_board_small;save=true} @self ~onSpawn
+    - model{m=fur-bulletin_board_small;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-bulletin_board_wall:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-bulletin_board_wall;save=true} @self ~onSpawn
+    - model{m=fur-bulletin_board_wall;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-candle_dish:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-candle_dish;save=true} @self ~onSpawn
+    - model{m=fur-candle_dish;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-canopy_flat:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-canopy_flat;save=true} @self ~onSpawn
+    - model{m=fur-canopy_flat;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-canopy_sloped:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-canopy_sloped;save=true} @self ~onSpawn
+    - model{m=fur-canopy_sloped;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-cattails:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-cattails;save=true} @self ~onSpawn
+    - model{m=fur-cattails;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chair:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chair;save=true} @self ~onSpawn
+    - model{m=fur-chair;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chair_cushion:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chair_cushion;save=true} @self ~onSpawn
+    - model{m=fur-chair_cushion;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chalk_sign:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chalk_sign;save=true} @self ~onSpawn
+    - model{m=fur-chalk_sign;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chalk_sign_hanging:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chalk_sign_hanging;save=true} @self ~onSpawn
+    - model{m=fur-chalk_sign_hanging;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chest:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chest;save=true} @self ~onSpawn
+    - model{m=fur-chest;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-chest_open:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-chest_open;save=true} @self ~onSpawn
+    - model{m=fur-chest_open;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-clovers:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-clovers;save=true} @self ~onSpawn
+    - model{m=fur-clovers;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-clover_flowers:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-clover_flowers;save=true} @self ~onSpawn
+    - model{m=fur-clover_flowers;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-coffee_table:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-coffee_table;save=true} @self ~onSpawn
+    - model{m=fur-coffee_table;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-coffee_table_cloth:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-coffee_table_cloth;save=true} @self ~onSpawn
+    - model{m=fur-coffee_table_cloth;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-coins_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-coins_1;save=true} @self ~onSpawn
+    - model{m=fur-coins_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-coins_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-coins_2;save=true} @self ~onSpawn
+    - model{m=fur-coins_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-coins_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-coins_3;save=true} @self ~onSpawn
+    - model{m=fur-coins_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_bread:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_bread;save=true} @self ~onSpawn
+    - model{m=fur-crate_bread;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_carrots:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_carrots;save=true} @self ~onSpawn
+    - model{m=fur-crate_carrots;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_display_bread:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_display_bread;save=true} @self ~onSpawn
+    - model{m=fur-crate_display_bread;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_display_carrots:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_display_carrots;save=true} @self ~onSpawn
+    - model{m=fur-crate_display_carrots;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_display_empty:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_display_empty;save=true} @self ~onSpawn
+    - model{m=fur-crate_display_empty;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_empty:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_empty;save=true} @self ~onSpawn
+    - model{m=fur-crate_empty;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crate_stack:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crate_stack;save=true} @self ~onSpawn
+    - model{m=fur-crate_stack;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-crystal:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-crystal;save=true} @self ~onSpawn
+    - model{m=fur-crystal;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-desk:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-desk;save=true} @self ~onSpawn
+    - model{m=fur-desk;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-dresser_low:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-dresser_low;save=true} @self ~onSpawn
+    - model{m=fur-dresser_low;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-dresser_tall:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-dresser_tall;save=true} @self ~onSpawn
+    - model{m=fur-dresser_tall;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-end_table:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-end_table;save=true} @self ~onSpawn
+    - model{m=fur-end_table;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-fireplace:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-fireplace;save=true} @self ~onSpawn
+    - model{m=fur-fireplace;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-glow_mushroom_patch:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-glow_mushroom_patch;save=true} @self ~onSpawn
+    - model{m=fur-glow_mushroom_patch;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-glow_mushroom_patch_large:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-glow_mushroom_patch_large;save=true} @self ~onSpawn
+    - model{m=fur-glow_mushroom_patch_large;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-lamp:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-lamp;save=true} @self ~onSpawn
+    - model{m=fur-lamp;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-lamp_hanging:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-lamp_hanging;save=true} @self ~onSpawn
+    - model{m=fur-lamp_hanging;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-lamp_tall:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-lamp_tall;save=true} @self ~onSpawn
+    - model{m=fur-lamp_tall;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_mushroom:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_mushroom;save=true} @self ~onSpawn
+    - model{m=fur-log_mushroom;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_mushroom_corner:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_mushroom_corner;save=true} @self ~onSpawn
+    - model{m=fur-log_mushroom_corner;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_pile_large:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_pile_large;save=true} @self ~onSpawn
+    - model{m=fur-log_pile_large;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_pile_large_overgrown:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_pile_large_overgrown;save=true} @self ~onSpawn
+    - model{m=fur-log_pile_large_overgrown;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_pile_small_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_pile_small_1;save=true} @self ~onSpawn
+    - model{m=fur-log_pile_small_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_pile_small_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_pile_small_2;save=true} @self ~onSpawn
+    - model{m=fur-log_pile_small_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-log_pile_small_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-log_pile_small_3;save=true} @self ~onSpawn
+    - model{m=fur-log_pile_small_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-orange_mushroom_patch:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-orange_mushroom_patch;save=true} @self ~onSpawn
+    - model{m=fur-orange_mushroom_patch;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-orange_mushroom_patch_large:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-orange_mushroom_patch_large;save=true} @self ~onSpawn
+    - model{m=fur-orange_mushroom_patch_large;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-ore:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-ore;save=true} @self ~onSpawn
+    - model{m=fur-ore;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-papers_hanging_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-papers_hanging_1;save=true} @self ~onSpawn
+    - model{m=fur-papers_hanging_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-papers_hanging_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-papers_hanging_2;save=true} @self ~onSpawn
+    - model{m=fur-papers_hanging_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-papers_hanging_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-papers_hanging_3;save=true} @self ~onSpawn
+    - model{m=fur-papers_hanging_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pebbles_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pebbles_1;save=true} @self ~onSpawn
+    - model{m=fur-pebbles_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pebbles_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pebbles_2;save=true} @self ~onSpawn
+    - model{m=fur-pebbles_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pebbles_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pebbles_3;save=true} @self ~onSpawn
+    - model{m=fur-pebbles_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-plant:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-plant;save=true} @self ~onSpawn
+    - model{m=fur-plant;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pot_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pot_1;save=true} @self ~onSpawn
+    - model{m=fur-pot_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pot_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pot_2;save=true} @self ~onSpawn
+    - model{m=fur-pot_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-pot_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-pot_3;save=true} @self ~onSpawn
+    - model{m=fur-pot_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-red_mushroom_patch:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-red_mushroom_patch;save=true} @self ~onSpawn
+    - model{m=fur-red_mushroom_patch;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-red_mushroom_patch_large:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-red_mushroom_patch_large;save=true} @self ~onSpawn
+    - model{m=fur-red_mushroom_patch_large;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-rock_1:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-rock_1;save=true} @self ~onSpawn
+    - model{m=fur-rock_1;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-rock_2:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-rock_2;save=true} @self ~onSpawn
+    - model{m=fur-rock_2;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-rock_3:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-rock_3;save=true} @self ~onSpawn
+    - model{m=fur-rock_3;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-rock_4:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-rock_4;save=true} @self ~onSpawn
+    - model{m=fur-rock_4;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-sack:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-sack;save=true} @self ~onSpawn
+    - model{m=fur-sack;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-scroll_open:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-scroll_open;save=true} @self ~onSpawn
+    - model{m=fur-scroll_open;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-scroll_stack:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-scroll_stack;save=true} @self ~onSpawn
+    - model{m=fur-scroll_stack;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-shipping_crate:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-shipping_crate;save=true} @self ~onSpawn
+    - model{m=fur-shipping_crate;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-shipping_crate_triple_stack:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-shipping_crate_triple_stack;save=true} @self ~onSpawn
+    - model{m=fur-shipping_crate_triple_stack;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-shop_cart:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-shop_cart;save=true} @self ~onSpawn
+    - model{m=fur-shop_cart;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-sofa:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-sofa;save=true} @self ~onSpawn
+    - model{m=fur-sofa;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-stool:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-stool;save=true} @self ~onSpawn
+    - model{m=fur-stool;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-stool_cushion:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-stool_cushion;save=true} @self ~onSpawn
+    - model{m=fur-stool_cushion;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-streamers_hanging:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-streamers_hanging;save=true} @self ~onSpawn
+    - model{m=fur-streamers_hanging;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-streamer_post:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-streamer_post;save=true} @self ~onSpawn
+    - model{m=fur-streamer_post;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-table_long:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-table_long;save=true} @self ~onSpawn
+    - model{m=fur-table_long;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-table_small:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-table_small;save=true} @self ~onSpawn
+    - model{m=fur-table_small;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-table_small_cloth:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-table_small_cloth;save=true} @self ~onSpawn
+    - model{m=fur-table_small_cloth;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-wagon:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-wagon;save=true} @self ~onSpawn
+    - model{m=fur-wagon;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
+
+fur-wagon_full:
+  Type: armorstand
+  Display: ''
+  Health: 999
+  Options:
+    NoDamageTicks: 60
+    PreventRandomEquipment: true
+    Collidable: true
+    MovementSpeed: 0
+    NoGravity: true
+    Invincible: true
+    KnockbackResistance: 1
+    Despawn: false
+    AlwaysShowName: false
+  Skills:
+    - model{m=fur-wagon_full;save=true} @self ~onSpawn
+    - model{m=fur-wagon_full;save=true;delay=5} @self ~onLoad
+  Disguise: FALLING_BLOCK STONE
