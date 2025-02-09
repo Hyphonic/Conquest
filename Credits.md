@@ -23,3 +23,6 @@ Of course, where would we be without the incredible people who made this project
 
 - **[`Comunidad Aylas`](https://discord.gg/RTXZSc37H8)**
   - For their amazing support and deep knowledge of resource packs.
+
+- **[`Cymock`](https://modrinth.com/user/Cymock)**
+  - For his incredible work on the custom player animations
