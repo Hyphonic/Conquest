@@ -1,22 +1,22 @@
 {
     "sfx.slash_katana":{
         "sounds":[
-            "rrpg_void_edge:sfx.slash_katana"
+            "rrpg_void_edge:slash_katana"
         ]
     },
     "sfx.upperslash_katana":{
         "sounds":[
-            "rrpg_void_edge:sfx.upperslash_katana"
+            "rrpg_void_edge:upperslash_katana"
         ]
     },
     "sfx.slash_katana_electric":{
         "sounds":[
-            "rrpg_void_edge:sfx.slash_katana_electric"
+            "rrpg_void_edge:slash_katana_electric"
         ]
     },
     "sfx.void_edge_teleport":{
         "sounds":[
-            "rrpg_void_edge:sfx.void_edge_teleport"
+            "rrpg_void_edge:void_edge_teleport"
         ]
     }
 }
