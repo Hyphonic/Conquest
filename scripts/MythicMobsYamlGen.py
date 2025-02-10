@@ -7,7 +7,7 @@ def get_model_name(filename):
 
 def process_yaml_template(model_name):
     template = '''{}:
-  Type: armorstand
+  Type: block_display
   Display: ''
   Health: 999
   Options:
@@ -23,6 +23,7 @@ def process_yaml_template(model_name):
   Skills:
     - model{{m={};save=true}} @self ~onSpawn
     - model{{m={};save=true;delay=5}} @self ~onLoad
+    - brightness{{p=eyes;b=15;s=15}} @self ~onSpawn
   Disguise: FALLING_BLOCK STONE
 '''.format(model_name, model_name, model_name)
     return template

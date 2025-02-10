@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/void_edge_dimension_benediction_2"},"elements":[{"from":[0.5,-1.0,8.0],"to":[15.5,17.0,8.0],"faces":{"south":{"uv":[13.454546,3.2727275,10.727273,6.545455],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[10.727273,3.2727275,13.454546,6.545455],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
