@@ -1,0 +1,69 @@
+{
+    "death": {
+        "sounds": [
+            "direwolf:death"
+        ]
+    },
+    "death_impact": {
+        "sounds": [
+            "direwolf:death_impact"
+        ]
+    },
+    "ground_impact_1": {
+        "sounds": [
+            "direwolf:ground_impact_1"
+        ]
+    },
+    "growl": {
+        "sounds": [
+            "direwolf:growl_1",
+            "direwolf:growl_2",
+            "direwolf:growl_3",
+            "direwolf:growl_4",
+            "direwolf:growl_5",
+            "direwolf:growl_6"
+        ]
+    },
+    "grunt": {
+        "sounds": [
+            "direwolf:grunt_1",
+            "direwolf:grunt_2",
+            "direwolf:grunt_3"
+        ]
+    },
+    "howl": {
+        "sounds": [
+            "direwolf:howl"
+        ]
+    },
+    "leap": {
+        "sounds": [
+            "direwolf:leap_1",
+            "direwolf:leap_2"
+        ]
+    },
+    "shadow_ambience": {
+        "sounds": [
+            "direwolf:shadow_ambience"
+        ]
+    },
+    "shadow_mode": {
+        "sounds": [
+            "direwolf:shadow_mode"
+        ]
+    },
+    "sword_swing": {
+        "sounds": [
+            "direwolf:sword_swing_1",
+            "direwolf:sword_swing_2",
+            "direwolf:sword_swing_3",
+            "direwolf:sword_swing_4",
+            "direwolf:sword_swing_5"
+        ]
+    },
+    "pickup_sword": {
+        "sounds": [
+            "direwolf:pickup_sword"
+        ]
+    }
+}

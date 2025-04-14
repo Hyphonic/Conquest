@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/ork_nil_ground_fx"},"elements":[{"from":[-6.5,8.0,-2.5],"to":[22.5,8.0,18.5],"faces":{"up":{"uv":[2.5,10.75,9.75,16.0],"tintindex":0,"rotation":0,"texture":"#0"},"down":{"uv":[0.0,0.0,7.25,5.25],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}

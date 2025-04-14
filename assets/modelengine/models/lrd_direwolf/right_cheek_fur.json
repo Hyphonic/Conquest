@@ -1,0 +1,1 @@
+{"textures":{"0":"modelengine:entity/lrd_direwolf"},"elements":[{"from":[5.0000005,0.5,8.0],"to":[17.0,15.5,8.0],"faces":{"south":{"uv":[9.9375,8.25,10.6875,9.1875],"tintindex":0,"rotation":0,"texture":"#0"},"north":{"uv":[6.8125,3.4375,7.5625,4.375],"tintindex":0,"rotation":0,"texture":"#0"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
