@@ -21,6 +21,48 @@
             "custom_model_data": 100300
             },
             "model": "minecraft:item/3_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100400
+            },
+            "model": "minecraft:item/4_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100500
+            },
+            "model": "minecraft:item/5_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100600
+            },
+            "model": "minecraft:item/6_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100700
+            },
+            "model": "minecraft:item/7_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100800
+            },
+            "model": "minecraft:item/8_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 100900
+            },
+            "model": "minecraft:item/9_base_book"
+        },
+        {
+            "predicate": {
+            "custom_model_data": 101000
+            },
+            "model": "minecraft:item/10_base_book"
         }
     ]
 }
