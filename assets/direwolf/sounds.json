@@ -17,18 +17,13 @@
     "growl": {
         "sounds": [
             "direwolf:growl_1",
-            "direwolf:growl_2",
-            "direwolf:growl_3",
-            "direwolf:growl_4",
             "direwolf:growl_5",
             "direwolf:growl_6"
         ]
     },
     "grunt": {
         "sounds": [
-            "direwolf:grunt_1",
-            "direwolf:grunt_2",
-            "direwolf:grunt_3"
+            "direwolf:grunt_1"
         ]
     },
     "howl": {
