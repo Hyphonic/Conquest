@@ -1,0 +1,1 @@
+{"textures":{"10":"modelengine:entity/lrd_direwolf_shadow_tail"},"elements":[{"from":[8.0,2.5,-4.5],"to":[8.0,13.5,20.5],"faces":{"east":{"uv":[6.25,0.0,3.125,1.375],"tintindex":0,"rotation":0,"texture":"#10"},"west":{"uv":[3.125,0.0,6.25,1.375],"tintindex":0,"rotation":0,"texture":"#10"}}}],"display":{"gui":{"rotation":[30,225,0]}}}
