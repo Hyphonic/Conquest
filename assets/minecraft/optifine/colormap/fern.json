@@ -1,5 +1,0 @@
-{
-    "format": "vanilla",
-    "blocks": ["minecraft:fern minecraft:tall_fern"],
-    "source": "./fern.png"
-}
